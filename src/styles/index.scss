@@ -1,0 +1,530 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import "utils/variables";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  z-index: inherit;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul, li {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a{
+  text-decoration: #FFFFFF;
+}
+
+@import "./utils/variables";
+@import "./typography.scss";
+
+body{
+  background: #FAFAFF;
+  font-family: 'Gilroy', sans-serif;
+}
+a{
+  text-decoration: none;
+}
+.App {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+  .MuiListItem-root {
+    padding-left: 8px;
+  }
+}
+
+@media (min-width: $tablet) {
+  .wrapper {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1440px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+.main {
+  margin-top: 32px;
+  @media (min-width: $desktop) {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+}
+
+.menu-lang {
+  @media (max-width: $desktop - 1) {
+    .MuiOutlinedInput-input {
+      padding: 12px 16px;
+    }
+  }
+}
+
+.hamburger-react {
+  @media (max-width: $desktop) {
+    margin-left: -10px;
+  }
+}
+
+.textarea {
+  input {
+    padding: 14px 16px;
+    font-size: 14px;
+    height: 50px;
+    box-sizing: border-box;
+  }
+
+  fieldset {
+    padding: 0 6px;
+    border-width: 1px !important;
+  }
+
+  .MuiInputAdornment-root {
+    p {
+      font-size: 12px;
+      line-height: 12px;
+      color: $Black-600;
+    }
+  }
+
+  .MuiOutlinedInput-root {
+    .MuiOutlinedInput-notchedOutline {
+      border-color: $Black-500;
+    }
+
+    &:hover {
+      .MuiOutlinedInput-notchedOutline {
+        border-color: $Black-600;
+      }
+    }
+
+    &.Mui-focused {
+      .MuiOutlinedInput-notchedOutline {
+        border-color: #7B61FF;
+      }
+      &:hover {
+        border-color: #7B61FF;
+      }
+    }
+
+    &.Mui-error {
+      .MuiOutlinedInput-notchedOutline {
+        border-color: $Warning-900;
+      }
+
+      &:hover {
+        border-color: $Warning-900;
+      }
+    }
+
+    &.Mui-disabled {
+      .MuiOutlinedInput-notchedOutline {
+        border-color: $Black-500;
+      }
+
+      &:hover {
+        border-color: $Black-500;
+      }
+    }
+  }
+
+  .MuiFormLabel-root {
+    &.Mui-focused {
+      color: #7B61FF;
+    }
+
+    &.Mui-error {
+      color: $Warning-900;
+    }
+
+    &.Mui-disabled {
+      color: $Black-500;
+    }
+  }
+
+  label {
+    font-size: 14px;
+    line-height: 22px;
+    &.MuiInputLabel-shrink {
+      transform: translate(13px, -2px) scale(0.75);
+    }
+  }
+
+  legend {
+    height: 16px;
+
+    span {
+      padding-left: 4px;
+      padding-right: 4px;
+    }
+  }
+
+  .MuiInputBase-root {
+    line-height: 14px;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-direction: column;
+  @media (min-width: $tablet) {
+    flex-direction: row;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 100%;
+    padding-left: 224px;
+  }
+}
+
+.copyright {
+  font-size: 12px;
+  line-height: 16px;
+  color: $Black-600;
+  text-align: center;
+  margin-bottom: 20px;
+  @media (min-width: $tablet) {
+    text-align: left;
+    margin-bottom: 0;
+  }
+}
+
+.terms {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  @media (min-width: $tablet) {
+    justify-content: inherit;
+  }
+
+  li {
+    &:last-child {
+      margin-left: 32px;
+    }
+  }
+
+  a {
+    font-size: 12px;
+    line-height: 16px;
+    color: $Black-700;
+  }
+}
+
+.breadcrumbs {
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  li {
+    font-size: 12px;
+    line-height: 16px;
+    &:before {
+      content: '/';
+      margin-left: 4px;
+      margin-right: 4px;
+    }
+
+    &:first-child {
+      &:before {
+        display: none;
+      }
+    }
+    a {
+      color: $Secondary-900;
+    }
+  }
+}
+
+.input-search-wrapper {
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    background-image: url("../assets/icons/Search.svg");
+  }
+  &::placeholder {
+    color: $Black-600;
+  }
+}
+
+.search-bar {
+  width: 100%;
+  height: 100%;
+  border: 1px solid $Black-500;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 12px 12px 12px 48px;
+  outline: none;
+  &:focus {
+    border-color: $Secondary-900;
+  }
+}
+
+.btn {
+  padding: 18px 45px;
+  border-radius: 8px;
+  background-color: $Main-900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 12px;
+  color: $White-100;
+  border: none;
+  cursor: pointer;
+  &.btn--default {
+    background-color: $Main-900;
+    &:hover {
+      background-color: $Main-700;
+    }
+
+    &:active {
+      background-color: $Main-800;
+    }
+  }
+
+  &.btn--purple {
+    background-color: $Secondary-900;
+  }
+
+  &.btn--disabled {
+    background-color: $Black-500;
+  }
+
+  &.btn--gray {
+    background-color: rgba(51, 52, 62, .2);
+    color: $Black-700;
+  }
+
+  &.btn--transparent-default {
+    padding: 0;
+    background-color: transparent;
+    color: $Secondary-900;
+  }
+
+  &.btn--warning {
+    background-color: rgba(255, 86, 85, .2);
+    color: $Warning-900;
+  }
+}
+
+.secondary-900-bg {
+  background-color: $Secondary-900;
+}
+
+.marina-900-bg {
+  background-color: $Marina-900;
+}
+
+.accent-900-bg {
+  background-color: $Accent-900;
+}
+
+.main-900-bg {
+  background-color: $Main-900;
+}
+
+.black-500-bg {
+  background-color: $Black-500;
+}
+
+.black-600-bg {
+  background-color: $Black-600;
+}
+
+.pink-900-bg {
+  background-color: $Pink-900;
+}
+
+.warning-900-bg {
+  background-color: $Warning-900;
+}
+
+.label {
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: $White-100;
+  white-space: nowrap;
+
+  &.label--7 {
+    background-color: $Navy-900;
+  }
+
+  &.label--id {
+    background-color: $Black-600;
+  }
+
+  &.label--10 {
+    background-color: $Pink-900;
+  }
+}
+
+.modal-wrapper {
+  padding: 32px 52px;
+  width: 100%;
+
+
+  &.modal-wrapper--transactions {
+    max-width: 468px;
+  }
+
+  .modal-close-icon {
+    position: absolute;
+    right: 32px;
+    top: 35px;
+    cursor: pointer;
+  }
+
+  .title {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 30px;
+    color: $Black-800;
+    padding-right: 10px;
+    padding-bottom: 16px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid $Black-500;
+  }
+
+  .input-field {
+    margin-bottom: 40px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .balance {
+    margin: 32px 0;
+    .title {
+      font-size: 14px;
+      line-height: 24px;
+      color: $Black-700;
+      padding-bottom: 0;
+      margin-bottom: 0;
+      border-bottom: none;
+      font-weight: 400;
+    }
+
+    .description {
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 34px;
+      color: $Black-700;
+    }
+  }
+
+  .btn-wrapper {
+    display: flex;
+    align-items: center;
+    .btn {
+      margin-right: 24px;
+      width: 50%;
+      text-align: center;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .MuiTouchRipple-root {
+    display: none;
+  }
+
+  .MuiIconButton-root {
+    background-color: transparent;
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  .search-input {
+    margin-bottom: 40px;
+  }
+
+  .custom-select {
+    margin-bottom: 40px;
+  }
+
+  .form-input-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 64px;
+    .form-item {
+      margin-right: 24px;
+      width: 50%;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

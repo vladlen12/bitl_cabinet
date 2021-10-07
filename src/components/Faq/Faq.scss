@@ -1,0 +1,203 @@
+@import "../../styles/utils/variables";
+
+.section--faq {
+  .tabs-wrapper {
+    .MuiTabs-root {
+      background-color: $White-100;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      padding-top: 22px;
+      padding-left: 20px;
+      padding-right: 20px;
+      box-shadow: none;
+      border-bottom: 1px solid $Black-500;
+      @media (min-width: $tablet) {
+        padding-top: 32px;
+        padding-left: 52px;
+        padding-right: 52px;
+      }
+    }
+
+    .MuiTabs-flexContainer {
+      overflow-x: auto;
+    }
+
+    .MuiTab-root {
+      padding: 0 0 16px 0;
+      min-width: auto;
+      margin-right: 28px;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 12px;
+      @media (min-width: $tablet) {
+        margin-right: 42px;
+      }
+      &.Mui-selected {
+        color: $Secondary-900;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .MuiTab-wrapper {
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: $Black-700;
+    }
+
+    .MuiTabs-indicator {
+      background-color: $Secondary-900;
+    }
+
+    .MuiTouchRipple-root {
+      display: none;
+    }
+
+    .MuiBox-root {
+      padding: 20px;
+      background-color: $White-100;
+      @media (min-width: $tablet) {
+        padding: 32px 52px;
+      }
+    }
+
+    .MuiPaper-root {
+      padding: 0;
+      border-bottom: none;
+      border-radius: 0;
+    }
+  }
+
+  .accordion-wrapper {
+    .MuiAccordionSummary-root {
+      padding: 16px 20px 0;
+      position: relative;
+      @media (min-width: $tablet) {
+        padding: 16px 32px 0;
+      }
+      &.Mui-expanded {
+        min-height: auto;
+        .title {
+          color: $Black-700;
+        }
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 58px;
+        height: 58px;
+        background-image: url("../../assets/accordionImg1.svg");
+        background-size: cover;
+      }
+    }
+
+    .MuiAccordion-root {
+      border-radius: 8px;
+      border: 1px solid $Black-500;
+      margin-bottom: 16px;
+      &:before {
+        display: none;
+      }
+      &.Mui-expanded {
+        border-color: $Main-900;
+        .MuiAccordionSummary-root {
+          &:before {
+            background-image: url("../../assets/accordionImg2.svg");
+          }
+        }
+      }
+    }
+
+
+    .MuiAccordionSummary-expandIconWrapper {
+      position: absolute;
+      right: 20px;
+      top: 16px;
+      @media (min-width: $tablet) {
+        right: 32px;
+        top: 16px;
+      }
+    }
+
+    .title {
+      position: relative;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 24px;
+      color: $Black-600;
+      width: 100%;
+      padding-bottom: 16px;
+      z-index: 1;
+      padding-right: 20px;
+      @media (min-width: $tablet) {
+        font-size: 16px;
+        line-height: 26px;
+      }
+    }
+
+    .MuiAccordionSummary-content {
+      margin: 0;
+    }
+
+    .MuiPaper-elevation {
+      &.Mui-expanded {
+        .title {
+          border-bottom: 1px solid $Black-500;
+        }
+      }
+    }
+
+    .MuiAccordionDetails-root {
+      padding: 16px 20px 20px;
+      @media (min-width: $tablet) {
+        padding: 16px 32px 32px;
+      }
+      p,
+      ul,
+      strong {
+        font-size: 12px;
+        line-height: 16px;
+        color: $Black-700;
+        margin-bottom: 8px;
+        display: block;
+        @media (min-width: $tablet) {
+          font-size: 14px;
+          line-height: 24px;
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      li {
+        list-style-type: disc;
+      }
+
+      strong {
+        font-weight: 700;
+      }
+    }
+  }
+
+  .pagination-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-top: 32px;
+    @media (min-width: $tablet) {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .pagination {
+      margin-right: -10px;
+    }
+  }
+}

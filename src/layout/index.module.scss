@@ -1,0 +1,11 @@
+@import "../styles/utils/variables";
+
+@media (min-width: $desktop) {
+  .wrapper{
+    display: flex;
+    flex-direction: column;
+  }
+  .content{
+    width: 100%;
+  }
+}

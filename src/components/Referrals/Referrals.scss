@@ -1,0 +1,458 @@
+@import "../../styles/utils/variables";
+
+.section--referrals {
+  .structure-info {
+    .title {
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 26px;
+      color: $Black-700;
+      padding-bottom: 8px;
+      border-bottom: 1px solid $Black-500;
+      padding-top: 32px;
+      padding-left: 52px;
+      padding-right: 52px;
+      @media (min-width: $tablet) {
+        font-size: 20px;
+        line-height: 30px;
+        padding-bottom: 16px;
+      }
+    }
+  }
+
+  .search-bar-wrapper {
+    padding: 32px 52px 40px;
+    position: relative;
+    overflow: hidden;
+    &:before {
+      content: '';
+      width: 100%;
+      height: 1px;
+      background-color: $Black-500;
+      position: absolute;
+      left: 0;
+      top: 112px;
+    }
+  }
+
+  .input-search-wrapper {
+    width: 100%;
+    height: 48px;
+    @media (min-width: $tablet) {
+      width: 200px;
+      margin-right: 20px;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $desktop) {
+      width: 270px;
+      margin-right: 24px;
+    }
+  }
+
+  .tabs-wrapper {
+    padding-top: 32px;
+    margin-top: 32px;
+    .MuiTabs-indicator {
+      display: none;
+    }
+
+    .MuiTabs-root {
+      position: absolute;
+      right: 52px;
+      top: 36px;
+    }
+
+    .MuiBox-root {
+      border-bottom: none;
+    }
+
+    .MuiTab-root,
+    .tab-item {
+      width: 40px;
+      height: 40px;
+      min-height: 40px;
+      border: 1px solid $Black-500;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      margin-right: 8px;
+      cursor: pointer;
+      &:last-child {
+        margin-right: 0;
+      }
+      svg {
+        path {
+          fill: $Black-600;
+        }
+      }
+
+      .tab-item {
+        margin-right: 0;
+      }
+
+      &.Mui-selected {
+        svg {
+          path {
+            fill: $Secondary-900;
+          }
+        }
+      }
+    }
+  }
+
+  .currency-info {
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @media (min-width: $tablet) {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $desktop) {
+      margin-bottom: 24px;
+      flex-wrap: nowrap;
+    }
+
+    .currency-info__item {
+      margin-right: 0;
+      @media (min-width: $tablet) {
+        width: 48%;
+        margin-right: 0;
+        margin-bottom: 24px;
+      }
+
+      @media (min-width: $desktop) {
+        width: 25%;
+        margin-right: 24px;
+        margin-bottom: 0;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+  }
+
+  .info-block {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    padding: 18px 64px 18px 24px;
+    border: 1px solid $Black-500;
+    border-radius: 8px;
+    margin-bottom: 32px;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 54px;
+      height: 58px;
+      background-image: url("../../assets/info-bg.svg");
+      background-size: cover;
+    }
+
+    .close-icon {
+      position: absolute;
+      right: 30px;
+      top: 20px;
+      cursor: pointer;
+      img {
+        margin-right: 0;
+      }
+    }
+
+    img {
+      margin-right: 18px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .content {
+      font-size: 14px;
+      line-height: 24px;
+      color: $Black-700;
+      padding: 0;
+    }
+
+    strong {
+      font-weight: bold;
+      display: block;
+    }
+  }
+
+  .table {
+    width: 100%;
+    text-align: left;
+    thead {
+      th {
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 12px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $Black-600;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+    }
+
+    tbody {
+      td {
+        font-size: 14px;
+        line-height: 20px;
+        color: $Black-700;
+        padding-bottom: 16px;
+        padding-top: 16px;
+        white-space: nowrap;
+        &:last-child {
+          width: 120px;
+          padding-right: 24px;
+        }
+      }
+      tr {
+        border-bottom: 1px solid $Black-500;
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+
+      .td-1 {
+        width: 84px;
+        display: flex;
+        align-items: center;
+        padding-left: 24px;
+        .label {
+          margin-left: 8px;
+        }
+      }
+
+      .td-2 {
+        width: 130px;
+      }
+
+      .td-3 {
+        width: 100px;
+      }
+
+      .td-4 {
+        text-align: center;
+      }
+
+      .td-5 {
+        width: 120px;
+      }
+    }
+
+    .user-info {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .label {
+      display: inline-block;
+      &.new {
+        color: $Main-900;
+        background-color: rgba(56, 212, 126, .2);
+      }
+
+      &.delete {
+        color: $Warning-900;
+        background-color: rgba(255, 86, 85, .2);
+      }
+    }
+
+    .table-new {
+      background-color: rgba(56, 212, 126, .1);
+      border-radius: 4px;
+      border-bottom: none;
+    }
+
+    .table-delete {
+      background-color: rgba(255, 86, 85, .1);
+      border-radius: 4px;
+      border-bottom: none;
+      td {
+        color: $Warning-900;
+      }
+    }
+  }
+
+  .pagination-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-top: 32px;
+    @media (min-width: $tablet) {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .pagination {
+      margin-right: -10px;
+    }
+  }
+
+  .table-wrapper--tree {
+    .table-col {
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: $Black-600;
+      &:first-child {
+        padding-left: 28px;
+      }
+
+      &:last-child {
+        padding-right: 24px;
+      }
+    }
+
+    .table-head {
+      display: flex;
+      align-items: center;
+      padding-left: 10px;
+      .col-1 {
+        width: 22%;
+      }
+
+      .col-2 {
+        width: 14%;
+      }
+
+      .col-3 {
+        width: 8.5%;
+      }
+
+      .col-4 {
+        width: 11%;
+      }
+
+      .col-5 {
+        width: 10%;
+      }
+
+      .col-6 {
+        width: 9.5%;
+      }
+
+      .col-7 {
+        width: 10%;
+      }
+
+      .col-8 {
+        width: 10%;
+      }
+    }
+
+    .MuiTreeItem-content {
+      padding-right: 0;
+    }
+
+    .MuiTreeItem-label {
+      padding-left: 0;
+    }
+
+    .table-body {
+      display: flex;
+      align-items: center;
+      .table-body__item {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        line-height: 20px;
+        color: $Black-700;
+        padding: 10px;
+        white-space: nowrap;
+      }
+
+      .label {
+        display: inline-block;
+      }
+
+      .user-info {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+      }
+
+      .col-1 {
+        width: 20%;
+      }
+
+      .col-2 {
+        width: 14%;
+      }
+
+      .col-3 {
+        width: 10%;
+      }
+
+      .col-4 {
+        width: 10%;
+        text-align: center;
+      }
+
+      .col-5 {
+        width: 10%;
+      }
+
+      .col-6 {
+        width: 10%;
+      }
+
+      .col-7 {
+        width: 10%;
+      }
+      .col-8 {
+        width: 11%;
+      }
+    }
+
+    .MuiTreeItem-content {
+      background-color: transparent;
+      &:hover {
+        background-color: transparent;
+      }
+    }
+
+    .MuiCollapse-root  {
+      border: none;
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: -16px;
+        border-left: 1px dashed $Black-600;
+        height: calc(100% + 16px);
+      }
+    }
+
+    .MuiSvgIcon-root {
+      background-color: $White-100;
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  .table-wrapper {
+    @media (max-width: $desktop - 1) {
+      overflow-x: auto;
+    }
+    .table {
+      width: 100%;
+      min-width: 800px;
+    }
+  }
+}
