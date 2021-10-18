@@ -14,7 +14,26 @@
     font-family: 'Gilroy', sans-serif;
     border-radius: 4px;
     &.Mui-selected {
-      background-color: rgba(154, 155, 162, .1);
+      background-color: $Secondary-900;
+      color: $White-100;
+      &:hover {
+        background-color: rgba(123, 97, 255, .3);
+        color: $Secondary-900;
+      }
+      &:focus {
+        background-color: $Secondary-900;
+        color: $White-100;
+      }
+    }
+
+    &:hover {
+      background-color: rgba(123, 97, 255, .3);
+      color: $Secondary-900;
+    }
+
+    &:focus {
+      background-color: $Secondary-900;
+      color: $White-100;
     }
   }
 
@@ -22,10 +41,7 @@
     &:first-child,
     &:last-child {
       .MuiPaginationItem-root {
-        background-color: rgba(123, 97, 255, .3);
-        path {
-          color: $Secondary-900;
-        }
+        opacity: 1;
       }
     }
   }

@@ -1,19 +1,21 @@
 import {Link} from "react-router-dom";
+import ScrollToTop from "./ScrollToTop";
 
 const date = new Date().getFullYear()
 
 const Footer = () => (
   <footer className="footer">
+    <ScrollToTop />
     <div className="copyright">
       Copyright © {date} BITL. All rights reserved
     </div>
 
     <ul className="terms">
       <li>
-        <Link href="#">Privacy Policy</Link>
+        <Link to="/privacy-policy">Privacy Policy</Link>
       </li>
       <li>
-        <Link href="#">Terms of Use</Link>
+        <Link to="/terms-of-use">Terms of Use</Link>
       </li>
     </ul>
   </footer>

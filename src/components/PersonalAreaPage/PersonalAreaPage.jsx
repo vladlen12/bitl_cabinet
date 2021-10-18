@@ -12,7 +12,6 @@ import {ReactComponent as Currency2} from "../../assets/icons/currency2.svg"
 import {ReactComponent as CopyIcon} from "../../assets/icons/Copy.svg"
 
 import {ReactComponent as Percent} from "../../assets/icons/percent.svg"
-import {ReactComponent as Calendar} from "../../assets/icons/Calendar.svg"
 import {ReactComponent as ProgressIcon} from "../../assets/icons/progress.svg"
 import {ReactComponent as BlockIcon} from "../../assets/icons/block.svg"
 import {ReactComponent as Warning} from "../../assets/icons/Warning.svg"
@@ -26,6 +25,8 @@ import TextField from "@mui/material/TextField";
 import InputAdornment from '@mui/material/InputAdornment';
 import 'antd/dist/antd.css';
 import { Progress } from 'antd';
+import LoginDialog from "./Popup";
+import CalendarPopover from "./popover";
 
 const data = {
   datasets: [
@@ -82,6 +83,8 @@ const PersonalAreaPage = () => {
       <h1 className="h1">
         Personal Area
       </h1>
+
+      <LoginDialog />
 
       <ul className="structure-info-list">
         <li className="board structure-info-list__item">
@@ -229,7 +232,7 @@ const PersonalAreaPage = () => {
           <div className="user-rate board">
             <div className="title">
               Bonuses for the current month
-              <Calendar />
+              <CalendarPopover />
             </div>
 
             <div className="chart">
@@ -354,10 +357,9 @@ const PersonalAreaPage = () => {
                         strokeWidth={6}
                         width={32}
                         strokeColor={{
-                          '15%': '#FF5655',
-                          '45%': '#E3E3E7',
+                          '0': '#FF5655',
                         }}
-                        percent={15}
+                        percent={13}
                         format={() => (
                           <img src={customer} alt=""/>
                         )}
@@ -384,10 +386,9 @@ const PersonalAreaPage = () => {
                         strokeWidth={6}
                         width={32}
                         strokeColor={{
-                          '15%': '#FF5655',
-                          '45%': '#E3E3E7',
+                          '0': '#FFD965',
                         }}
-                        percent={15}
+                        percent={35}
                         format={() => (
                           <img src={customer} alt=""/>
                         )}
@@ -413,10 +414,9 @@ const PersonalAreaPage = () => {
                         strokeWidth={6}
                         width={32}
                         strokeColor={{
-                          '15%': '#FF5655',
-                          '45%': '#E3E3E7',
+                          '0': '#38D47E',
                         }}
-                        percent={15}
+                        percent={45}
                         format={() => (
                           <img src={customer} alt=""/>
                         )}
@@ -442,10 +442,9 @@ const PersonalAreaPage = () => {
                         strokeWidth={6}
                         width={32}
                         strokeColor={{
-                          '15%': '#FF5655',
-                          '45%': '#E3E3E7',
+                          '0': '#0D05BA',
                         }}
-                        percent={15}
+                        percent={60}
                         format={() => (
                           <img src={customer} alt=""/>
                         )}
@@ -471,10 +470,9 @@ const PersonalAreaPage = () => {
                         strokeWidth={6}
                         width={32}
                         strokeColor={{
-                          '15%': '#FF5655',
-                          '45%': '#E3E3E7',
+                          '0': '#0D05BA',
                         }}
-                        percent={15}
+                        percent={50}
                         format={() => (
                           <img src={customer} alt=""/>
                         )}
@@ -500,10 +498,9 @@ const PersonalAreaPage = () => {
                         strokeWidth={6}
                         width={32}
                         strokeColor={{
-                          '15%': '#FF5655',
-                          '45%': '#E3E3E7',
+                          '0': '#BE22E2',
                         }}
-                        percent={15}
+                        percent={70}
                         format={() => (
                           <img src={customer} alt=""/>
                         )}
@@ -529,10 +526,9 @@ const PersonalAreaPage = () => {
                         strokeWidth={6}
                         width={32}
                         strokeColor={{
-                          '15%': '#FF5655',
-                          '45%': '#E3E3E7',
+                          '0': '#F6339A',
                         }}
-                        percent={15}
+                        percent={75}
                         format={() => (
                           <img src={customer} alt=""/>
                         )}
@@ -558,10 +554,9 @@ const PersonalAreaPage = () => {
                         strokeWidth={6}
                         width={32}
                         strokeColor={{
-                          '15%': '#FF5655',
-                          '45%': '#E3E3E7',
+                          '0': '#FFB865',
                         }}
-                        percent={15}
+                        percent={30}
                         format={() => (
                           <img src={customer} alt=""/>
                         )}
@@ -587,10 +582,37 @@ const PersonalAreaPage = () => {
                         strokeWidth={6}
                         width={32}
                         strokeColor={{
-                          '15%': '#FF5655',
-                          '45%': '#E3E3E7',
+                          '0': '#FFD965',
                         }}
-                        percent={15}
+                        percent={27}
+                        format={() => (
+                          <img src={customer} alt=""/>
+                        )}
+                      />
+
+                    </div>
+                    piterparker
+                  </div>
+                </div>
+                <div className="table-item">
+                  <span>15.08.2021 - 16:35</span>
+                </div>
+              </div>
+              <div className="table-row">
+                <div className="table-item">
+                  10
+                </div>
+                <div className="table-item">
+                  <div className="user-info">
+                    <div className="user-pic">
+                      <Progress
+                        type="circle"
+                        strokeWidth={6}
+                        width={32}
+                        strokeColor={{
+                          '0': '#9A9BA2',
+                        }}
+                        percent={5}
                         format={() => (
                           <img src={customer} alt=""/>
                         )}

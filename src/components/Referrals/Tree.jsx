@@ -1,308 +1,266 @@
-import * as React from 'react';
-import PropTypes from 'prop-types';
-import SvgIcon from '@mui/material/SvgIcon';
-import { alpha, styled } from '@mui/material/styles';
-import TreeView from '@mui/lab/TreeView';
-import TreeItem, { treeItemClasses } from '@mui/lab/TreeItem';
-import Collapse from '@mui/material/Collapse';
-import { useSpring, animated } from 'react-spring';
-import {Progress} from "antd";
+import React from "react"
+import {Progress, Table,} from 'antd';
 import customer from "../../assets/icons/customer.svg";
 
-function MinusSquare(props) {
-  return (
-    <SvgIcon fontSize="inherit" style={{ width: 14, height: 14 }} {...props}>
-      {/* tslint:disable-next-line: max-line-length */}
-      <path d="M22.047 22.074v0 0-20.147 0h-20.12v0 20.147 0h20.12zM22.047 24h-20.12q-.803 0-1.365-.562t-.562-1.365v-20.147q0-.776.562-1.351t1.365-.575h20.147q.776 0 1.351.575t.575 1.351v20.147q0 .803-.575 1.365t-1.378.562v0zM17.873 11.023h-11.826q-.375 0-.669.281t-.294.682v0q0 .401.294 .682t.669.281h11.826q.375 0 .669-.281t.294-.682v0q0-.401-.294-.682t-.669-.281z" />
-    </SvgIcon>
-  );
-}
-
-function PlusSquare(props) {
-  return (
-    <SvgIcon fontSize="inherit" style={{ width: 14, height: 14 }} {...props}>
-      {/* tslint:disable-next-line: max-line-length */}
-      <path d="M22.047 22.074v0 0-20.147 0h-20.12v0 20.147 0h20.12zM22.047 24h-20.12q-.803 0-1.365-.562t-.562-1.365v-20.147q0-.776.562-1.351t1.365-.575h20.147q.776 0 1.351.575t.575 1.351v20.147q0 .803-.575 1.365t-1.378.562v0zM17.873 12.977h-4.923v4.896q0 .401-.281.682t-.682.281v0q-.375 0-.669-.281t-.294-.682v-4.896h-4.923q-.401 0-.682-.294t-.281-.669v0q0-.401.281-.682t.682-.281h4.923v-4.896q0-.401.294-.682t.669-.281v0q.401 0 .682.281t.281.682v4.896h4.923q.401 0 .682.281t.281.682v0q0 .375-.281.669t-.682.294z" />
-    </SvgIcon>
-  );
-}
-
-function CloseSquare(props) {
-  return (
-    <SvgIcon
-      className="close"
-      fontSize="inherit"
-      style={{ width: 14, height: 14 }}
-      {...props}
-    >
-      {/* tslint:disable-next-line: max-line-length */}
-      <path d="M17.485 17.512q-.281.281-.682.281t-.696-.268l-4.12-4.147-4.12 4.147q-.294.268-.696.268t-.682-.281-.281-.682.294-.669l4.12-4.147-4.12-4.147q-.294-.268-.294-.669t.281-.682.682-.281.696 .268l4.12 4.147 4.12-4.147q.294-.268.696-.268t.682.281 .281.669-.294.682l-4.12 4.147 4.12 4.147q.294.268 .294.669t-.281.682zM22.047 22.074v0 0-20.147 0h-20.12v0 20.147 0h20.12zM22.047 24h-20.12q-.803 0-1.365-.562t-.562-1.365v-20.147q0-.776.562-1.351t1.365-.575h20.147q.776 0 1.351.575t.575 1.351v20.147q0 .803-.575 1.365t-1.378.562v0z" />
-    </SvgIcon>
-  );
-}
-
-function TransitionComponent(props) {
-  const style = useSpring({
-    from: {
-      opacity: 0,
-      transform: 'translate3d(20px,0,0)',
-    },
-    to: {
-      opacity: props.in ? 1 : 0,
-      transform: `translate3d(${props.in ? 0 : 20}px,0,0)`,
-    },
-  });
-
-  return (
-    <animated.div style={style}>
-      <Collapse {...props} />
-    </animated.div>
-  );
-}
-
-TransitionComponent.propTypes = {
-  /**
-   * Show the component; triggers the enter or exit states
-   */
-  in: PropTypes.bool,
-};
-
-const StyledTreeItem = styled((props) => (
-  <TreeItem {...props} TransitionComponent={TransitionComponent} />
-))(({ theme }) => ({
-  [`& .${treeItemClasses.iconContainer}`]: {
-    width: "auto",
-    '& .close': {
-      display: "none",
-      position: "relative",
-      left: -10,
-    },
-  },
-  [`& .${treeItemClasses.group}`]: {
-    marginLeft: 15,
-    paddingLeft: 18,
-    borderLeft: `1px dashed ${alpha(theme.palette.text.primary, 0.4)}`,
-  },
-}));
-
-
-export default function CustomizedTreeView() {
-
-  return (
-    <TreeView
-      aria-label="customized"
-      defaultExpanded={['1']}
-      defaultCollapseIcon={<MinusSquare />}
-      defaultExpandIcon={<PlusSquare />}
-      defaultEndIcon={<CloseSquare />}
-    >
-      <StyledTreeItem nodeId="1" label={
-        <div className="table-body">
-          <div className="table-body__item col-1">
-            <div className="user-info">
-              <div className="user-pic">
-                <Progress
-                  type="circle"
-                  strokeWidth={6}
-                  width={32}
-                  strokeColor={{
-                    '15%': '#FF5655',
-                    '45%': '#E3E3E7',
-                  }}
-                  percent={15}
-                  format={() => (
-                    <img src={customer} alt=""/>
-                  )}
-                />
-
-              </div>
-
-              piterparker
-            </div>
+const columns = [
+  {
+    title: 'Nickname',
+    dataIndex: 'name',
+    key: 'name',
+    render: ([color, pic, percent, name, labelUser]) => (
+      <div className="user-wrapper">
+        <div className="user-info">
+          <div className="user-pic">
+            <Progress
+              type="circle"
+              strokeWidth={6}
+              width={32}
+              strokeColor={{
+                '0': color,
+              }}
+              percent={percent}
+              format={() => (
+                <img src={pic} alt="pic"/>
+              )}
+            />
           </div>
-          <div className="table-body__item col-2">
-            William Lawson
-          </div>
-          <div className="table-body__item col-3">
-            <div className="label black-600-bg">
-              1 lvl
-            </div>
-          </div>
-          <div className="table-body__item col-4">
-            -
-          </div>
-          <div className="table-body__item col-5">
-            50 | 37 | 10
-          </div>
-          <div className="table-body__item col-6">
-            30
-          </div>
-          <div className="table-body__item col-7">
-            200
-          </div>
-          <div className="table-body__item col-8">
-            <div className="user-info">
-              <div className="user-pic">
-                <Progress
-                  type="circle"
-                  strokeWidth={6}
-                  width={32}
-                  strokeColor={{
-                    '15%': '#FF5655',
-                    '45%': '#E3E3E7',
-                  }}
-                  percent={15}
-                  format={() => (
-                    <img src={customer} alt=""/>
-                  )}
-                />
-
-              </div>
-
-              piterparker
-            </div>
-          </div>
+          {name}
         </div>
-      }>
-        <StyledTreeItem nodeId="2" label={
-          <div className="table-body">
-            <div className="table-body__item col-1">
-              <div className="user-info">
-                <div className="user-pic">
-                  <Progress
-                    type="circle"
-                    strokeWidth={6}
-                    width={32}
-                    strokeColor={{
-                      '15%': '#FF5655',
-                      '45%': '#E3E3E7',
-                    }}
-                    percent={15}
-                    format={() => (
-                      <img src={customer} alt=""/>
-                    )}
-                  />
+        {labelUser ? <div className={`label ${labelUser}`}>{labelUser}</div> : ''}
+      </div>
+    ),
+  },
+  {
+    title: 'BIO',
+    dataIndex: 'bio',
+    key: 'bio',
+    width: '15%',
+  },
+  {
+    title: 'Status',
+    dataIndex: 'status',
+    width: '7%',
+    key: 'status',
+    render: ([status, color]) => <div className={`label ${color}`}>{status} lvl</div>,
+  },
+  {
+    title: 'line',
+    dataIndex: 'line',
+    width: '10%',
+    key: 'line',
+  },
+  {
+    title: 'partner',
+    dataIndex: 'partner',
+    width: '12%',
+    key: 'partner',
+  },
+  {
+    title: 'P.V.',
+    dataIndex: 'pv',
+    width: '6%',
+    key: 'pv',
+  },
+  {
+    title: 'G.V.',
+    dataIndex: 'gv',
+    width: '7%',
+    key: 'gv',
+  },
+  {
+    title: 'Sponsor',
+    dataIndex: 'sponsor',
+    width: '10%',
+    key: 'sponsor',
+    render: ([color, pic, percent, name]) => (
+      <div className="user-info">
+        <div className="user-pic">
+          <Progress
+            type="circle"
+            strokeWidth={6}
+            width={32}
+            strokeColor={{
+              '0': color,
+            }}
+            percent={percent}
+            format={() => (
+              <img src={pic} alt="pic"/>
+            )}
+          />
+        </div>
+        {name}
+      </div>
+    ),
+  },
+];
 
-                </div>
+const data = [
+  {
+    key: 1,
+    name: ['#0D05BA', customer, 65, "william"],
+    bio: "William Lawson",
+    status: [7, 'label--7'],
+    line: "-",
+    partner: "50 | 37 | 10",
+    pv: "30",
+    gv: "200",
+    sponsor: ['#F6339A', customer, 75, "maryjane"],
+    children: [
+      {
+        className: "new",
+        key: 12,
+        name: ['#A6D4FF', customer, 55, "piterparker", "new"],
+        bio: "William Lawson",
+        status: [6, 'label--6'],
+        line: "1",
+        partner: "50 | 37 | 10",
+        pv: "30",
+        gv: "200",
+        sponsor: ['#0D05BA', customer, 65, "piterparker"],
+        children: [
+          {
+            key: 124,
+            name: ['#9A9BA2', customer, 15, "salmahayek"],
+            bio: "Salma Hayek",
+            status: [1, 'label--1'],
+            line: "2",
+            partner: "50 | 37 | 10",
+            pv: "30",
+            gv: "200",
+            sponsor: ['#0D05BA', customer, 65, "piterparker"],
+            children: [
+              {
+                className: "children",
+                key: 126,
+                name: ['#FF5655', customer, 15, "sarasmit"],
+                bio: "William Lawson",
+                status: [2, 'label--2'],
+                line: "3",
+                partner: "50 | 37 | 10",
+                pv: "30",
+                gv: "200",
+                sponsor: ['#0D05BA', customer, 65, "piterparker"],
+              },
+              {
+                className: "children",
+                key: 126,
+                name: ['#FF5655', customer, 15, "johndoe"],
+                bio: "Piter Parker",
+                status: [2, 'label--2'],
+                line: "3",
+                partner: "50 | 37 | 10",
+                pv: "30",
+                gv: "200",
+                sponsor: ['#0D05BA', customer, 65, "piterparker"],
+              },
+            ],
+          },
+          {
+            key: 122,
+            name: ['#FFB865', customer, 25, "piterparker"],
+            bio: "William Lawson",
+            status: [3, 'label--3'],
+            line: "2",
+            partner: "50 | 37 | 10",
+            pv: "30",
+            gv: "200",
+            sponsor: ['#0D05BA', customer, 65, "piterparker"],
+            children: [
+              {
+                className: "children",
+                key: 1211,
+                name: ['#FF5655', customer, 65, "piterparker"],
+                bio: "William Lawson",
+                status: [2, 'label--2'],
+                line: "4",
+                partner: "50 | 37 | 10",
+                pv: "30",
+                gv: "200",
+                sponsor: ['#0D05BA', customer, 65, "piterparker"],
+              },
+              {
+                className: "children",
+                key: 12112,
+                name: ['#FF5655', customer, 65, "piterparker"],
+                bio: "William Lawson",
+                status: [2, 'label--2'],
+                line: "4",
+                partner: "50 | 37 | 10",
+                pv: "30",
+                gv: "200",
+                sponsor: ['#0D05BA', customer, 65, "piterparker"],
+              },
+            ],
+          },
+        ],
+      },
+      {
+        className: "deleted",
+        key: 2,
+        name: ['#A6D4FF', customer, 65, "piterparker", "deleted"],
+        bio: "William Lawson",
+        status: [6, 'label--6'],
+        line: "--",
+        partner: "-- | -- | --",
+        pv: "--",
+        gv: "--",
+        sponsor: ['#0D05BA', customer, 65, "piterparker"],
+        children: [
+          {
+            key: 124,
+            name: ['#9A9BA2', customer, 15, "piterparker"],
+            bio: "William Lawson",
+            status: [1, 'label--1'],
+            line: "1",
+            partner: "50 | 37 | 10",
+            pv: "30",
+            gv: "200",
+            sponsor: ['#0D05BA', customer, 65, "piterparker"],
+          },
+        ],
+      },
+      {
+        className: "children-1",
+        key: 3,
+        name: ['#FFD965', customer, 35, "piterparker"],
+        bio: "William Lawson",
+        status: [4, 'label--4'],
+        line: "2",
+        partner: "50 | 37 | 10",
+        pv: "30",
+        gv: "200",
+        sponsor: ['#0D05BA', customer, 65, "piterparker"],
+        children: [
+          {
+            key: 125,
+            name: ['#9A9BA2', customer, 15, "piterparker"],
+            bio: "William Lawson",
+            status: [1, 'label--1'],
+            line: "3",
+            partner: "50 | 37 | 10",
+            pv: "30",
+            gv: "200",
+            sponsor: ['#0D05BA', customer, 65, "piterparker"],
+          },
+        ],
+      },
+    ],
+  },
+];
 
-                piterparker
-              </div>
-            </div>
-            <div className="table-body__item col-2">
-              William Lawson
-            </div>
-            <div className="table-body__item col-3">
-              <div className="label black-600-bg">
-                1 lvl
-              </div>
-            </div>
-            <div className="table-body__item col-4">
-              -
-            </div>
-            <div className="table-body__item col-5">
-              50 | 37 | 10
-            </div>
-            <div className="table-body__item col-6">
-              30
-            </div>
-            <div className="table-body__item col-7">
-              200
-            </div>
-            <div className="table-body__item col-8">
-              <div className="user-info">
-                <div className="user-pic">
-                  <Progress
-                    type="circle"
-                    strokeWidth={6}
-                    width={32}
-                    strokeColor={{
-                      '15%': '#FF5655',
-                      '45%': '#E3E3E7',
-                    }}
-                    percent={15}
-                    format={() => (
-                      <img src={customer} alt=""/>
-                    )}
-                  />
 
-                </div>
-
-                piterparker
-              </div>
-            </div>
-          </div>
-        }>
-          <StyledTreeItem nodeId="3" label={
-            <div className="table-body">
-              <div className="table-body__item col-1">
-                <div className="user-info">
-                  <div className="user-pic">
-                    <Progress
-                      type="circle"
-                      strokeWidth={6}
-                      width={32}
-                      strokeColor={{
-                        '15%': '#FF5655',
-                        '45%': '#E3E3E7',
-                      }}
-                      percent={15}
-                      format={() => (
-                        <img src={customer} alt=""/>
-                      )}
-                    />
-
-                  </div>
-
-                  piterparker
-                </div>
-              </div>
-              <div className="table-body__item col-2">
-                William Lawson
-              </div>
-              <div className="table-body__item col-3">
-                <div className="label black-600-bg">
-                  1 lvl
-                </div>
-              </div>
-              <div className="table-body__item col-4">
-                -
-              </div>
-              <div className="table-body__item col-5">
-                50 | 37 | 10
-              </div>
-              <div className="table-body__item col-6">
-                30
-              </div>
-              <div className="table-body__item col-7">
-                200
-              </div>
-              <div className="table-body__item col-8">
-                <div className="user-info">
-                  <div className="user-pic">
-                    <Progress
-                      type="circle"
-                      strokeWidth={6}
-                      width={32}
-                      strokeColor={{
-                        '15%': '#FF5655',
-                        '45%': '#E3E3E7',
-                      }}
-                      percent={15}
-                      format={() => (
-                        <img src={customer} alt=""/>
-                      )}
-                    />
-
-                  </div>
-
-                  piterparker
-                </div>
-              </div>
-            </div>
-          } />
-
-        </StyledTreeItem>
-      </StyledTreeItem>
-    </TreeView>
+function TreeData() {
+  return (
+    <Table
+      columns={columns}
+      dataSource={data}
+      pagination={false}
+      hideSelectAll={true}
+      // eslint-disable-next-line
+      rowClassName={(record) => record.className === record.className ? record.className : "" }
+      indentSize={36}
+    />
   );
 }
+
+export default TreeData

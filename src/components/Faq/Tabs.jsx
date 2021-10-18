@@ -48,7 +48,13 @@ export default function FaqTabs() {
 
   return (
     <div className="tabs-wrapper">
-        <Tabs value={value} onChange={handleChange} aria-label="tabs">
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          aria-label="tabs"
+          variant="scrollable"
+          allowScrollButtonsMobile
+        >
           <Tab label="All qestions" {...a11yProps(0)} />
           <Tab label="MLM qestions" {...a11yProps(1)} />
           <Tab label="Internet Marketing" {...a11yProps(2)} />

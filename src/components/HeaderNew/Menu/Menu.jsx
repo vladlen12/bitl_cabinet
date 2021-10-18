@@ -50,6 +50,12 @@ function Menu({isOpen, commonClass}) {
     const [isDesktop,setIsDesktop] = useState();
     const {width} = useWindowSize()
 
+    const [state, setState] = useState(false);
+    useEffect(() => {
+        document.body.classList.toggle('dark-theme', state);
+    },[state])
+
+
     useEffect(() => {
         setIsDesktop(width >= constants.WINDOW_DESKTOP_SIZE)
     },[width])
@@ -160,6 +166,7 @@ function Menu({isOpen, commonClass}) {
                             </div>
                             <Switch isToggled={isToggled}
                                     onToggle={() => setIsToggled(!isToggled)}
+                                    onCLick={()=> setState(!state)}
                             />
                         </div>
                     </ListItem>
@@ -292,6 +299,7 @@ function Menu({isOpen, commonClass}) {
                             </div>
                             <Switch isToggled={isToggled}
                                     onToggle={() => setIsToggled(!isToggled)}
+                                    onCLick={()=> setState(!state)}
                             />
                         </div>
                     </ListItem>

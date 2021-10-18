@@ -1,6 +1,6 @@
 import React from "react"
 import Popover from '@mui/material/Popover';
-import Share from "../../assets/icons/share.svg";
+import {ReactComponent as Share} from "../../assets/icons/share.svg";
 import Facebook from "../../assets/icons/social/Facebook.svg"
 import Telegram from "../../assets/icons/social/Telegram.svg"
 import Twitter from "../../assets/icons/social/Twitter.svg"
@@ -25,7 +25,7 @@ export default function SharePopover() {
 
   return (
     <>
-      <img src={Share} alt="share" aria-describedby={id}  onClick={handleClick} className="share-icon"/>
+      <Share aria-describedby={id}  onClick={handleClick} className="share-icon" />
       <Popover
         id={id}
         open={open}

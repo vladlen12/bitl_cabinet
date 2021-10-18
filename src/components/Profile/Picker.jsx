@@ -3,8 +3,6 @@ import TextField from '@mui/material/TextField';
 import AdapterDateFns from '@mui/lab/AdapterDateFns';
 import LocalizationProvider from '@mui/lab/LocalizationProvider';
 import DatePicker from '@mui/lab/DatePicker';
-import InputAdornment from "@mui/material/InputAdornment";
-import {ReactComponent as CalendarIcon} from "../../assets/icons/Calendar.svg";
 
 export default function DatePickerProfile() {
   const [value, setValue] = React.useState(null);
@@ -20,14 +18,8 @@ export default function DatePickerProfile() {
         renderInput={
           (params) =>
             <TextField
+              className="textarea search-input"
               {...params}
-              InputProps={{
-                endAdornment: (
-                  <InputAdornment position="end">
-                    <CalendarIcon />
-                  </InputAdornment>
-                ),
-              }}
             />
         }
       />

@@ -18,10 +18,6 @@
       }
     }
 
-    .MuiTabs-flexContainer {
-      overflow-x: auto;
-    }
-
     .MuiTab-root {
       padding: 0 0 16px 0;
       min-width: auto;
@@ -45,7 +41,6 @@
       font-weight: bold;
       font-size: 12px;
       line-height: 12px;
-      letter-spacing: 1px;
       text-transform: uppercase;
       color: $Black-700;
     }
@@ -92,7 +87,7 @@
         left: 0;
         top: 0;
         width: 58px;
-        height: 58px;
+        height: 62px;
         background-image: url("../../assets/accordionImg1.svg");
         background-size: cover;
       }
@@ -102,11 +97,14 @@
       border-radius: 8px;
       border: 1px solid $Black-500;
       margin-bottom: 16px;
+      font-family: 'Gilroy', sans-serif;
+      overflow: hidden;
       &:before {
         display: none;
       }
       &.Mui-expanded {
         border-color: $Main-900;
+        overflow: auto;
         .MuiAccordionSummary-root {
           &:before {
             background-image: url("../../assets/accordionImg2.svg");

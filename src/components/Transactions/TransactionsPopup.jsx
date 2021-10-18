@@ -27,7 +27,7 @@ export default function TransactionsPopup() {
         aria-labelledby="dialog"
         aria-describedby="dialog"
       >
-        <div className="modal-wrapper board">
+        <div className="modal-wrapper board modal-wrapper--search">
           <div className="title">
             Withdrawal and deposit
           </div>

@@ -1,12 +1,20 @@
 @import "../../../styles/utils/variables";
 
+body {
+  &.dark-theme {
+    .listItemContent {
+      color: $Black-500;
+    }
+  }
+}
+
 .listItemText{
   font-family: Gilroy, serif;
   font-size: 12px;
   line-height: 12px;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #33343E;
+  color: $Black-700;
 }
 .listItemContent{
   display: flex;
@@ -16,14 +24,14 @@
   line-height: 12px;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #33343E;
+  color: $Black-700;
 }
 .listItemContent:hover{
-  color: #7B61FF;
+  color: $Secondary-900;
 }
 
 .activeLink{
-  color: #7B61FF;
+  color: $Secondary-900;
   font-weight: bold;
 }
 

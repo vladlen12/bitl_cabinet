@@ -6,13 +6,13 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import {ReactComponent as Tab1} from '../../assets/icons/tab1.svg';
 import {ReactComponent as Tab2} from '../../assets/icons/tab2.svg';
-import Saving from "../../assets/icons/tab3.svg"
+import {ReactComponent as Saving} from "../../assets/icons/tab3.svg"
 import Info from "../../assets/icons/info.svg"
 import Close from "../../assets/icons/Close.svg"
 import {Progress} from "antd";
 import customer from "../../assets/icons/customer.svg";
 import PaginationRounded from "../Pagination/Pagination";
-import CustomizedTreeView from "./Tree";
+import TreeData from "./Tree";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -57,56 +57,23 @@ export default function BasicTabs() {
   return (
     <Box sx={{ width: '100%' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          aria-label="tabs"
+          variant="scrollable"
+          allowScrollButtonsMobile
+        >
           <Tab icon={<Tab1 />} {...a11yProps(0)} />
           <Tab icon={<Tab2 />} {...a11yProps(1)} />
           <div className="tab-item">
-            <img src={Saving} alt="icon"/>
+            <Saving />
           </div>
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
         <div className="table-wrapper table-wrapper--tree">
-          <div className="table">
-            <div className="table-head">
-              <div className="col-1 table-col">
-                Nickname
-              </div>
-              <div className="col-2 table-col">
-                BIO
-              </div>
-              <div className="col-3 table-col">
-                Status
-              </div>
-              <div className="col-4 table-col">
-                line
-              </div>
-              <div className="col-5 table-col">
-                partner
-              </div>
-              <div className="col-6 table-col">
-                P.V.
-              </div>
-              <div className="col-7 table-col">
-                G.V.
-              </div>
-              <div className="col-8 table-col">
-                Sponsor
-              </div>
-            </div>
-            <CustomizedTreeView />
-            <div className="pagination-wrapper">
-              <div className="page-count">
-                Rows per page:
-                <input type="text" placeholder="10"/>
-              </div>
-
-              <div className="pagination">
-                <PaginationRounded />
-              </div>
-            </div>
-          </div>
-
+          <TreeData />
         </div>
       </TabPanel>
       <TabPanel value={value} index={1}>
@@ -145,10 +112,9 @@ export default function BasicTabs() {
                       strokeWidth={6}
                       width={32}
                       strokeColor={{
-                        '15%': '#FF5655',
-                        '45%': '#E3E3E7',
+                        '0': '#5851FF',
                       }}
-                      percent={15}
+                      percent={55}
                       format={() => (
                         <img src={customer} alt=""/>
                       )}
@@ -156,12 +122,12 @@ export default function BasicTabs() {
 
                   </div>
 
-                  piterparker
+                  william
                 </div>
               </td>
               <td className="td-2">William Lawson</td>
               <td className="td-3">
-                <div className="label black-600-bg">1 lvl</div>
+                <div className="label label--7">7 lvl</div>
               </td>
               <td className="td-4">-</td>
               <td className="td-5">50 | 37 | 10</td>
@@ -175,10 +141,9 @@ export default function BasicTabs() {
                       strokeWidth={6}
                       width={32}
                       strokeColor={{
-                        '15%': '#FF5655',
-                        '45%': '#E3E3E7',
+                        '0': '#F6339A',
                       }}
-                      percent={15}
+                      percent={80}
                       format={() => (
                         <img src={customer} alt=""/>
                       )}
@@ -186,7 +151,7 @@ export default function BasicTabs() {
 
                   </div>
 
-                  piterparker
+                  maryjane
                 </div>
               </td>
             </tr>
@@ -199,10 +164,9 @@ export default function BasicTabs() {
                       strokeWidth={6}
                       width={32}
                       strokeColor={{
-                        '15%': '#FF5655',
-                        '45%': '#E3E3E7',
+                        '0': '#A6D4FF',
                       }}
-                      percent={15}
+                      percent={50}
                       format={() => (
                         <img src={customer} alt=""/>
                       )}
@@ -210,17 +174,17 @@ export default function BasicTabs() {
 
                   </div>
 
-                  piterparker
+                  william
                 </div>
                 <div className="label new">
                   new
                 </div>
               </td>
-              <td className="td-2">William Lawson</td>
+              <td className="td-2">--</td>
               <td className="td-3">
-                <div className="label black-600-bg">1 lvl</div>
+                <div className="label label--6">6 lvl</div>
               </td>
-              <td className="td-4">-</td>
+              <td className="td-4">1</td>
               <td className="td-5">50 | 37 | 10</td>
               <td>30</td>
               <td>200</td>
@@ -232,10 +196,9 @@ export default function BasicTabs() {
                       strokeWidth={6}
                       width={32}
                       strokeColor={{
-                        '15%': '#FF5655',
-                        '45%': '#E3E3E7',
+                        '0': '#5851FF',
                       }}
-                      percent={15}
+                      percent={55}
                       format={() => (
                         <img src={customer} alt=""/>
                       )}
@@ -243,7 +206,7 @@ export default function BasicTabs() {
 
                   </div>
 
-                  piterparker
+                  william
                 </div>
               </td>
             </tr>
@@ -256,10 +219,9 @@ export default function BasicTabs() {
                       strokeWidth={6}
                       width={32}
                       strokeColor={{
-                        '15%': '#FF5655',
-                        '45%': '#E3E3E7',
+                        '0': '#9A9BA2',
                       }}
-                      percent={15}
+                      percent={10}
                       format={() => (
                         <img src={customer} alt=""/>
                       )}
@@ -267,14 +229,14 @@ export default function BasicTabs() {
 
                   </div>
 
-                  piterparker
+                  salmahayek
                 </div>
               </td>
-              <td className="td-2">William Lawson</td>
+              <td className="td-2">Salma Hayek</td>
               <td className="td-3">
-                <div className="label black-600-bg">1 lvl</div>
+                <div className="label label--1">1 lvl</div>
               </td>
-              <td className="td-4">-</td>
+              <td className="td-4">2</td>
               <td className="td-5">50 | 37 | 10</td>
               <td>30</td>
               <td>200</td>
@@ -286,10 +248,9 @@ export default function BasicTabs() {
                       strokeWidth={6}
                       width={32}
                       strokeColor={{
-                        '15%': '#FF5655',
-                        '45%': '#E3E3E7',
+                        '0': '#5851FF',
                       }}
-                      percent={15}
+                      percent={55}
                       format={() => (
                         <img src={customer} alt=""/>
                       )}
@@ -297,7 +258,7 @@ export default function BasicTabs() {
 
                   </div>
 
-                  piterparker
+                  william
                 </div>
               </td>
             </tr>
@@ -310,8 +271,7 @@ export default function BasicTabs() {
                       strokeWidth={6}
                       width={32}
                       strokeColor={{
-                        '15%': '#FF5655',
-                        '45%': '#E3E3E7',
+                        '0': '#FF5655',
                       }}
                       percent={15}
                       format={() => (
@@ -321,14 +281,14 @@ export default function BasicTabs() {
 
                   </div>
 
-                  piterparker
+                  sarasmit
                 </div>
               </td>
-              <td className="td-2">William Lawson</td>
+              <td className="td-2">--</td>
               <td className="td-3">
-                <div className="label black-600-bg">1 lvl</div>
+                <div className="label label--2">2 lvl</div>
               </td>
-              <td className="td-4">-</td>
+              <td className="td-4">3</td>
               <td className="td-5">50 | 37 | 10</td>
               <td>30</td>
               <td>200</td>
@@ -340,10 +300,9 @@ export default function BasicTabs() {
                       strokeWidth={6}
                       width={32}
                       strokeColor={{
-                        '15%': '#FF5655',
-                        '45%': '#E3E3E7',
+                        '0': '#5851FF',
                       }}
-                      percent={15}
+                      percent={55}
                       format={() => (
                         <img src={customer} alt=""/>
                       )}
@@ -351,7 +310,7 @@ export default function BasicTabs() {
 
                   </div>
 
-                  piterparker
+                  william
                 </div>
               </td>
             </tr>
@@ -364,8 +323,7 @@ export default function BasicTabs() {
                       strokeWidth={6}
                       width={32}
                       strokeColor={{
-                        '15%': '#FF5655',
-                        '45%': '#E3E3E7',
+                        '0': '#FF5655',
                       }}
                       percent={15}
                       format={() => (
@@ -375,14 +333,14 @@ export default function BasicTabs() {
 
                   </div>
 
-                  piterparker
+                  johndoe
                 </div>
               </td>
               <td className="td-2">William Lawson</td>
               <td className="td-3">
-                <div className="label black-600-bg">1 lvl</div>
+                <div className="label label--2">2 lvl</div>
               </td>
-              <td className="td-4">-</td>
+              <td className="td-4">3</td>
               <td className="td-5">50 | 37 | 10</td>
               <td>30</td>
               <td>200</td>
@@ -394,10 +352,9 @@ export default function BasicTabs() {
                       strokeWidth={6}
                       width={32}
                       strokeColor={{
-                        '15%': '#FF5655',
-                        '45%': '#E3E3E7',
+                        '0': '#5851FF',
                       }}
-                      percent={15}
+                      percent={55}
                       format={() => (
                         <img src={customer} alt=""/>
                       )}
@@ -405,7 +362,7 @@ export default function BasicTabs() {
 
                   </div>
 
-                  piterparker
+                  william
                 </div>
               </td>
             </tr>
@@ -418,10 +375,9 @@ export default function BasicTabs() {
                       strokeWidth={6}
                       width={32}
                       strokeColor={{
-                        '15%': '#FF5655',
-                        '45%': '#E3E3E7',
+                        '0': '#FFB865',
                       }}
-                      percent={15}
+                      percent={25}
                       format={() => (
                         <img src={customer} alt=""/>
                       )}
@@ -429,14 +385,14 @@ export default function BasicTabs() {
 
                   </div>
 
-                  piterparker
+                  salmahayek
                 </div>
               </td>
-              <td className="td-2">William Lawson</td>
+              <td className="td-2">Salma Hayek</td>
               <td className="td-3">
-                <div className="label black-600-bg">1 lvl</div>
+                <div className="label label--3">3 lvl</div>
               </td>
-              <td className="td-4">-</td>
+              <td className="td-4">2</td>
               <td className="td-5">50 | 37 | 10</td>
               <td>30</td>
               <td>200</td>
@@ -448,10 +404,9 @@ export default function BasicTabs() {
                       strokeWidth={6}
                       width={32}
                       strokeColor={{
-                        '15%': '#FF5655',
-                        '45%': '#E3E3E7',
+                        '0': '#5851FF',
                       }}
-                      percent={15}
+                      percent={55}
                       format={() => (
                         <img src={customer} alt=""/>
                       )}
@@ -459,7 +414,7 @@ export default function BasicTabs() {
 
                   </div>
 
-                  piterparker
+                  william
                 </div>
               </td>
             </tr>
@@ -472,10 +427,9 @@ export default function BasicTabs() {
                       strokeWidth={6}
                       width={32}
                       strokeColor={{
-                        '15%': '#FF5655',
-                        '45%': '#E3E3E7',
+                        '0': '#A6D4FF',
                       }}
-                      percent={15}
+                      percent={45}
                       format={() => (
                         <img src={customer} alt=""/>
                       )}
@@ -483,7 +437,7 @@ export default function BasicTabs() {
 
                   </div>
 
-                  piterparker
+                  william
                 </div>
                 <div className="label delete">
                   deleted
@@ -491,12 +445,12 @@ export default function BasicTabs() {
               </td>
               <td className="td-2">William Lawson</td>
               <td className="td-3">
-                <div className="label black-600-bg">1 lvl</div>
+
               </td>
-              <td className="td-4">-</td>
-              <td className="td-5">50 | 37 | 10</td>
-              <td>30</td>
-              <td>200</td>
+              <td className="td-4">1</td>
+              <td className="td-5">-- | -- | --</td>
+              <td>--</td>
+              <td>--</td>
               <td>
                 <div className="user-info">
                   <div className="user-pic">
@@ -505,10 +459,9 @@ export default function BasicTabs() {
                       strokeWidth={6}
                       width={32}
                       strokeColor={{
-                        '15%': '#FF5655',
-                        '45%': '#E3E3E7',
+                        '0': '#5851FF',
                       }}
-                      percent={15}
+                      percent={55}
                       format={() => (
                         <img src={customer} alt=""/>
                       )}
@@ -516,7 +469,7 @@ export default function BasicTabs() {
 
                   </div>
 
-                  piterparker
+                  william
                 </div>
               </td>
             </tr>
@@ -529,10 +482,9 @@ export default function BasicTabs() {
                       strokeWidth={6}
                       width={32}
                       strokeColor={{
-                        '15%': '#FF5655',
-                        '45%': '#E3E3E7',
+                        '0': '#FFD965',
                       }}
-                      percent={15}
+                      percent={35}
                       format={() => (
                         <img src={customer} alt=""/>
                       )}
@@ -540,14 +492,14 @@ export default function BasicTabs() {
 
                   </div>
 
-                  piterparker
+                  andrewfirst
                 </div>
               </td>
-              <td className="td-2">William Lawson</td>
+              <td className="td-2">--</td>
               <td className="td-3">
-                <div className="label black-600-bg">1 lvl</div>
+                <div className="label label--4">4 lvl</div>
               </td>
-              <td className="td-4">-</td>
+              <td className="td-4">1</td>
               <td className="td-5">50 | 37 | 10</td>
               <td>30</td>
               <td>200</td>
@@ -559,10 +511,9 @@ export default function BasicTabs() {
                       strokeWidth={6}
                       width={32}
                       strokeColor={{
-                        '15%': '#FF5655',
-                        '45%': '#E3E3E7',
+                        '0': '#5851FF',
                       }}
-                      percent={15}
+                      percent={55}
                       format={() => (
                         <img src={customer} alt=""/>
                       )}
@@ -570,7 +521,7 @@ export default function BasicTabs() {
 
                   </div>
 
-                  piterparker
+                  william
                 </div>
               </td>
             </tr>

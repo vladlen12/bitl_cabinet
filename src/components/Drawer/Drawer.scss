@@ -4,6 +4,7 @@
   padding: 10px 24px;
   @media (min-width: $desktop) {
     padding: 24px 32px;
+    width: 400px;
   }
 
   .user-aria {
@@ -50,7 +51,9 @@
     }
 
     .label {
-      margin-top: 12px;
+      margin-top: 9px;
+      background-color: rgba(154, 155, 162, .1);
+      color: $Black-600;
     }
   }
 
@@ -74,6 +77,14 @@
   .input-field {
     margin-top: 40px;
     margin-bottom: 24px;
+    width: 100%;
+    @media (min-width: $tablet) {
+      max-width: 336px;
+    }
+
+    input {
+      padding-right: 5px;
+    }
   }
 
   .user-data {
@@ -134,6 +145,7 @@
 
   .user-aria--support {
     flex-wrap: wrap;
+    align-items: center;
     .title {
       font-weight: bold;
       font-size: 20px;
@@ -142,6 +154,7 @@
       flex: none;
       width: 100%;
       margin-bottom: 8px;
+      flex: none;
     }
 
     .user-info {

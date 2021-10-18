@@ -9,21 +9,27 @@
       color: $Black-700;
       padding-bottom: 8px;
       border-bottom: 1px solid $Black-500;
-      padding-top: 32px;
-      padding-left: 52px;
-      padding-right: 52px;
+      padding-top: 16px;
+      padding-left: 20px;
+      padding-right: 20px;
       @media (min-width: $tablet) {
         font-size: 20px;
         line-height: 30px;
+        padding-top: 32px;
+        padding-left: 52px;
+        padding-right: 52px;
         padding-bottom: 16px;
       }
     }
   }
 
   .search-bar-wrapper {
-    padding: 32px 52px 40px;
+    padding: 20px;
     position: relative;
     overflow: hidden;
+    @media (min-width: $tablet) {
+      padding: 32px 52px 40px;
+    }
     &:before {
       content: '';
       width: 100%;
@@ -31,13 +37,17 @@
       background-color: $Black-500;
       position: absolute;
       left: 0;
-      top: 112px;
+      top: 180px;
+      @media (min-width: $tablet) {
+        top: 112px;
+      }
     }
   }
 
   .input-search-wrapper {
     width: 100%;
     height: 48px;
+    margin-bottom: 100px;
     @media (min-width: $tablet) {
       width: 200px;
       margin-right: 20px;
@@ -59,8 +69,15 @@
 
     .MuiTabs-root {
       position: absolute;
-      right: 52px;
-      top: 36px;
+      left: 20px;
+      top: 90px;
+      width: 100%;
+      @media (min-width: $tablet) {
+        right: 52px;
+        top: 36px;
+        left: auto;
+        width: auto;
+      }
     }
 
     .MuiBox-root {
@@ -82,6 +99,18 @@
       cursor: pointer;
       &:last-child {
         margin-right: 0;
+        @media (max-width: $tablet - 1) {
+          margin-left: auto;
+          margin-right: 40px;
+        }
+      }
+
+      &:hover {
+        svg {
+          path {
+            fill: $Secondary-900;
+          }
+        }
       }
       svg {
         path {
@@ -106,10 +135,7 @@
   .currency-info {
     flex-wrap: wrap;
     justify-content: space-between;
-
-    @media (min-width: $tablet) {
-      margin-bottom: 0;
-    }
+    margin-bottom: 0;
 
     @media (min-width: $desktop) {
       margin-bottom: 24px;
@@ -118,6 +144,8 @@
 
     .currency-info__item {
       margin-right: 0;
+      width: 48%;
+      margin-bottom: 8px;
       @media (min-width: $tablet) {
         width: 48%;
         margin-right: 0;
@@ -144,6 +172,7 @@
     border: 1px solid $Black-500;
     border-radius: 8px;
     margin-bottom: 32px;
+    font-family: "Gilroy", sans-serif;
     &:before {
       content: '';
       position: absolute;
@@ -192,7 +221,6 @@
         font-weight: bold;
         font-size: 12px;
         line-height: 12px;
-        letter-spacing: 1px;
         text-transform: uppercase;
         color: $Black-600;
       }
@@ -301,157 +329,177 @@
   }
 
   .table-wrapper--tree {
-    .table-col {
-      font-weight: bold;
-      font-size: 12px;
-      line-height: 12px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: $Black-600;
-      &:first-child {
-        padding-left: 28px;
+    .ant-table-thead > tr > th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before {
+      display: none;
+    }
+
+    .ant-table-thead > tr > th,
+    .ant-table-tbody > tr.ant-table-row:hover > td{
+      background-color: transparent;
+    }
+
+    .ant-table-thead {
+      .ant-table-cell {
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 12px;
+        color: $Black-600;
+        text-transform: uppercase;
+        border-bottom: none;
+      }
+    }
+
+    .user-info {
+      padding: 0;
+      margin: 0;
+      border-bottom: none;
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+      position: relative;
+      z-index: 2;
+    }
+
+    .ant-table-row-expand-icon {
+      position: relative;
+      margin: 0 7px 0 0;
+      width: 24px;
+      height: 24px;
+      background-image: url("../../assets/icons/Exclude-minus.svg");
+      transform: none;
+      border: none;
+      background-size: cover;
+      &.ant-table-row-expand-icon-collapsed {
+        background-image: url("../../assets/icons/Exclude-plus.svg");
+        background-position: -.8px center;
+        &:before {
+          display: none;
+        }
       }
 
+      &:before,
+      &:after{
+        display: none;
+      }
+    }
+
+    .ant-table-cell-with-append {
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .label {
+      display: inline-block;
+    }
+
+    .ant-table-thead > tr > th{
+      padding: 16px 0;
+      vertical-align: middle;
+      &:first-child {
+        padding-left: 48px;
+      }
       &:last-child {
         padding-right: 24px;
       }
     }
 
-    .table-head {
-      display: flex;
-      align-items: center;
-      padding-left: 10px;
-      .col-1 {
-        width: 22%;
+    .ant-table-tbody > tr > td {
+      padding: 16px 0;
+      vertical-align: middle;
+      &:first-child {
+        padding-left: 16px;
       }
-
-      .col-2 {
-        width: 14%;
-      }
-
-      .col-3 {
-        width: 8.5%;
-      }
-
-      .col-4 {
-        width: 11%;
-      }
-
-      .col-5 {
-        width: 10%;
-      }
-
-      .col-6 {
-        width: 9.5%;
-      }
-
-      .col-7 {
-        width: 10%;
-      }
-
-      .col-8 {
-        width: 10%;
+      &:last-child {
+        padding-right: 24px;
       }
     }
 
-    .MuiTreeItem-content {
-      padding-right: 0;
-    }
-
-    .MuiTreeItem-label {
-      padding-left: 0;
-    }
-
-    .table-body {
-      display: flex;
-      align-items: center;
-      .table-body__item {
-        display: flex;
-        align-items: center;
-        font-size: 14px;
-        line-height: 20px;
-        color: $Black-700;
-        padding: 10px;
-        white-space: nowrap;
-      }
-
-      .label {
-        display: inline-block;
-      }
-
-      .user-info {
-        padding: 0;
-        margin: 0;
-        display: flex;
-        align-items: center;
-      }
-
-      .col-1 {
-        width: 20%;
-      }
-
-      .col-2 {
-        width: 14%;
-      }
-
-      .col-3 {
-        width: 10%;
-      }
-
-      .col-4 {
-        width: 10%;
+    .ant-table-cell {
+      &:nth-child(4) {
         text-align: center;
       }
+    }
 
-      .col-5 {
-        width: 10%;
+    .user-wrapper {
+      display: flex;
+      align-items: center;
+      .user-pic {
+        background-color: $White-100;
+        border-radius: 100%;
       }
-
-      .col-6 {
-        width: 10%;
-      }
-
-      .col-7 {
-        width: 10%;
-      }
-      .col-8 {
-        width: 11%;
+      .label {
+        margin-left: 4px;
       }
     }
 
-    .MuiTreeItem-content {
-      background-color: transparent;
-      &:hover {
+    .new {
+      background-color: rgba(56, 212, 126, .1);
+      border-radius: 4px;
+      .ant-table-row-expand-icon {
         background-color: transparent;
       }
-    }
 
-    .MuiCollapse-root  {
-      border: none;
-      position: relative;
-      &:before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: -16px;
-        border-left: 1px dashed $Black-600;
-        height: calc(100% + 16px);
+      .new {
+        &.label {
+          background-color: rgba(56, 212, 126, .2);
+          color: $Main-900;
+        }
       }
     }
 
-    .MuiSvgIcon-root {
-      background-color: $White-100;
-      position: relative;
-      z-index: 1;
+    .deleted {
+      background-color: rgba(255, 86, 85, .1);
+      border-radius: 4px;
+      color: $Warning-900;
+      .ant-table-row-expand-icon {
+        background-color: transparent;
+      }
+
+      .ant-table-cell {
+        &:last-child {
+          .user-info {
+            color: $Black-700;
+          }
+        }
+
+        &:nth-child(3) {
+          .label {
+            display: none;
+          }
+
+          &:before {
+            content: "--";
+          }
+        }
+      }
+
+
+      .deleted {
+        &.label {
+          background-color: rgba(255, 86, 85, .2);
+          color: $Warning-900;
+        }
+      }
     }
+
+    .ant-table-row {
+      &:last-child {
+        .ant-table-cell {
+          border-bottom: none;
+        }
+      }
+    }
+
+    table {
+      overflow: hidden;
+    }
+
   }
 
-  .table-wrapper {
-    @media (max-width: $desktop - 1) {
-      overflow-x: auto;
-    }
-    .table {
-      width: 100%;
+  .ant-table-content {
+    overflow-x: auto;
+    table {
       min-width: 800px;
     }
   }

@@ -1,3 +1,5 @@
+@import "../../../styles/utils/variables";
+
 .customer{
   display: flex;
 }
@@ -11,11 +13,12 @@
   font-weight: bold;
   font-size: 14px;
   line-height: 20px;
-  color: #33343E;
+  color: $Black-700;
 }
+
 .level{
   padding: 5px 11px;
-  background: #3206AC;
+  background: $Navy-800;
   border-radius: 4px;
 }
 .levelText{
@@ -25,6 +28,6 @@
   line-height: 10px;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: $White-100;
   text-align: center;
 }

@@ -50,13 +50,13 @@ q:before, q:after {
   content: '';
   content: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
+  font-family: 'Gilroy', sans-serif;
 }
-a{
-  text-decoration: #FFFFFF;
-}
+
 
 @import "./utils/variables";
 @import "./typography.scss";
@@ -65,9 +65,11 @@ body{
   background: #FAFAFF;
   font-family: 'Gilroy', sans-serif;
 }
+
 a{
   text-decoration: none;
 }
+
 .App {
   max-width: 1024px;
   margin: 0 auto;
@@ -122,11 +124,13 @@ a{
 }
 
 .textarea {
+  font-family: 'Gilroy', sans-serif;
   input {
     padding: 14px 16px;
     font-size: 14px;
     height: 50px;
     box-sizing: border-box;
+    font-family: 'Gilroy', sans-serif;
   }
 
   fieldset {
@@ -155,10 +159,10 @@ a{
 
     &.Mui-focused {
       .MuiOutlinedInput-notchedOutline {
-        border-color: #7B61FF;
+        border-color: $Secondary-900;
       }
       &:hover {
-        border-color: #7B61FF;
+        border-color: $Secondary-900;
       }
     }
 
@@ -185,7 +189,7 @@ a{
 
   .MuiFormLabel-root {
     &.Mui-focused {
-      color: #7B61FF;
+      color: $Secondary-900;
     }
 
     &.Mui-error {
@@ -201,7 +205,11 @@ a{
     font-size: 14px;
     line-height: 22px;
     &.MuiInputLabel-shrink {
-      transform: translate(13px, -2px) scale(0.75);
+      transform: translate(12px, -6px) scale(1);
+      font-family: 'Gilroy', sans-serif;
+      font-size: 12px;
+      line-height: 16px;
+      color: $Black-700;
     }
   }
 
@@ -215,7 +223,10 @@ a{
   }
 
   .MuiInputBase-root {
-    line-height: 14px;
+    font-family: 'Gilroy', sans-serif;
+    color: $Black-700;
+    height: 50px;
+    line-height: 50px;
   }
 }
 
@@ -263,7 +274,7 @@ a{
   a {
     font-size: 12px;
     line-height: 16px;
-    color: $Black-700;
+    color: $Secondary-900;
   }
 }
 
@@ -309,6 +320,19 @@ a{
   &::placeholder {
     color: $Black-600;
   }
+
+  .MuiInputLabel-formControl {
+    font-family: 'Gilroy', sans-serif;
+    padding-left: 28px;
+    &.MuiInputLabel-shrink {
+      padding-left: 0;
+    }
+  }
+
+  input {
+    padding-left: 41px;
+    font-family: 'Gilroy', sans-serif;
+  }
 }
 
 .search-bar {
@@ -350,6 +374,13 @@ a{
 
   &.btn--purple {
     background-color: $Secondary-900;
+    &:hover {
+      background-color: $Secondary-700;
+    }
+
+    &:active {
+      background-color: $Secondary-800;
+    }
   }
 
   &.btn--disabled {
@@ -377,12 +408,20 @@ a{
   background-color: $Secondary-900;
 }
 
+.navy-800-bg {
+  background-color: $Navy-800;
+}
+
 .marina-900-bg {
   background-color: $Marina-900;
 }
 
 .accent-900-bg {
   background-color: $Accent-900;
+}
+
+.accent-800-bg {
+  background-color: $Accent-800;
 }
 
 .main-900-bg {
@@ -415,24 +454,64 @@ a{
   text-transform: uppercase;
   color: $White-100;
   white-space: nowrap;
+  font-family: Gilroy, sans-serif;
+
+  &.label--1 {
+    background-color: $Black-600;
+  }
+
+  &.label--2 {
+    background-color: $Warning-900;
+  }
+
+  &.label--3 {
+    background-color: $Accent-800;
+  }
+
+  &.label--4 {
+    background-color: $Accent-900;
+  }
+
+  &.label--5 {
+    background-color: $Main-900;
+  }
+
+  &.label--6 {
+    background-color: $Marina-900;
+  }
 
   &.label--7 {
-    background-color: $Navy-900;
+    background-color: $Navy-800;
+  }
+
+  &.label--8 {
+    background-color: $Secondary-900;
+  }
+
+  &.label--9 {
+    background-color: $Violet-900;
+  }
+
+  &.label--10 {
+    background-color: $Pink-900;
   }
 
   &.label--id {
     background-color: $Black-600;
   }
 
-  &.label--10 {
-    background-color: $Pink-900;
-  }
 }
 
 .modal-wrapper {
-  padding: 32px 52px;
+  padding: 26px;
   width: 100%;
+  @media (min-width: $tablet) {
+    padding: 32px 52px;
+  }
 
+  .MuiInputLabel-formControl {
+    z-index: 1500;
+  }
 
   &.modal-wrapper--transactions {
     max-width: 468px;
@@ -440,9 +519,13 @@ a{
 
   .modal-close-icon {
     position: absolute;
-    right: 32px;
-    top: 35px;
+    right: 16px;
+    top: 12px;
     cursor: pointer;
+    @media (min-width: $tablet) {
+      right: 32px;
+      top: 35px;
+    }
   }
 
   .title {
@@ -490,6 +573,8 @@ a{
       margin-right: 24px;
       width: 50%;
       text-align: center;
+      padding-left: 10px;
+      padding-right: 10px;
       &:last-child {
         margin-right: 0;
       }
@@ -509,10 +594,27 @@ a{
 
   .search-input {
     margin-bottom: 40px;
+    .MuiIconButton-root {
+      background-image: url("../assets/icons/Calendar.svg");
+      width: 24px;
+      height: 24px;
+      background-size: cover;
+      margin-right: 1px;
+      .MuiSvgIcon-root {
+        display: none;
+      }
+    }
   }
 
   .custom-select {
     margin-bottom: 40px;
+  }
+
+  .MuiSelect-select {
+    height: 50px !important;
+    box-sizing: border-box;
+    line-height: 31px;
+    color: $Black-700;
   }
 
   .form-input-wrapper {
@@ -525,6 +627,629 @@ a{
       &:last-child {
         margin-right: 0;
       }
+    }
+  }
+}
+
+.user-pic--avatar {
+  width: 40px;
+  height: 40px;
+  img {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.MuiCalendarPicker-root {
+  .MuiPickersDay-root {
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    &.Mui-selected {
+      background-color: $Secondary-900 !important;
+    }
+  }
+
+  .PrivatePickersYear-yearButton {
+    border-radius: 4px;
+    &.Mui-selected {
+      background-color: $Secondary-900 !important;
+    }
+  }
+
+  .PrivatePickersSlideTransition-root {
+    min-height: 220px;
+  }
+
+  .MuiTouchRipple-root {
+    display: none;
+  }
+}
+
+.custom-select {
+  label.MuiInputLabel-shrink {
+    transform: translate(6px, -10px) scale(1);
+  }
+}
+
+.modal-wrapper--login {
+  width: 300px;
+  @media (min-width: $tablet) {
+    width: 468px;
+  }
+  .MuiPaper-root {
+    padding: 0;
+  }
+
+  .input-field {
+    margin-top: 40px;
+    &:last-child {
+      margin-bottom: 32px;
+    }
+  }
+
+  .btn-wrapper {
+    justify-content: right;
+  }
+
+  .MuiInputAdornment-root {
+    p {
+      font-size: 12px;
+      line-height: 12px;
+      letter-spacing: 1px;
+      color: $Secondary-900;
+      text-transform: uppercase;
+    }
+  }
+
+  .tabs-wrapper {
+    overflow: hidden;
+  }
+
+  .attention-info {
+    color: $Black-600;
+    align-items: center;
+    margin-top: 22px;
+    margin-bottom: -10px;
+    @media (max-width: $tablet - 1) {
+      flex-direction: row;
+    }
+    .MuiSwitch-root {
+      margin: 0;
+    }
+
+    .MuiFormControlLabel-root {
+      margin-right: 0;
+      margin-left: auto;
+    }
+  }
+
+  .checkbox-wrapper {
+    margin-top: -16px;
+    margin-bottom: 32px;
+    .MuiFormControlLabel-root {
+      margin-right: 0;
+      padding-bottom: 16px;
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+
+    .MuiTouchRipple-root {
+      display: none;
+    }
+  }
+
+  .MuiCheckbox-root {
+    padding-top: 0;
+    padding-bottom: 0;
+    &:hover {
+      background-color: transparent;
+    }
+
+    &.Mui-checked {
+      .MuiSvgIcon-root {
+        background-image: url("../assets/icons/checkbox1.svg");
+      }
+    }
+  }
+
+  .MuiSvgIcon-root {
+    width: 24px;
+    height: 24px;
+    background-image: url("../assets/icons/checkbox0.svg");
+    background-size: cover;
+    path {
+      display: none;
+    }
+  }
+
+  .checkbox-label {
+    font-size: 14px;
+    line-height: 24px;
+    color: $Black-700;
+    a {
+      color: $Secondary-900;
+    }
+  }
+
+}
+
+.MuiDialog-container {
+  .MuiPaper-root {
+    max-width: inherit;
+    background-color: transparent;
+    @media (max-width: $tablet - 1) {
+      margin: 10px;
+    }
+  }
+}
+
+.modal-wrapper--referrals {
+  @media (min-width: $tablet) {
+    width: 648px;
+  }
+
+  .board-panel__search .input-search-wrapper {
+    width: 100%;
+  }
+
+  .table-item {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 12px;
+    text-transform: uppercase;
+    color: $Black-600;
+    margin-right: auto;
+    white-space: nowrap;
+    &:first-child {
+      width: 10%;
+      margin-right: 0;
+    }
+    &:last-child {
+      width: 40%;
+      text-align: right;
+      margin-left: auto;
+      margin-right: 0;
+    }
+  }
+
+  .table-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid $Black-500;
+    @media (min-width: $tablet) {
+      width: auto;
+    }
+    &:first-child {
+      margin-bottom: 28px;
+      border: none;
+      padding-bottom: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+      border: none;
+      padding-bottom: 0;
+    }
+  }
+
+  .user-info {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: $Black-700;
+    text-transform: none;
+    @media (min-width: $tablet) {
+      font-size: 14px;
+      line-height: 20px;
+    }
+    img {
+      margin-right: 8px;
+    }
+  }
+
+  span {
+    font-size: 12px;
+    line-height: 16px;;
+    font-weight: 400;
+    color: $Black-700;
+    @media (min-width: $tablet) {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+
+  .table {
+    width: 100%;
+    margin-top: 32px;
+    @media (min-width: $tablet) {
+      width: auto;
+    }
+  }
+
+  .pagination-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-top: 32px;
+    @media (min-width: $tablet) {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .pagination {
+      margin-right: -10px;
+    }
+  }
+}
+
+.app-store {
+  margin-right: auto;
+  .app-store__item--dark {
+    display: none;
+  }
+}
+
+body {
+  &.dark-theme {
+    background-color: $Black-900;
+
+    .board,
+    .modal-wrapper,
+    .tabs-wrapper .MuiPaper-root,
+    .section--reports .form,
+    .section--reports .container,
+    .custom-select .MuiSelect-root,
+    .custom-select .MuiFormLabel-root ,
+    .ant-table ,
+    .ant-table-row-expand-icon ,
+    .section--referrals .info-block .content ,
+    .section--faq .tabs-wrapper .MuiTabs-root ,
+    .section--faq .tabs-wrapper .MuiBox-root ,
+    .board-body .content ,
+    .content ,
+    .MuiDrawer-root .MuiPaper-root ,
+    .social ,{
+      background-color: $Black-800;
+    }
+
+    .user-info .title,
+    .user-rate .title,
+    .course-info .title {
+      color: $White-100;
+      border-color: $Black-700;
+    }
+
+    .currency-info__item {
+      border-color: $Black-700;
+    }
+
+    .user-rate .chart-data .value,
+    .user-rate .type,
+    .user-rate span,
+    .user-rate strong,
+    .currency-info__item .value,
+    .course-item .value,
+    .amount-item .value,
+    .recent-info .title,
+    .personal-info .title,
+    .textarea .MuiInputBase-root,
+    .textarea label.MuiInputLabel-shrink,
+    .tabs-wrapper .MuiTab-root,
+    .recent-info .user-info,
+    .recent-info span,
+    .attention-info,
+    .volumes-chart .chart-data .value,
+    .modal-wrapper--login .checkbox-label,
+    .volumes-chart .balance,
+    .section--profile .profile-wrapper .title,
+    .structure-info-list__item .table,
+    .structure-info-list__item .value,
+    section .h1 ,
+    .section--reports .accrued-statistics .title ,
+    .section--reports .graphic-statistics .title ,
+    .section--reports .accrued-statistics-total .subtitle ,
+    .section--reports .list-item ,
+    .section--reports .table .table-item ,
+    .section--reports .table .table-row ,
+    .section--reports .board--bonus .title ,
+    .section--reports .board--bonus .table tbody td ,
+    .section--reports .board--bonus .table .type ,
+    .section--reports .board--bonus .table .user-info ,
+    .section--reports .user-status .title ,
+    .section--reports .partner-info .title ,
+    .section--reports .partner-info .table tbody td ,
+    .section--reports .history-info .title ,
+    .section--reports .history-info .table .user-info ,
+    .section--reports .history-info .table tbody td ,
+    .section--referrals .structure-info .title ,
+    .section--referrals .table-wrapper--tree .user-info ,
+    .section--referrals .table-wrapper--tree .ant-table-row:last-child .ant-table-cell ,
+    .section--referrals .table-wrapper--tree .ant-table-tbody > tr > td ,
+    .section--referrals .table .user-info ,
+    .section--referrals .table tbody td ,
+    .modal-wrapper--referrals .user-info ,
+    .modal-wrapper--referrals span ,
+    .modal-wrapper .title ,
+    .section--referrals .info-block .content ,
+    .structure-info-list__item .title ,
+    .user-rate .table-row ,
+    .section--transactions .user-rate .table-item ,
+    .section--transactions .search-wrapper .title ,
+    .section--transactions .board--bonus .title ,
+    .section--transactions .board--bonus .table tbody td ,
+    .section--transactions .board--bonus .table tbody tr ,
+    .section--transactions .board--bonus .table .type ,
+    .section--faq .tabs-wrapper .MuiTabs-root ,
+    .section--faq .accordion-wrapper .MuiAccordion-root ,
+    .section--faq .accordion-wrapper .title ,
+    .section--faq .accordion-wrapper .MuiAccordionSummary-root.Mui-expanded .title ,
+    .section--faq .accordion-wrapper .MuiAccordionDetails-root p,
+    .section--faq .accordion-wrapper .MuiAccordionDetails-root ul,
+    .section--faq .accordion-wrapper .MuiAccordionDetails-root strong,
+    .tabs-wrapper .MuiPaper-root,
+    .article-content .title ,
+    .article-data .time ,
+    .article-data .tag ,
+    .tags-item ,
+    .content h2 ,
+    .content p ,
+    .content ul li ,
+    .content h3 ,
+    .header-content .title h1 ,
+    .header-content .title p ,
+    .breadcrumbs li ,
+    .course ,
+    .recent-info .table-row ,
+    .volumes-info ,
+    .status-info ,
+    .drawer-wrapper .list-item,
+    .drawer-wrapper .list-info .title,
+    .drawer-wrapper .list-info .subtitle ,
+    .drawer-wrapper .list ,
+    .drawer-wrapper .user-info .subtitle ,
+    .social-link ,
+    .menu-user-name ,
+    .board-panel ,
+    .tags-wrapper .title ,
+    .tags-wrapper ,
+    .MuiPaginationItem-ellipsis ,
+    .modal-wrapper--referrals .table-row ,
+    .section--referrals .table tbody tr,
+    .section--referrals .tabs-wrapper .tab-item  ,
+    .section--reports .board--bonus .table tbody tr ,
+    .section--reports .form ,
+    .section--reports .partner-info .table tbody tr ,
+    .section--reports .history-info .table tbody tr ,
+    .section--profile .profile-data-item,{
+      color: $Black-500;
+      border-color: $Black-700;
+    }
+
+    .MuiInputAdornment-root svg path,
+    .modal-close-icon path,
+    .section--faq .accordion-wrapper .MuiAccordionSummary-expandIconWrapper path,{
+      fill: $Black-500;
+    }
+
+    .user-pic .ant-progress-circle-trail {
+      stroke: $Black-700;
+    }
+
+    .board {
+      box-shadow: 0px 16px 32px rgba(45, 62, 86, 0.04);
+    }
+
+    .textarea label {
+      color: $Black-600;
+    }
+
+    .tabs-wrapper .MuiTab-root.Mui-selected {
+      color: $Secondary-900;
+    }
+
+
+    .MuiListItem-root {
+      div,
+      a {
+        color: $Black-500;
+        &:hover {
+          color: $Secondary-900;
+        }
+        &.active {
+          color: $Secondary-900;
+        }
+      }
+    }
+
+    .MuiDivider-root {
+      border-color: $Black-700;
+    }
+
+    .app-store {
+      path {
+        fill: $Black-500;
+      }
+
+      rect {
+        fill: $Black-500;
+      }
+    }
+
+    .app-store {
+      .app-store__item {
+        display: none;
+      }
+      .app-store__item--dark {
+        display: block;
+      }
+    }
+
+    .menu-back-btn,
+    .drawer-wrapper .close-btn {
+      background-color: rgba(154, 155, 162, .2);
+      svg {
+        path {
+          fill: $Black-500;
+        }
+      }
+    }
+
+    .section--referrals .table-wrapper--tree .user-wrapper .user-pic {
+      background-color: transparent;
+    }
+
+    .share-icon {
+      path {
+        fill: $Black-500;
+      }
+    }
+
+    .input-search-wrapper:before {
+      background-image: url("../assets/icons/SearchDark.svg");
+    }
+
+    .custom-select .MuiSelect-icon {
+      background-image: url("../assets/icons/DownDark.svg");
+    }
+
+    .textarea .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+      border-color: $Black-700;
+    }
+
+    .textarea .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+      border-color: $Secondary-900;
+    }
+
+    .textarea .MuiFormLabel-root.Mui-focused {
+      color: $Secondary-900;
+    }
+
+    .user-rate .title svg {
+      path {
+        fill: $Black-500;
+      }
+    }
+
+    .course:before {
+      background-image: url("../assets/icons/EquallyDark.svg");
+    }
+
+    .modal-wrapper--login .MuiSvgIcon-root {
+      background-image: url("../assets/icons/UncheckedDark.svg");
+    }
+
+    .section--referrals .table-wrapper--tree .deleted td,
+    .section--referrals .table-wrapper--tree .deleted .user-info,
+    .section--referrals .table .table-delete td,
+    .section--referrals .table .table-delete td:first-child .user-info{
+      color: $Warning-900 !important;
+    }
+
+    .section--referrals .table-wrapper--tree .deleted td:last-child .user-info {
+      color: $Black-500 !important;
+    }
+
+    .page-count input {
+      background-color: $Black-700;
+      border-color: $Black-700;
+      color: $Black-500;
+      &::placeholder {
+        color: $Black-500;
+      }
+    }
+
+    .section--referrals .info-block {
+      border-color: $Black-700;
+    }
+
+    .section--referrals .info-block:before,
+    .section--faq .accordion-wrapper .MuiAccordionSummary-root:before {
+      background-image: url("../assets/IntersectDark.svg");
+    }
+
+    .custom-select__dropdown {
+      background-color: $Black-800 !important;
+    }
+
+    .custom-select__dropdown .MuiTypography-root {
+      color: $Black-500;
+    }
+
+    .modal-wrapper .MuiSelect-select {
+        color: $Black-500;
+    }
+
+    .modal-wrapper .search-input .MuiIconButton-root {
+      background-image: url("../assets/icons/CalendarDark.svg");
+    }
+
+    .calendar-wrapper {
+      background-color: $Black-800;
+    }
+
+    .calendar-wrapper .title {
+      color: $Black-500;
+      border-color: $Black-700;
+      svg {
+        path {
+          fill: $Black-500;
+        }
+      }
+    }
+
+    .calendar-popover {
+      background-color: $Black-800;
+    }
+
+    .section--profile .profile-data-item .info .input {
+      background-color: transparent;
+      border-color: $Black-700;
+    }
+
+    .section--profile .MuiIconButton-root {
+      background-image: url("../assets/icons/CalendarDark.svg");
+    }
+
+    .section--faq .accordion-wrapper .MuiAccordion-root.Mui-expanded {
+      border-color: #38D47E;
+    }
+
+    .calendar-wrapper {
+      > div {
+        background-color: $Black-800;
+      }
+
+      .MuiTypography-subtitle1 {
+        color: $Black-500;
+      }
+
+      .MuiSvgIcon-root {
+        path {
+          fill: $Black-500;
+        }
+      }
+    }
+
+    .calendar-wrapper .MuiTypography-root,
+    .calendar-wrapper .MuiPickersDay-root,
+    .calendar-wrapper .MuiDateRangePickerDay-rangeIntervalPreview {
+      color: $Black-500;
+      &:not(.Mui-selected) {
+        border-color: transparent;
+      }
+    }
+
+    .calendar-wrapper .MuiDateRangePickerDay-rangeIntervalDayHighlight {
+      background-color: rgba(123, 97, 255, .2);
     }
   }
 }

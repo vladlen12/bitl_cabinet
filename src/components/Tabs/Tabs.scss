@@ -6,10 +6,11 @@
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     padding-top: 22px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 0;
+    padding-right: 0;
     box-shadow: none;
     border-bottom: 1px solid $Black-500;
+    font-family: 'Gilroy', sans-serif;
     @media (min-width: $tablet) {
       padding-top: 32px;
       padding-left: 52px;
@@ -17,8 +18,8 @@
     }
   }
 
-  .MuiTabs-flexContainer {
-    overflow-x: auto;
+  .MuiButtonBase-root {
+    font-family: 'Gilroy', sans-serif;
   }
 
   .MuiTab-root {
@@ -44,7 +45,6 @@
     font-weight: bold;
     font-size: 12px;
     line-height: 12px;
-    letter-spacing: 1px;
     text-transform: uppercase;
     color: $Black-700;
   }
@@ -59,5 +59,15 @@
 
   .MuiBox-root {
     padding: 0;
+  }
+
+  .MuiSvgIcon-fontSizeSmall {
+    fill: $Black-700;
+    width: 24px;
+    margin-top: -12px;
+  }
+
+  .MuiTabScrollButton-root {
+    width: auto;
   }
 }

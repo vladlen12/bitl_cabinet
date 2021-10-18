@@ -2,7 +2,9 @@ import "./Profile.scss"
 import {Progress} from "antd";
 import customer from "../../assets/icons/customer.svg";
 import RowRadioButtonsGroup from "./Radio";
+import * as React from "react";
 import DatePickerProfile from "./Picker";
+import ProfileDialog from "./modal";
 
 export default function ProfileSection() {
 
@@ -24,10 +26,9 @@ export default function ProfileSection() {
                 strokeWidth={6}
                 width={68}
                 strokeColor={{
-                  '15%': '#FF5655',
-                  '45%': '#E3E3E7',
+                  '0': '#4D45FF',
                 }}
-                percent={15}
+                percent={55}
                 format={() => (
                   <img src={customer} alt=""/>
                 )}
@@ -43,9 +44,7 @@ export default function ProfileSection() {
             <div className="btn btn--disabled">
               Delete
             </div>
-            <div className="btn btn--default">
-              Upload
-            </div>
+            <ProfileDialog />
             <div className="btn btn--gray">
               Delete
             </div>

@@ -14,6 +14,7 @@ export default function StaticDateRangePickerDemo() {
       <StaticDateRangePicker
         displayStaticWrapperAs="desktop"
         value={value}
+
         onChange={(newValue) => {
           setValue(newValue);
         }}

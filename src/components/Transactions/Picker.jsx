@@ -5,17 +5,17 @@ import LocalizationProvider from '@mui/lab/LocalizationProvider';
 import DatePicker from '@mui/lab/DatePicker';
 
 export default function SearchPicker() {
-  const [value, setValue] = React.useState(null);
+  const [value, setValue] = React.useState(new Date());
 
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <DatePicker
-        label="Basic example"
+        label="Date"
         value={value}
         onChange={(newValue) => {
           setValue(newValue);
         }}
-        renderInput={(params) => <TextField className="search-input" fullWidth {...params} />}
+        renderInput={(params) => <TextField className="textarea search-input" fullWidth {...params} />}
       />
     </LocalizationProvider>
   );

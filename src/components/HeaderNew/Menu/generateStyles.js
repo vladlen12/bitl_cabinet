@@ -1,4 +1,3 @@
-
 export function generateStyles(isOpen) {
     return {
         menu: {

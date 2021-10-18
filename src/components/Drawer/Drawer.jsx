@@ -1,10 +1,10 @@
 import Drawer from '@mui/material/Drawer';
-import backBtn from "../../assets/icons/vector.svg";
+import {ReactComponent as BackBtn} from "../../assets/icons/vector.svg";
 import React from "react";
 import styles from "../HeaderNew/Header.module.scss";
 import {Progress} from "antd";
 import customer from "../../assets/icons/customer.svg";
-import arrowRight from "../../assets/icons/ArrowRight.svg"
+import {ReactComponent as ArrowRight} from "../../assets/icons/ArrowRight.svg"
 
 import "./Drawer.scss"
 import TextField from "@mui/material/TextField";
@@ -16,6 +16,10 @@ import listIcon2 from "../../assets/icons/listIcon-2.svg"
 import listIcon3 from "../../assets/icons/listIcon-3.svg"
 import listIcon4 from "../../assets/icons/listIcon-4.svg"
 import listIcon5 from "../../assets/icons/listIcon-5.svg"
+
+import cx from 'classnames'
+
+const cxBack = cx("menu-back-btn",styles.backBtn)
 
 export default function DrawerMenu() {
   const [open, setOpen] = React.useState(false);
@@ -33,8 +37,8 @@ export default function DrawerMenu() {
 
   return (
     <>
-      <button className={styles.backBtn} onClick={toggleDrawer}>
-        <img src={backBtn} alt="back"/>
+      <button className={cxBack} onClick={toggleDrawer}>
+        <BackBtn />
       </button>
 
       <Drawer
@@ -50,10 +54,9 @@ export default function DrawerMenu() {
                 strokeWidth={6}
                 width={68}
                 strokeColor={{
-                  '15%': '#FF5655',
-                  '45%': '#E3E3E7',
+                  '0': '#5851FF',
                 }}
-                percent={15}
+                percent={55}
                 format={() => (
                   <img src={customer} alt=""/>
                 )}
@@ -80,7 +83,7 @@ export default function DrawerMenu() {
               className="btn close-btn"
               onClick={toggleDrawer}
             >
-              <img src={arrowRight} alt="arrow"/>
+              <ArrowRight />
             </button>
           </div>
           <div className="input-field">
@@ -186,16 +189,15 @@ export default function DrawerMenu() {
                 strokeWidth={6}
                 width={68}
                 strokeColor={{
-                  '15%': '#FF5655',
-                  '45%': '#E3E3E7',
+                  '0': '#F6339A',
                 }}
-                percent={15}
+                percent={70}
                 format={() => (
                   <img src={customer} alt=""/>
                 )}
               />
-              <div className="label label--7">
-                7 lvl
+              <div className="label label--10">
+                10 lvl
               </div>
             </div>
             <div className="user-info">
@@ -204,11 +206,6 @@ export default function DrawerMenu() {
               </div>
               <div className="subtitle">
                 Mary Jane
-              </div>
-              <div className="label-wrapper">
-                <div className="label label--10">
-                  7 lvl
-                </div>
               </div>
 
             </div>

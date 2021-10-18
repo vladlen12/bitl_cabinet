@@ -131,6 +131,14 @@
 
   a {
     color: $Secondary-900;
+    &:hover {
+      border-bottom: 1px solid $Secondary-700;
+      color: $Secondary-700;
+    }
+    &:focus {
+      border-bottom: 1px solid $Secondary-800;
+      color: $Secondary-800;
+    }
   }
 
   ul {

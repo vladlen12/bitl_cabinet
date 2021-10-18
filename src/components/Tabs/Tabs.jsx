@@ -145,7 +145,13 @@ export default function TabPanelMenu() {
   return (
     <>
       <AppBar position="static">
-        <Tabs value={value} onChange={handleChange} aria-label="tabs">
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          aria-label="tabs"
+          variant="scrollable"
+          allowScrollButtonsMobile
+        >
           <Tab label="Bonus report" {...a11yProps(0)} />
           <Tab label="UMI reports" {...a11yProps(1)} />
           <Tab label="Status reports" {...a11yProps(2)} />
@@ -318,10 +324,129 @@ export default function TabPanelMenu() {
                         strokeWidth={6}
                         width={32}
                         strokeColor={{
-                          '15%': '#FF5655',
-                          '45%': '#E3E3E7',
+                          '0': '#38D47E',
                         }}
-                        percent={15}
+                        percent={35}
+                        format={() => (
+                          <img src={customer} alt=""/>
+                        )}
+                      />
+                    </div>
+                    piterparker
+                  </div>
+                </td>
+                <td className="td-5">21.01.2021 - 01:12</td>
+              </tr>
+              <tr>
+                <td className="td-1">85.</td>
+                <td className="td-2">
+                  <div className="type">
+                    <div className="table-item-circle marina-900-bg" />
+                    Pertner bonus:
+                  </div>
+                </td>
+                <td className="td-3">10  UMI</td>
+                <td className="td-4">
+                  <div className="user-info">
+                    <div className="user-pic">
+                      <Progress
+                        type="circle"
+                        strokeWidth={6}
+                        width={32}
+                        strokeColor={{
+                          '0': '#FFD965',
+                        }}
+                        percent={25}
+                        format={() => (
+                          <img src={customer} alt=""/>
+                        )}
+                      />
+                    </div>
+                    piterparker
+                  </div>
+                </td>
+                <td className="td-5">21.01.2021 - 01:12</td>
+              </tr>
+              <tr>
+                <td className="td-1">85.</td>
+                <td className="td-2">
+                  <div className="type">
+                    <div className="table-item-circle marina-900-bg" />
+                    Pertner bonus:
+                  </div>
+                </td>
+                <td className="td-3">10  UMI</td>
+                <td className="td-4">
+                  <div className="user-info">
+                    <div className="user-pic">
+                      <Progress
+                        type="circle"
+                        strokeWidth={6}
+                        width={32}
+                        strokeColor={{
+                          '0': '#FFB865',
+                        }}
+                        percent={20}
+                        format={() => (
+                          <img src={customer} alt=""/>
+                        )}
+                      />
+                    </div>
+                    piterparker
+                  </div>
+                </td>
+                <td className="td-5">21.01.2021 - 01:12</td>
+              </tr>
+              <tr>
+                <td className="td-1">85.</td>
+                <td className="td-2">
+                  <div className="type">
+                    <div className="table-item-circle pink-900-bg" />
+                    Pertner bonus:
+                  </div>
+                </td>
+                <td className="td-3">10  UMI</td>
+                <td className="td-4">
+                  <div className="user-info">
+                    <div className="user-pic">
+                      <Progress
+                        type="circle"
+                        strokeWidth={6}
+                        width={32}
+                        strokeColor={{
+                          '0': '#F6339A',
+                        }}
+                        percent={80}
+                        format={() => (
+                          <img src={customer} alt=""/>
+                        )}
+                      />
+                    </div>
+                    piterparker
+                  </div>
+                </td>
+                <td className="td-5">21.01.2021 - 01:12</td>
+              </tr>
+              <tr>
+                <td className="td-1">85.</td>
+                <td className="td-2">
+                  <div className="type">
+                    <div className="table-item-circle accent-900-bg" />
+                    Pertner bonus:
+                  </div>
+                </td>
+                <td className="td-3">10  UMI</td>
+                <td className="td-4">
+                  <div className="user-info">
+                    <div className="user-pic">
+                      <Progress
+                        type="circle"
+                        strokeWidth={6}
+                        width={32}
+                        strokeColor={{
+                          '0': '#5851FF',
+                        }}
+                        percent={55}
                         format={() => (
                           <img src={customer} alt=""/>
                         )}
@@ -349,10 +474,99 @@ export default function TabPanelMenu() {
                         strokeWidth={6}
                         width={32}
                         strokeColor={{
-                          '15%': '#FF5655',
-                          '45%': '#E3E3E7',
+                          '0': '#A6D4FF',
                         }}
-                        percent={15}
+                        percent={50}
+                        format={() => (
+                          <img src={customer} alt=""/>
+                        )}
+                      />
+                    </div>
+                    piterparker
+                  </div>
+                </td>
+                <td className="td-5">21.01.2021 - 01:12</td>
+              </tr>
+              <tr>
+                <td className="td-1">85.</td>
+                <td className="td-2">
+                  <div className="type">
+                    <div className="table-item-circle marina-900-bg" />
+                    Pertner bonus:
+                  </div>
+                </td>
+                <td className="td-3">10  UMI</td>
+                <td className="td-4">
+                  <div className="user-info">
+                    <div className="user-pic">
+                      <Progress
+                        type="circle"
+                        strokeWidth={6}
+                        width={32}
+                        strokeColor={{
+                          '0': '#7B61FF',
+                        }}
+                        percent={65}
+                        format={() => (
+                          <img src={customer} alt=""/>
+                        )}
+                      />
+                    </div>
+                    piterparker
+                  </div>
+                </td>
+                <td className="td-5">21.01.2021 - 01:12</td>
+              </tr>
+              <tr>
+                <td className="td-1">85.</td>
+                <td className="td-2">
+                  <div className="type">
+                    <div className="table-item-circle marina-900-bg" />
+                    Pertner bonus:
+                  </div>
+                </td>
+                <td className="td-3">10  UMI</td>
+                <td className="td-4">
+                  <div className="user-info">
+                    <div className="user-pic">
+                      <Progress
+                        type="circle"
+                        strokeWidth={6}
+                        width={32}
+                        strokeColor={{
+                          '0': '#F6339A',
+                        }}
+                        percent={80}
+                        format={() => (
+                          <img src={customer} alt=""/>
+                        )}
+                      />
+                    </div>
+                    piterparker
+                  </div>
+                </td>
+                <td className="td-5">21.01.2021 - 01:12</td>
+              </tr>
+              <tr>
+                <td className="td-1">85.</td>
+                <td className="td-2">
+                  <div className="type">
+                    <div className="table-item-circle pink-900-bg" />
+                    Pertner bonus:
+                  </div>
+                </td>
+                <td className="td-3">10  UMI</td>
+                <td className="td-4">
+                  <div className="user-info">
+                    <div className="user-pic">
+                      <Progress
+                        type="circle"
+                        strokeWidth={6}
+                        width={32}
+                        strokeColor={{
+                          '0': '#38D47E',
+                        }}
+                        percent={35}
                         format={() => (
                           <img src={customer} alt=""/>
                         )}
@@ -380,227 +594,9 @@ export default function TabPanelMenu() {
                         strokeWidth={6}
                         width={32}
                         strokeColor={{
-                          '15%': '#FF5655',
-                          '45%': '#E3E3E7',
+                          '0': '#A6D4FF',
                         }}
-                        percent={15}
-                        format={() => (
-                          <img src={customer} alt=""/>
-                        )}
-                      />
-                    </div>
-                    piterparker
-                  </div>
-                </td>
-                <td className="td-5">21.01.2021 - 01:12</td>
-              </tr>
-              <tr>
-                <td className="td-1">85.</td>
-                <td className="td-2">
-                  <div className="type">
-                    <div className="table-item-circle secondary-900-bg" />
-                    Pertner bonus:
-                  </div>
-                </td>
-                <td className="td-3">10  UMI</td>
-                <td className="td-4">
-                  <div className="user-info">
-                    <div className="user-pic">
-                      <Progress
-                        type="circle"
-                        strokeWidth={6}
-                        width={32}
-                        strokeColor={{
-                          '15%': '#FF5655',
-                          '45%': '#E3E3E7',
-                        }}
-                        percent={15}
-                        format={() => (
-                          <img src={customer} alt=""/>
-                        )}
-                      />
-                    </div>
-                    piterparker
-                  </div>
-                </td>
-                <td className="td-5">21.01.2021 - 01:12</td>
-              </tr>
-              <tr>
-                <td className="td-1">85.</td>
-                <td className="td-2">
-                  <div className="type">
-                    <div className="table-item-circle secondary-900-bg" />
-                    Pertner bonus:
-                  </div>
-                </td>
-                <td className="td-3">10  UMI</td>
-                <td className="td-4">
-                  <div className="user-info">
-                    <div className="user-pic">
-                      <Progress
-                        type="circle"
-                        strokeWidth={6}
-                        width={32}
-                        strokeColor={{
-                          '15%': '#FF5655',
-                          '45%': '#E3E3E7',
-                        }}
-                        percent={15}
-                        format={() => (
-                          <img src={customer} alt=""/>
-                        )}
-                      />
-                    </div>
-                    piterparker
-                  </div>
-                </td>
-                <td className="td-5">21.01.2021 - 01:12</td>
-              </tr>
-              <tr>
-                <td className="td-1">85.</td>
-                <td className="td-2">
-                  <div className="type">
-                    <div className="table-item-circle secondary-900-bg" />
-                    Pertner bonus:
-                  </div>
-                </td>
-                <td className="td-3">10  UMI</td>
-                <td className="td-4">
-                  <div className="user-info">
-                    <div className="user-pic">
-                      <Progress
-                        type="circle"
-                        strokeWidth={6}
-                        width={32}
-                        strokeColor={{
-                          '15%': '#FF5655',
-                          '45%': '#E3E3E7',
-                        }}
-                        percent={15}
-                        format={() => (
-                          <img src={customer} alt=""/>
-                        )}
-                      />
-                    </div>
-                    piterparker
-                  </div>
-                </td>
-                <td className="td-5">21.01.2021 - 01:12</td>
-              </tr>
-              <tr>
-                <td className="td-1">85.</td>
-                <td className="td-2">
-                  <div className="type">
-                    <div className="table-item-circle secondary-900-bg" />
-                    Pertner bonus:
-                  </div>
-                </td>
-                <td className="td-3">10  UMI</td>
-                <td className="td-4">
-                  <div className="user-info">
-                    <div className="user-pic">
-                      <Progress
-                        type="circle"
-                        strokeWidth={6}
-                        width={32}
-                        strokeColor={{
-                          '15%': '#FF5655',
-                          '45%': '#E3E3E7',
-                        }}
-                        percent={15}
-                        format={() => (
-                          <img src={customer} alt=""/>
-                        )}
-                      />
-                    </div>
-                    piterparker
-                  </div>
-                </td>
-                <td className="td-5">21.01.2021 - 01:12</td>
-              </tr>
-              <tr>
-                <td className="td-1">85.</td>
-                <td className="td-2">
-                  <div className="type">
-                    <div className="table-item-circle secondary-900-bg" />
-                    Pertner bonus:
-                  </div>
-                </td>
-                <td className="td-3">10  UMI</td>
-                <td className="td-4">
-                  <div className="user-info">
-                    <div className="user-pic">
-                      <Progress
-                        type="circle"
-                        strokeWidth={6}
-                        width={32}
-                        strokeColor={{
-                          '15%': '#FF5655',
-                          '45%': '#E3E3E7',
-                        }}
-                        percent={15}
-                        format={() => (
-                          <img src={customer} alt=""/>
-                        )}
-                      />
-                    </div>
-                    piterparker
-                  </div>
-                </td>
-                <td className="td-5">21.01.2021 - 01:12</td>
-              </tr>
-              <tr>
-                <td className="td-1">85.</td>
-                <td className="td-2">
-                  <div className="type">
-                    <div className="table-item-circle secondary-900-bg" />
-                    Pertner bonus:
-                  </div>
-                </td>
-                <td className="td-3">10  UMI</td>
-                <td className="td-4">
-                  <div className="user-info">
-                    <div className="user-pic">
-                      <Progress
-                        type="circle"
-                        strokeWidth={6}
-                        width={32}
-                        strokeColor={{
-                          '15%': '#FF5655',
-                          '45%': '#E3E3E7',
-                        }}
-                        percent={15}
-                        format={() => (
-                          <img src={customer} alt=""/>
-                        )}
-                      />
-                    </div>
-                    piterparker
-                  </div>
-                </td>
-                <td className="td-5">21.01.2021 - 01:12</td>
-              </tr>
-              <tr>
-                <td className="td-1">85.</td>
-                <td className="td-2">
-                  <div className="type">
-                    <div className="table-item-circle secondary-900-bg" />
-                    Pertner bonus:
-                  </div>
-                </td>
-                <td className="td-3">10  UMI</td>
-                <td className="td-4">
-                  <div className="user-info">
-                    <div className="user-pic">
-                      <Progress
-                        type="circle"
-                        strokeWidth={6}
-                        width={32}
-                        strokeColor={{
-                          '15%': '#FF5655',
-                          '45%': '#E3E3E7',
-                        }}
-                        percent={15}
+                        percent={45}
                         format={() => (
                           <img src={customer} alt=""/>
                         )}
@@ -700,7 +696,7 @@ export default function TabPanelMenu() {
         </div>
         <div className="board board--bonus">
           <div className="title">
-            Received bonuses
+            UMI statistics
             <img src={savingIcon} alt="icon"/>
           </div>
 
@@ -721,11 +717,11 @@ export default function TabPanelMenu() {
                 <td className="td-1">85.</td>
                 <td className="td-2">
                   <div className="type">
-                    <div className="table-item-circle secondary-900-bg" />
-                    Pertner bonus:
+                    <div className="table-item-circle main-900-bg" />
+                    Deposit
                   </div>
                 </td>
-                <td className="td-3"><span className="value-up">10  UMI</span></td>
+                <td className="td-3"><span className="value-up">+ 10  UMI</span></td>
                 <td className="td-4">Personal volume</td>
                 <td className="td-5">
                   <div className="user-info">
@@ -735,10 +731,193 @@ export default function TabPanelMenu() {
                         strokeWidth={6}
                         width={32}
                         strokeColor={{
-                          '15%': '#FF5655',
-                          '45%': '#E3E3E7',
+                          '0': '#38D47E',
                         }}
-                        percent={15}
+                        percent={35}
+                        format={() => (
+                          <img src={customer} alt=""/>
+                        )}
+                      />
+                    </div>
+                    piterparker
+                  </div>
+                </td>
+                <td className="td-6">21.01.2021 - 01:12</td>
+              </tr>
+              <tr>
+                <td className="td-1">85.</td>
+                <td className="td-2">
+                  <div className="type">
+                    <div className="table-item-circle warning-900-bg" />
+                    Withdraw
+                  </div>
+                </td>
+                <td className="td-3"><span className="value-down">- 10  UMI</span></td>
+                <td className="td-4">Personal volume</td>
+                <td className="td-5">
+                  -
+                </td>
+                <td className="td-6">21.01.2021 - 01:12</td>
+              </tr>
+              <tr>
+                <td className="td-1">85.</td>
+                <td className="td-2">
+                  <div className="type">
+                    <div className="table-item-circle warning-900-bg" />
+                    Withdraw
+                  </div>
+                </td>
+                <td className="td-3"><span className="value-down">- 10  UMI</span></td>
+                <td className="td-4">Personal volume</td>
+                <td className="td-5">
+                  -
+                </td>
+                <td className="td-6">21.01.2021 - 01:12</td>
+              </tr>
+              <tr>
+                <td className="td-1">85.</td>
+                <td className="td-2">
+                  <div className="type">
+                    <div className="table-item-circle main-900-bg" />
+                    Deposit
+                  </div>
+                </td>
+                <td className="td-3"><span className="value-up">+ 10  UMI</span></td>
+                <td className="td-4">Group volume</td>
+                <td className="td-5">
+                  <div className="user-info">
+                    <div className="user-pic">
+                      <Progress
+                        type="circle"
+                        strokeWidth={6}
+                        width={32}
+                        strokeColor={{
+                          '0': '#F6339A',
+                        }}
+                        percent={80}
+                        format={() => (
+                          <img src={customer} alt=""/>
+                        )}
+                      />
+                    </div>
+                    piterparker
+                  </div>
+                </td>
+                <td className="td-6">21.01.2021 - 01:12</td>
+              </tr>
+              <tr>
+                <td className="td-1">85.</td>
+                <td className="td-2">
+                  <div className="type">
+                    <div className="table-item-circle accent-900-bg" />
+                    Global bonus
+                  </div>
+                </td>
+                <td className="td-3"><span className="value-up">+ 10 UMI</span></td>
+                <td className="td-4">Group volume</td>
+                <td className="td-5">
+                  <div className="user-info">
+                    <div className="user-pic">
+                      <Progress
+                        type="circle"
+                        strokeWidth={6}
+                        width={32}
+                        strokeColor={{
+                          '0': '#A6D4FF',
+                        }}
+                        percent={45}
+                        format={() => (
+                          <img src={customer} alt=""/>
+                        )}
+                      />
+                    </div>
+                    piterparker
+                  </div>
+                </td>
+                <td className="td-6">21.01.2021 - 01:12</td>
+              </tr>
+              <tr>
+                <td className="td-1">85.</td>
+                <td className="td-2">
+                  <div className="type">
+                    <div className="table-item-circle pink-900-bg" />
+                    Sam rank
+                  </div>
+                </td>
+                <td className="td-3"><span className="value-down">+ 20 UMI</span></td>
+                <td className="td-4">Personal volume</td>
+                <td className="td-5">
+                  <div className="user-info">
+                    <div className="user-pic">
+                      <Progress
+                        type="circle"
+                        strokeWidth={6}
+                        width={32}
+                        strokeColor={{
+                          '0': '#7B61FF',
+                        }}
+                        percent={70}
+                        format={() => (
+                          <img src={customer} alt=""/>
+                        )}
+                      />
+                    </div>
+                    piterparker
+                  </div>
+                </td>
+                <td className="td-6">21.01.2021 - 01:12</td>
+              </tr>
+              <tr>
+                <td className="td-1">85.</td>
+                <td className="td-2">
+                  <div className="type">
+                    <div className="table-item-circle marina-900-bg" />
+                    Team bonus
+                  </div>
+                </td>
+                <td className="td-3"><span className="value-up">+ 10 UMI</span></td>
+                <td className="td-4">Personal volume</td>
+                <td className="td-5">
+                  -
+                </td>
+                <td className="td-6">21.01.2021 - 01:12</td>
+              </tr>
+              <tr>
+                <td className="td-1">85.</td>
+                <td className="td-2">
+                  <div className="type">
+                    <div className="table-item-circle secondary-900-bg" />
+                    Pertner bonus:
+                  </div>
+                </td>
+                <td className="td-3"><span className="value-up">+ 10 UMI</span></td>
+                <td className="td-4">Personal volume</td>
+                <td className="td-5">
+                  -
+                </td>
+                <td className="td-6">21.01.2021 - 01:12</td>
+              </tr>
+              <tr>
+                <td className="td-1">85.</td>
+                <td className="td-2">
+                  <div className="type">
+                    <div className="table-item-circle warning-900-bg" />
+                    Withdraw
+                  </div>
+                </td>
+                <td className="td-3"><span className="value-up">-40 UMI</span></td>
+                <td className="td-4">Group volume</td>
+                <td className="td-5">
+                  <div className="user-info">
+                    <div className="user-pic">
+                      <Progress
+                        type="circle"
+                        strokeWidth={6}
+                        width={32}
+                        strokeColor={{
+                          '0': '#38D47E',
+                        }}
+                        percent={45}
                         format={() => (
                           <img src={customer} alt=""/>
                         )}
@@ -754,11 +933,11 @@ export default function TabPanelMenu() {
                 <td className="td-2">
                   <div className="type">
                     <div className="table-item-circle secondary-900-bg" />
-                    Pertner bonus:
+                    Deposit
                   </div>
                 </td>
-                <td className="td-3"><span className="value-down">10  UMI</span></td>
-                <td className="td-4">Personal volume</td>
+                <td className="td-3"><span className="value-up">+ 10 UMI</span></td>
+                <td className="td-4">Group volume</td>
                 <td className="td-5">
                   <div className="user-info">
                     <div className="user-pic">
@@ -767,266 +946,9 @@ export default function TabPanelMenu() {
                         strokeWidth={6}
                         width={32}
                         strokeColor={{
-                          '15%': '#FF5655',
-                          '45%': '#E3E3E7',
+                          '0': '#A6D4FF',
                         }}
-                        percent={15}
-                        format={() => (
-                          <img src={customer} alt=""/>
-                        )}
-                      />
-                    </div>
-                    piterparker
-                  </div>
-                </td>
-                <td className="td-6">21.01.2021 - 01:12</td>
-              </tr>
-              <tr>
-                <td className="td-1">85.</td>
-                <td className="td-2">
-                  <div className="type">
-                    <div className="table-item-circle secondary-900-bg" />
-                    Pertner bonus:
-                  </div>
-                </td>
-                <td className="td-3"><span className="value-up">10  UMI</span></td>
-                <td className="td-4">Personal volume</td>
-                <td className="td-5">
-                  <div className="user-info">
-                    <div className="user-pic">
-                      <Progress
-                        type="circle"
-                        strokeWidth={6}
-                        width={32}
-                        strokeColor={{
-                          '15%': '#FF5655',
-                          '45%': '#E3E3E7',
-                        }}
-                        percent={15}
-                        format={() => (
-                          <img src={customer} alt=""/>
-                        )}
-                      />
-                    </div>
-                    piterparker
-                  </div>
-                </td>
-                <td className="td-6">21.01.2021 - 01:12</td>
-              </tr>
-              <tr>
-                <td className="td-1">85.</td>
-                <td className="td-2">
-                  <div className="type">
-                    <div className="table-item-circle secondary-900-bg" />
-                    Pertner bonus:
-                  </div>
-                </td>
-                <td className="td-3"><span className="value-down">10  UMI</span></td>
-                <td className="td-4">Personal volume</td>
-                <td className="td-5">
-                  <div className="user-info">
-                    <div className="user-pic">
-                      <Progress
-                        type="circle"
-                        strokeWidth={6}
-                        width={32}
-                        strokeColor={{
-                          '15%': '#FF5655',
-                          '45%': '#E3E3E7',
-                        }}
-                        percent={15}
-                        format={() => (
-                          <img src={customer} alt=""/>
-                        )}
-                      />
-                    </div>
-                    piterparker
-                  </div>
-                </td>
-                <td className="td-6">21.01.2021 - 01:12</td>
-              </tr>
-              <tr>
-                <td className="td-1">85.</td>
-                <td className="td-2">
-                  <div className="type">
-                    <div className="table-item-circle secondary-900-bg" />
-                    Pertner bonus:
-                  </div>
-                </td>
-                <td className="td-3"><span className="value-up">10  UMI</span></td>
-                <td className="td-4">Personal volume</td>
-                <td className="td-5">
-                  <div className="user-info">
-                    <div className="user-pic">
-                      <Progress
-                        type="circle"
-                        strokeWidth={6}
-                        width={32}
-                        strokeColor={{
-                          '15%': '#FF5655',
-                          '45%': '#E3E3E7',
-                        }}
-                        percent={15}
-                        format={() => (
-                          <img src={customer} alt=""/>
-                        )}
-                      />
-                    </div>
-                    piterparker
-                  </div>
-                </td>
-                <td className="td-6">21.01.2021 - 01:12</td>
-              </tr>
-              <tr>
-                <td className="td-1">85.</td>
-                <td className="td-2">
-                  <div className="type">
-                    <div className="table-item-circle secondary-900-bg" />
-                    Pertner bonus:
-                  </div>
-                </td>
-                <td className="td-3"><span className="value-down">10  UMI</span></td>
-                <td className="td-4">Personal volume</td>
-                <td className="td-5">
-                  <div className="user-info">
-                    <div className="user-pic">
-                      <Progress
-                        type="circle"
-                        strokeWidth={6}
-                        width={32}
-                        strokeColor={{
-                          '15%': '#FF5655',
-                          '45%': '#E3E3E7',
-                        }}
-                        percent={15}
-                        format={() => (
-                          <img src={customer} alt=""/>
-                        )}
-                      />
-                    </div>
-                    piterparker
-                  </div>
-                </td>
-                <td className="td-6">21.01.2021 - 01:12</td>
-              </tr>
-              <tr>
-                <td className="td-1">85.</td>
-                <td className="td-2">
-                  <div className="type">
-                    <div className="table-item-circle secondary-900-bg" />
-                    Pertner bonus:
-                  </div>
-                </td>
-                <td className="td-3"><span className="value-up">10  UMI</span></td>
-                <td className="td-4">Personal volume</td>
-                <td className="td-5">
-                  <div className="user-info">
-                    <div className="user-pic">
-                      <Progress
-                        type="circle"
-                        strokeWidth={6}
-                        width={32}
-                        strokeColor={{
-                          '15%': '#FF5655',
-                          '45%': '#E3E3E7',
-                        }}
-                        percent={15}
-                        format={() => (
-                          <img src={customer} alt=""/>
-                        )}
-                      />
-                    </div>
-                    piterparker
-                  </div>
-                </td>
-                <td className="td-6">21.01.2021 - 01:12</td>
-              </tr>
-              <tr>
-                <td className="td-1">85.</td>
-                <td className="td-2">
-                  <div className="type">
-                    <div className="table-item-circle secondary-900-bg" />
-                    Pertner bonus:
-                  </div>
-                </td>
-                <td className="td-3"><span className="value-down">10  UMI</span></td>
-                <td className="td-4">Personal volume</td>
-                <td className="td-5">
-                  <div className="user-info">
-                    <div className="user-pic">
-                      <Progress
-                        type="circle"
-                        strokeWidth={6}
-                        width={32}
-                        strokeColor={{
-                          '15%': '#FF5655',
-                          '45%': '#E3E3E7',
-                        }}
-                        percent={15}
-                        format={() => (
-                          <img src={customer} alt=""/>
-                        )}
-                      />
-                    </div>
-                    piterparker
-                  </div>
-                </td>
-                <td className="td-6">21.01.2021 - 01:12</td>
-              </tr>
-              <tr>
-                <td className="td-1">85.</td>
-                <td className="td-2">
-                  <div className="type">
-                    <div className="table-item-circle secondary-900-bg" />
-                    Pertner bonus:
-                  </div>
-                </td>
-                <td className="td-3"><span className="value-up">10  UMI</span></td>
-                <td className="td-4">Personal volume</td>
-                <td className="td-5">
-                  <div className="user-info">
-                    <div className="user-pic">
-                      <Progress
-                        type="circle"
-                        strokeWidth={6}
-                        width={32}
-                        strokeColor={{
-                          '15%': '#FF5655',
-                          '45%': '#E3E3E7',
-                        }}
-                        percent={15}
-                        format={() => (
-                          <img src={customer} alt=""/>
-                        )}
-                      />
-                    </div>
-                    piterparker
-                  </div>
-                </td>
-                <td className="td-6">21.01.2021 - 01:12</td>
-              </tr>
-              <tr>
-                <td className="td-1">85.</td>
-                <td className="td-2">
-                  <div className="type">
-                    <div className="table-item-circle secondary-900-bg" />
-                    Pertner bonus:
-                  </div>
-                </td>
-                <td className="td-3"><span className="value-down">10  UMI</span></td>
-                <td className="td-4">Personal volume</td>
-                <td className="td-5">
-                  <div className="user-info">
-                    <div className="user-pic">
-                      <Progress
-                        type="circle"
-                        strokeWidth={6}
-                        width={32}
-                        strokeColor={{
-                          '15%': '#FF5655',
-                          '45%': '#E3E3E7',
-                        }}
-                        percent={15}
+                        percent={55}
                         format={() => (
                           <img src={customer} alt=""/>
                         )}
@@ -1092,10 +1014,9 @@ export default function TabPanelMenu() {
                             strokeWidth={6}
                             width={32}
                             strokeColor={{
-                              '15%': '#FF5655',
-                              '45%': '#E3E3E7',
+                              '0': '#5851FF',
                             }}
-                            percent={15}
+                            percent={55}
                             format={() => (
                               <img src={customer} alt=""/>
                             )}
@@ -1121,8 +1042,8 @@ export default function TabPanelMenu() {
                   </div>
                   <div className="table-row">
                     <div className="table-item">
-                      <div className="label black-600-bg">
-                        1 lvl
+                      <div className="label warning-900-bg">
+                        2 lvl
                       </div>
                     </div>
                     <div className="table-item">
@@ -1131,8 +1052,8 @@ export default function TabPanelMenu() {
                   </div>
                   <div className="table-row">
                     <div className="table-item">
-                      <div className="label black-600-bg">
-                        1 lvl
+                      <div className="label accent-800-bg">
+                        3 lvl
                       </div>
                     </div>
                     <div className="table-item">
@@ -1141,8 +1062,8 @@ export default function TabPanelMenu() {
                   </div>
                   <div className="table-row">
                     <div className="table-item">
-                      <div className="label black-600-bg">
-                        1 lvl
+                      <div className="label accent-900-bg">
+                        4 lvl
                       </div>
                     </div>
                     <div className="table-item">
@@ -1151,8 +1072,8 @@ export default function TabPanelMenu() {
                   </div>
                   <div className="table-row">
                     <div className="table-item">
-                      <div className="label black-600-bg">
-                        1 lvl
+                      <div className="label main-900-bg">
+                        5 lvl
                       </div>
                     </div>
                     <div className="table-item">
@@ -1161,8 +1082,8 @@ export default function TabPanelMenu() {
                   </div>
                   <div className="table-row">
                     <div className="table-item">
-                      <div className="label black-600-bg">
-                        1 lvl
+                      <div className="label marina-900-bg">
+                        6 lvl
                       </div>
                     </div>
                     <div className="table-item">
@@ -1171,8 +1092,8 @@ export default function TabPanelMenu() {
                   </div>
                   <div className="table-row">
                     <div className="table-item">
-                      <div className="label black-600-bg">
-                        1 lvl
+                      <div className="label navy-800-bg">
+                        7 lvl
                       </div>
                     </div>
                     <div className="table-item">
@@ -1355,8 +1276,8 @@ export default function TabPanelMenu() {
               </tr>
               <tr>
                 <td>
-                  <div className="label black-600-bg">
-                    1 lvl
+                  <div className="label warning-900-bg">
+                    2 lvl
                   </div>
                 </td>
                 <td>
@@ -1377,8 +1298,8 @@ export default function TabPanelMenu() {
               </tr>
               <tr>
                 <td>
-                  <div className="label black-600-bg">
-                    1 lvl
+                  <div className="label accent-800-bg">
+                    3 lvl
                   </div>
                 </td>
                 <td>
@@ -1399,8 +1320,8 @@ export default function TabPanelMenu() {
               </tr>
               <tr>
                 <td>
-                  <div className="label black-600-bg">
-                    1 lvl
+                  <div className="label accent-900-bg">
+                    4 lvl
                   </div>
                 </td>
                 <td>
@@ -1421,8 +1342,8 @@ export default function TabPanelMenu() {
               </tr>
               <tr>
                 <td>
-                  <div className="label black-600-bg">
-                    1 lvl
+                  <div className="label main-900-bg">
+                    5 lvl
                   </div>
                 </td>
                 <td>
@@ -1499,8 +1420,88 @@ export default function TabPanelMenu() {
                         strokeWidth={6}
                         width={32}
                         strokeColor={{
-                          '15%': '#FF5655',
-                          '45%': '#E3E3E7',
+                          '0': '#38D47E',
+                        }}
+                        percent={40}
+                        format={() => (
+                          <img src={customer} alt=""/>
+                        )}
+                      />
+                    </div>
+                    piterparker
+                  </div>
+                </td>
+                <td className="td-2">
+                  <div className="label main-900-bg">
+                    5 lvl
+                  </div>
+                </td>
+                <td className="td-3">21.01.2021 - 01:12</td>
+              </tr>
+              <tr>
+                <td className="td-1">
+                  <div className="user-info">
+                    <div className="user-pic">
+                      <Progress
+                        type="circle"
+                        strokeWidth={6}
+                        width={32}
+                        strokeColor={{
+                          '0': '#FF5655',
+                        }}
+                        percent={20}
+                        format={() => (
+                          <img src={customer} alt=""/>
+                        )}
+                      />
+                    </div>
+                    piterparker
+                  </div>
+                </td>
+                <td className="td-2">
+                  <div className="label warning-900-bg">
+                    2 lvl
+                  </div>
+                </td>
+                <td className="td-3">21.01.2021 - 01:12</td>
+              </tr>
+              <tr>
+                <td className="td-1">
+                  <div className="user-info">
+                    <div className="user-pic">
+                      <Progress
+                        type="circle"
+                        strokeWidth={6}
+                        width={32}
+                        strokeColor={{
+                          '0': '#FF5655',
+                        }}
+                        percent={15}
+                        format={() => (
+                          <img src={customer} alt=""/>
+                        )}
+                      />
+                    </div>
+                    piterparker
+                  </div>
+                </td>
+                <td className="td-2">
+                  <div className="label warning-900-bg">
+                    2 lvl
+                  </div>
+                </td>
+                <td className="td-3">21.01.2021 - 01:12</td>
+              </tr>
+              <tr>
+                <td className="td-1">
+                  <div className="user-info">
+                    <div className="user-pic">
+                      <Progress
+                        type="circle"
+                        strokeWidth={6}
+                        width={32}
+                        strokeColor={{
+                          '0': '#9A9BA2',
                         }}
                         percent={15}
                         format={() => (
@@ -1527,8 +1528,88 @@ export default function TabPanelMenu() {
                         strokeWidth={6}
                         width={32}
                         strokeColor={{
-                          '15%': '#FF5655',
-                          '45%': '#E3E3E7',
+                          '0': '#FFB865',
+                        }}
+                        percent={30}
+                        format={() => (
+                          <img src={customer} alt=""/>
+                        )}
+                      />
+                    </div>
+                    piterparker
+                  </div>
+                </td>
+                <td className="td-2">
+                  <div className="label accent-800-bg">
+                    3 lvl
+                  </div>
+                </td>
+                <td className="td-3">21.01.2021 - 01:12</td>
+              </tr>
+              <tr>
+                <td className="td-1">
+                  <div className="user-info">
+                    <div className="user-pic">
+                      <Progress
+                        type="circle"
+                        strokeWidth={6}
+                        width={32}
+                        strokeColor={{
+                          '0': '#FFB865',
+                        }}
+                        percent={30}
+                        format={() => (
+                          <img src={customer} alt=""/>
+                        )}
+                      />
+                    </div>
+                    piterparker
+                  </div>
+                </td>
+                <td className="td-2">
+                  <div className="label accent-800-bg">
+                    3 lvl
+                  </div>
+                </td>
+                <td className="td-3">21.01.2021 - 01:12</td>
+              </tr>
+              <tr>
+                <td className="td-1">
+                  <div className="user-info">
+                    <div className="user-pic">
+                      <Progress
+                        type="circle"
+                        strokeWidth={6}
+                        width={32}
+                        strokeColor={{
+                          '0': '#F6339A',
+                        }}
+                        percent={80}
+                        format={() => (
+                          <img src={customer} alt=""/>
+                        )}
+                      />
+                    </div>
+                    piterparker
+                  </div>
+                </td>
+                <td className="td-2">
+                  <div className="label pink-900-bg">
+                    10 lvl
+                  </div>
+                </td>
+                <td className="td-3">21.01.2021 - 01:12</td>
+              </tr>
+              <tr>
+                <td className="td-1">
+                  <div className="user-info">
+                    <div className="user-pic">
+                      <Progress
+                        type="circle"
+                        strokeWidth={6}
+                        width={32}
+                        strokeColor={{
+                          '0': '#9A9BA2',
                         }}
                         percent={15}
                         format={() => (
@@ -1555,10 +1636,9 @@ export default function TabPanelMenu() {
                         strokeWidth={6}
                         width={32}
                         strokeColor={{
-                          '15%': '#FF5655',
-                          '45%': '#E3E3E7',
+                          '0': '#5851FF',
                         }}
-                        percent={15}
+                        percent={55}
                         format={() => (
                           <img src={customer} alt=""/>
                         )}
@@ -1568,8 +1648,8 @@ export default function TabPanelMenu() {
                   </div>
                 </td>
                 <td className="td-2">
-                  <div className="label black-600-bg">
-                    1 lvl
+                  <div className="label navy-800-bg">
+                    7 lvl
                   </div>
                 </td>
                 <td className="td-3">21.01.2021 - 01:12</td>
@@ -1583,176 +1663,7 @@ export default function TabPanelMenu() {
                         strokeWidth={6}
                         width={32}
                         strokeColor={{
-                          '15%': '#FF5655',
-                          '45%': '#E3E3E7',
-                        }}
-                        percent={15}
-                        format={() => (
-                          <img src={customer} alt=""/>
-                        )}
-                      />
-                    </div>
-                    piterparker
-                  </div>
-                </td>
-                <td className="td-2">
-                  <div className="label black-600-bg">
-                    1 lvl
-                  </div>
-                </td>
-                <td className="td-3">21.01.2021 - 01:12</td>
-              </tr>
-              <tr>
-                <td className="td-1">
-                  <div className="user-info">
-                    <div className="user-pic">
-                      <Progress
-                        type="circle"
-                        strokeWidth={6}
-                        width={32}
-                        strokeColor={{
-                          '15%': '#FF5655',
-                          '45%': '#E3E3E7',
-                        }}
-                        percent={15}
-                        format={() => (
-                          <img src={customer} alt=""/>
-                        )}
-                      />
-                    </div>
-                    piterparker
-                  </div>
-                </td>
-                <td className="td-2">
-                  <div className="label black-600-bg">
-                    1 lvl
-                  </div>
-                </td>
-                <td className="td-3">21.01.2021 - 01:12</td>
-              </tr>
-              <tr>
-                <td className="td-1">
-                  <div className="user-info">
-                    <div className="user-pic">
-                      <Progress
-                        type="circle"
-                        strokeWidth={6}
-                        width={32}
-                        strokeColor={{
-                          '15%': '#FF5655',
-                          '45%': '#E3E3E7',
-                        }}
-                        percent={15}
-                        format={() => (
-                          <img src={customer} alt=""/>
-                        )}
-                      />
-                    </div>
-                    piterparker
-                  </div>
-                </td>
-                <td className="td-2">
-                  <div className="label black-600-bg">
-                    1 lvl
-                  </div>
-                </td>
-                <td className="td-3">21.01.2021 - 01:12</td>
-              </tr>
-              <tr>
-                <td className="td-1">
-                  <div className="user-info">
-                    <div className="user-pic">
-                      <Progress
-                        type="circle"
-                        strokeWidth={6}
-                        width={32}
-                        strokeColor={{
-                          '15%': '#FF5655',
-                          '45%': '#E3E3E7',
-                        }}
-                        percent={15}
-                        format={() => (
-                          <img src={customer} alt=""/>
-                        )}
-                      />
-                    </div>
-                    piterparker
-                  </div>
-                </td>
-                <td className="td-2">
-                  <div className="label black-600-bg">
-                    1 lvl
-                  </div>
-                </td>
-                <td className="td-3">21.01.2021 - 01:12</td>
-              </tr>
-              <tr>
-                <td className="td-1">
-                  <div className="user-info">
-                    <div className="user-pic">
-                      <Progress
-                        type="circle"
-                        strokeWidth={6}
-                        width={32}
-                        strokeColor={{
-                          '15%': '#FF5655',
-                          '45%': '#E3E3E7',
-                        }}
-                        percent={15}
-                        format={() => (
-                          <img src={customer} alt=""/>
-                        )}
-                      />
-                    </div>
-                    piterparker
-                  </div>
-                </td>
-                <td className="td-2">
-                  <div className="label black-600-bg">
-                    1 lvl
-                  </div>
-                </td>
-                <td className="td-3">21.01.2021 - 01:12</td>
-              </tr>
-              <tr>
-                <td className="td-1">
-                  <div className="user-info">
-                    <div className="user-pic">
-                      <Progress
-                        type="circle"
-                        strokeWidth={6}
-                        width={32}
-                        strokeColor={{
-                          '15%': '#FF5655',
-                          '45%': '#E3E3E7',
-                        }}
-                        percent={15}
-                        format={() => (
-                          <img src={customer} alt=""/>
-                        )}
-                      />
-                    </div>
-                    piterparker
-                  </div>
-                </td>
-                <td className="td-2">
-                  <div className="label black-600-bg">
-                    1 lvl
-                  </div>
-                </td>
-                <td className="td-3">21.01.2021 - 01:12</td>
-              </tr>
-              <tr>
-                <td className="td-1">
-                  <div className="user-info">
-                    <div className="user-pic">
-                      <Progress
-                        type="circle"
-                        strokeWidth={6}
-                        width={32}
-                        strokeColor={{
-                          '15%': '#FF5655',
-                          '45%': '#E3E3E7',
+                          '0': '#9A9BA2',
                         }}
                         percent={15}
                         format={() => (

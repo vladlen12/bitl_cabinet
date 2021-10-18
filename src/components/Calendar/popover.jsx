@@ -1,7 +1,7 @@
 import React from "react"
 import Popover from '@mui/material/Popover';
-import Calendar from "../../assets/icons/Calendar.svg";
-import ArrowRight from "../../assets/icons/ArrowRight.svg";
+import {ReactComponent as Calendar} from "../../assets/icons/Calendar.svg";
+import {ReactComponent as ArrowRight} from "../../assets/icons/ArrowRight.svg";
 import StaticDateRangePickerDemo from "./Calendar";
 
 export default function CalendarPopover() {
@@ -20,7 +20,7 @@ export default function CalendarPopover() {
 
   return (
     <>
-      <img src={Calendar} alt="calendar" aria-describedby={id}  onClick={handleClick} className="calendar-icon"/>
+      <Calendar aria-describedby={id}  onClick={handleClick} className="calendar-icon" />
       <Popover
         id={id}
         open={open}
@@ -38,7 +38,7 @@ export default function CalendarPopover() {
       >
         <div className="calendar-wrapper">
           <div className="title">
-            Start date <img src={ArrowRight} alt="icon"/> End date
+            Start date <ArrowRight /> End date
           </div>
           <StaticDateRangePickerDemo />
         </div>

@@ -230,7 +230,7 @@ export default function TransactionsSection() {
       </div>
 
       <h1 className="h1">
-        <Link href="#"><ArrowLeft /></Link> All news
+        <Link href="#"><ArrowLeft /></Link> All transaction
       </h1>
 
       <div className="search-wrapper board">
@@ -259,7 +259,12 @@ export default function TransactionsSection() {
           </div>
           <div className="board-panel__search">
             <div className="input-search-wrapper">
-              <input className="search-bar" type="text" placeholder="Search parameter"/>
+              <TextField
+                className="textarea"
+                label="Search parameter"
+                variant="outlined"
+                fullWidth
+              />
             </div>
 
             <SearchPopup />
@@ -270,7 +275,7 @@ export default function TransactionsSection() {
 
       <div className="board board--bonus">
         <div className="title">
-          Received bonuses
+          Transaction list
           <img src={savingIcon} alt="icon"/>
         </div>
 
@@ -291,8 +296,68 @@ export default function TransactionsSection() {
               <td className="td-1">85.</td>
               <td className="td-2">
                 <div className="type">
-                  <div className="table-item-circle secondary-900-bg" />
-                  Pertner bonus:
+                  <div className="table-item-circle marina-900-bg " />
+                  Team bonus
+                </div>
+              </td>
+              <td className="td-3">10  UMI</td>
+              <td className="td-4">v9ajmwyu4zldjhn...118dhdjj</td>
+              <td className="td-5">
+                v9ajmwyu4zldjhn...118dhdjj
+              </td>
+              <td className="td-6">21.01.2021 - 01:12</td>
+            </tr>
+            <tr>
+              <td className="td-1">85.</td>
+              <td className="td-2">
+                <div className="type">
+                  <div className="table-item-circle main-900-bg" />
+                  Deposit
+                </div>
+              </td>
+              <td className="td-3">10  UMI</td>
+              <td className="td-4">v9ajmwyu4zldjhn...118dhdjj</td>
+              <td className="td-5">
+                v9ajmwyu4zldjhn...118dhdjj
+              </td>
+              <td className="td-6">21.01.2021 - 01:12</td>
+            </tr>
+            <tr>
+              <td className="td-1">85.</td>
+              <td className="td-2">
+                <div className="type">
+                  <div className="table-item-circle warning-900-bg" />
+                  Withdraw
+                </div>
+              </td>
+              <td className="td-3">10  UMI</td>
+              <td className="td-4">v9ajmwyu4zldjhn...118dhdjj</td>
+              <td className="td-5">
+                v9ajmwyu4zldjhn...118dhdjj
+              </td>
+              <td className="td-6">21.01.2021 - 01:12</td>
+            </tr>
+            <tr>
+              <td className="td-1">85.</td>
+              <td className="td-2">
+                <div className="type">
+                  <div className="table-item-circle marina-900-bg" />
+                  Team bonus
+                </div>
+              </td>
+              <td className="td-3">10  UMI</td>
+              <td className="td-4">v9ajmwyu4zldjhn...118dhdjj</td>
+              <td className="td-5">
+                v9ajmwyu4zldjhn...118dhdjj
+              </td>
+              <td className="td-6">21.01.2021 - 01:12</td>
+            </tr>
+            <tr>
+              <td className="td-1">85.</td>
+              <td className="td-2">
+                <div className="type">
+                  <div className="table-item-circle main-900-bg" />
+                  Deposit
                 </div>
               </td>
               <td className="td-3">10  UMI</td>
@@ -321,8 +386,8 @@ export default function TransactionsSection() {
               <td className="td-1">85.</td>
               <td className="td-2">
                 <div className="type">
-                  <div className="table-item-circle secondary-900-bg" />
-                  Pertner bonus:
+                  <div className="table-item-circle main-900-bg" />
+                  Deposit
                 </div>
               </td>
               <td className="td-3">10  UMI</td>
@@ -336,8 +401,8 @@ export default function TransactionsSection() {
               <td className="td-1">85.</td>
               <td className="td-2">
                 <div className="type">
-                  <div className="table-item-circle secondary-900-bg" />
-                  Pertner bonus:
+                  <div className="table-item-circle marina-900-bg" />
+                  Team bonus
                 </div>
               </td>
               <td className="td-3">10  UMI</td>
@@ -351,8 +416,8 @@ export default function TransactionsSection() {
               <td className="td-1">85.</td>
               <td className="td-2">
                 <div className="type">
-                  <div className="table-item-circle secondary-900-bg" />
-                  Pertner bonus:
+                  <div className="table-item-circle marina-900-bg" />
+                  Team bonus
                 </div>
               </td>
               <td className="td-3">10  UMI</td>
@@ -366,68 +431,8 @@ export default function TransactionsSection() {
               <td className="td-1">85.</td>
               <td className="td-2">
                 <div className="type">
-                  <div className="table-item-circle secondary-900-bg" />
-                  Pertner bonus:
-                </div>
-              </td>
-              <td className="td-3">10  UMI</td>
-              <td className="td-4">v9ajmwyu4zldjhn...118dhdjj</td>
-              <td className="td-5">
-                v9ajmwyu4zldjhn...118dhdjj
-              </td>
-              <td className="td-6">21.01.2021 - 01:12</td>
-            </tr>
-            <tr>
-              <td className="td-1">85.</td>
-              <td className="td-2">
-                <div className="type">
-                  <div className="table-item-circle secondary-900-bg" />
-                  Pertner bonus:
-                </div>
-              </td>
-              <td className="td-3">10  UMI</td>
-              <td className="td-4">v9ajmwyu4zldjhn...118dhdjj</td>
-              <td className="td-5">
-                v9ajmwyu4zldjhn...118dhdjj
-              </td>
-              <td className="td-6">21.01.2021 - 01:12</td>
-            </tr>
-            <tr>
-              <td className="td-1">85.</td>
-              <td className="td-2">
-                <div className="type">
-                  <div className="table-item-circle secondary-900-bg" />
-                  Pertner bonus:
-                </div>
-              </td>
-              <td className="td-3">10  UMI</td>
-              <td className="td-4">v9ajmwyu4zldjhn...118dhdjj</td>
-              <td className="td-5">
-                v9ajmwyu4zldjhn...118dhdjj
-              </td>
-              <td className="td-6">21.01.2021 - 01:12</td>
-            </tr>
-            <tr>
-              <td className="td-1">85.</td>
-              <td className="td-2">
-                <div className="type">
-                  <div className="table-item-circle secondary-900-bg" />
-                  Pertner bonus:
-                </div>
-              </td>
-              <td className="td-3">10  UMI</td>
-              <td className="td-4">v9ajmwyu4zldjhn...118dhdjj</td>
-              <td className="td-5">
-                v9ajmwyu4zldjhn...118dhdjj
-              </td>
-              <td className="td-6">21.01.2021 - 01:12</td>
-            </tr>
-            <tr>
-              <td className="td-1">85.</td>
-              <td className="td-2">
-                <div className="type">
-                  <div className="table-item-circle secondary-900-bg" />
-                  Pertner bonus:
+                  <div className="table-item-circle warning-900-bg" />
+                  Withdraw
                 </div>
               </td>
               <td className="td-3">10  UMI</td>

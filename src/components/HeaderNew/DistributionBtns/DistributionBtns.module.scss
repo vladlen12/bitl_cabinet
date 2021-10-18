@@ -7,18 +7,14 @@
 }
 
 .distributionButton {
-  width: 140px;
-  background-color: #f2f2f2;
-  border-radius: 4px;
+  width: 118px;
   border: none;
   cursor: pointer;
-  @media (max-width: $desktop - 1) {
-    width: 118px;
-  }
+  display: inline-block;
 }
 
 .distributionButton:not(:last-child) {
-  margin-right: 16px;
+  margin-right: 6px;
 }
 
 .btnContent {
@@ -29,28 +25,3 @@
     padding: 9px 0px 9px 5px;
   }
 }
-
-.btnIcon {
-  margin-right: 8px;
-}
-
-.btnText {
-  font-family: Gilroy, sans-serif;
-  color: #33343E;
-}
-
-.btnTitle {
-  text-align: left;
-  font-size: 8px;
-  line-height: 8px;
-  color: #33343E;
-  margin-bottom: 2px;
-}
-
-.btnSubtitle {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 12px;
-}
-

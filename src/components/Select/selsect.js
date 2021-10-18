@@ -26,7 +26,7 @@ export default function CustomSelect() {
   return (
     <FormControl
       fullWidth
-      className="custom-select"
+      className="custom-select textarea"
     >
       <InputLabel shrink>Filter</InputLabel>
       <Select
