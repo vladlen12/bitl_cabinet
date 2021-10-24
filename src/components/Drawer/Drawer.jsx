@@ -56,7 +56,7 @@ export default function DrawerMenu() {
                 strokeColor={{
                   '0': '#5851FF',
                 }}
-                percent={55}
+                percent={56}
                 format={() => (
                   <img src={customer} alt=""/>
                 )}
@@ -191,7 +191,7 @@ export default function DrawerMenu() {
                 strokeColor={{
                   '0': '#F6339A',
                 }}
-                percent={70}
+                percent={80}
                 format={() => (
                   <img src={customer} alt=""/>
                 )}

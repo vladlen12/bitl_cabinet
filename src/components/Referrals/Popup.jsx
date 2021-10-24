@@ -19,7 +19,15 @@ export default function ReferalsDialog() {
 
   return (
     <>
-      <button className="btn btn--default" type="button" onClick={handleClickOpen}>search</button>
+      <div className="input-search-wrapper">
+        <TextField
+          className="textarea"
+          label="Serch user"
+          variant="outlined"
+          fullWidth
+          onClick={handleClickOpen}
+        />
+      </div>
       <Dialog
         open={open}
         onClose={handleClose}
@@ -70,7 +78,7 @@ export default function ReferalsDialog() {
                       strokeColor={{
                         '0': '#FF5655',
                       }}
-                      percent={13}
+                      percent={16}
                       format={() => (
                         <img src={customer} alt=""/>
                       )}
@@ -99,7 +107,7 @@ export default function ReferalsDialog() {
                       strokeColor={{
                         '0': '#FFD965',
                       }}
-                      percent={35}
+                      percent={32}
                       format={() => (
                         <img src={customer} alt=""/>
                       )}
@@ -127,7 +135,7 @@ export default function ReferalsDialog() {
                       strokeColor={{
                         '0': '#38D47E',
                       }}
-                      percent={45}
+                      percent={40}
                       format={() => (
                         <img src={customer} alt=""/>
                       )}
@@ -155,7 +163,7 @@ export default function ReferalsDialog() {
                       strokeColor={{
                         '0': '#0D05BA',
                       }}
-                      percent={60}
+                      percent={56}
                       format={() => (
                         <img src={customer} alt=""/>
                       )}
@@ -183,7 +191,7 @@ export default function ReferalsDialog() {
                       strokeColor={{
                         '0': '#0D05BA',
                       }}
-                      percent={50}
+                      percent={56}
                       format={() => (
                         <img src={customer} alt=""/>
                       )}
@@ -211,7 +219,7 @@ export default function ReferalsDialog() {
                       strokeColor={{
                         '0': '#BE22E2',
                       }}
-                      percent={70}
+                      percent={72}
                       format={() => (
                         <img src={customer} alt=""/>
                       )}
@@ -239,7 +247,7 @@ export default function ReferalsDialog() {
                       strokeColor={{
                         '0': '#F6339A',
                       }}
-                      percent={75}
+                      percent={80}
                       format={() => (
                         <img src={customer} alt=""/>
                       )}
@@ -267,7 +275,7 @@ export default function ReferalsDialog() {
                       strokeColor={{
                         '0': '#FFB865',
                       }}
-                      percent={30}
+                      percent={24}
                       format={() => (
                         <img src={customer} alt=""/>
                       )}
@@ -295,7 +303,7 @@ export default function ReferalsDialog() {
                       strokeColor={{
                         '0': '#FFD965',
                       }}
-                      percent={27}
+                      percent={32}
                       format={() => (
                         <img src={customer} alt=""/>
                       )}
@@ -323,7 +331,7 @@ export default function ReferalsDialog() {
                       strokeColor={{
                         '0': '#9A9BA2',
                       }}
-                      percent={5}
+                      percent={8}
                       format={() => (
                         <img src={customer} alt=""/>
                       )}

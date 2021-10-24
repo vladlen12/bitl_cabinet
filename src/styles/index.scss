@@ -2,7 +2,9 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import "utils/variables";
+@import "./utils/variables";
+@import "./typography.scss";
+
 
 *,
 *::before,
@@ -27,7 +29,7 @@ time, mark, audio, video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
+  font-family: 'Gilroy', sans-serif;
   vertical-align: baseline;
   z-index: inherit;
 }
@@ -57,13 +59,14 @@ table {
   font-family: 'Gilroy', sans-serif;
 }
 
-
-@import "./utils/variables";
-@import "./typography.scss";
+.table {
+  font-family: 'Gilroy', sans-serif;
+}
 
 body{
   background: #FAFAFF;
   font-family: 'Gilroy', sans-serif;
+  font-feature-settings: inherit;
 }
 
 a{
@@ -117,6 +120,11 @@ a{
   }
 }
 
+.title,
+.subtitle {
+  font-family: 'Gilroy', sans-serif;
+}
+
 .hamburger-react {
   @media (max-width: $desktop) {
     margin-left: -10px;
@@ -131,6 +139,10 @@ a{
     height: 50px;
     box-sizing: border-box;
     font-family: 'Gilroy', sans-serif;
+  }
+
+  .MuiInputAdornment-root {
+    cursor: pointer;
   }
 
   fieldset {
@@ -274,7 +286,10 @@ a{
   a {
     font-size: 12px;
     line-height: 16px;
-    color: $Secondary-900;
+    color: $Black-600;
+    &:hover {
+      color: $Secondary-900;
+    }
   }
 }
 
@@ -355,7 +370,7 @@ a{
   background-color: $Main-900;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 12px;
   line-height: 12px;
   color: $White-100;
@@ -365,10 +380,12 @@ a{
     background-color: $Main-900;
     &:hover {
       background-color: $Main-700;
+      color: $White-100;
     }
 
     &:active {
       background-color: $Main-800;
+      color: $White-100;
     }
   }
 
@@ -447,14 +464,14 @@ a{
 .label {
   padding: 5px 8px;
   border-radius: 4px;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 10px;
   line-height: 10px;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: $White-100;
   white-space: nowrap;
-  font-family: Gilroy, sans-serif;
+  font-family: 'Gilroy', sans-serif;
 
   &.label--1 {
     background-color: $Black-600;
@@ -526,10 +543,14 @@ a{
       right: 32px;
       top: 35px;
     }
+
+    &:hover {
+      opacity: .6;
+    }
   }
 
   .title {
-    font-weight: bold;
+    font-weight: 700;
     font-size: 20px;
     line-height: 30px;
     color: $Black-800;
@@ -559,7 +580,7 @@ a{
     }
 
     .description {
-      font-weight: bold;
+      font-weight: 700;
       font-size: 24px;
       line-height: 34px;
       color: $Black-700;
@@ -795,7 +816,7 @@ a{
   }
 
   .table-item {
-    font-weight: bold;
+    font-weight: 700;
     font-size: 12px;
     line-height: 12px;
     text-transform: uppercase;
@@ -1250,6 +1271,10 @@ body {
 
     .calendar-wrapper .MuiDateRangePickerDay-rangeIntervalDayHighlight {
       background-color: rgba(123, 97, 255, .2);
+    }
+
+    input:checked + .switch-menu {
+      background-color: $Main-900;
     }
   }
 }

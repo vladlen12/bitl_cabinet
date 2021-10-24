@@ -13,6 +13,7 @@ import Language from "./Language/Language";
 import DrawerMenu from "../Drawer/Drawer"
 
 import styles from './Header.module.scss'
+import LoginDialog from "../PersonalAreaPage/Popup";
 
 function Header({commonClass}) {
     const [isOpen, setOpen] = useState(false)
@@ -48,6 +49,7 @@ function Header({commonClass}) {
                 <Logo/>
                 <DistributionBtns/>
                 <div style={{display: "flex", alignItems: "center"}}>
+                    <LoginDialog />
                     <Language/>
                     <Customer name="william" lvl="7 LVL"/>
                 </div>

@@ -3,9 +3,10 @@
 .pagination {
   .MuiButtonBase-root {
     min-width: 24px;
+    max-width: 24px;
     height: 24px;
     border: none;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 12px;
     line-height: 16px;
     color: $Black-600;
@@ -49,8 +50,10 @@
   .MuiPaginationItem-ellipsis {
     background-color: rgba(154, 155, 162, .1);
     min-width: 24px;
+    max-width: 24px;
     height: 24px;
     font-family: 'Gilroy', sans-serif;
     border-radius: 4px;
+    margin: 0 8px;
   }
 }

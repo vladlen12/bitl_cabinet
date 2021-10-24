@@ -3,7 +3,7 @@
 .section--referrals {
   .structure-info {
     .title {
-      font-weight: bold;
+      font-weight: 700;
       font-size: 16px;
       line-height: 26px;
       color: $Black-700;
@@ -106,28 +106,14 @@
       }
 
       &:hover {
-        svg {
-          path {
-            fill: $Secondary-900;
-          }
-        }
+        background-color: $Black-500;
       }
-      svg {
-        path {
-          fill: $Black-600;
-        }
-      }
-
       .tab-item {
         margin-right: 0;
       }
 
       &.Mui-selected {
-        svg {
-          path {
-            fill: $Secondary-900;
-          }
-        }
+        background-color: $Black-500;
       }
     }
   }
@@ -208,7 +194,7 @@
     }
 
     strong {
-      font-weight: bold;
+      font-weight: 700;
       display: block;
     }
   }
@@ -218,7 +204,7 @@
     text-align: left;
     thead {
       th {
-        font-weight: bold;
+        font-weight: 700;
         font-size: 12px;
         line-height: 12px;
         text-transform: uppercase;
@@ -340,7 +326,7 @@
 
     .ant-table-thead {
       .ant-table-cell {
-        font-weight: bold;
+        font-weight: 700;
         font-size: 12px;
         line-height: 12px;
         color: $Black-600;

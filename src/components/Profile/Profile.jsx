@@ -24,9 +24,9 @@ export default function ProfileSection() {
               <Progress
                 type="circle"
                 strokeWidth={6}
-                width={68}
+                width={56}
                 strokeColor={{
-                  '0': '#4D45FF',
+                  '0': '#5851FF',
                 }}
                 percent={55}
                 format={() => (

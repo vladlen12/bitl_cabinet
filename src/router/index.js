@@ -12,6 +12,7 @@ import Profile from "../pages/Profile";
 import Referrals from "../pages/Referrals";
 import Reports from "../pages/Reports";
 import Transactions from "../pages/Transactions";
+import TransactionsOne from "../pages/TransactionsOne";
 import privat from "../pages/privat";
 import terms from "../pages/terms";
 import NewsOne from "../pages/NewsOne";
@@ -23,6 +24,7 @@ const AppRouter = () => {
         <Route path={ROUTES.personalArea} component={PersonalArea} />
         <Route path={ROUTES.refferals} component={Referrals} />
         <Route path={ROUTES.transactions} component={Transactions} />
+        <Route path={ROUTES.transactionsOne} component={TransactionsOne} />
         <Route path={ROUTES.reports} component={Reports} />
         <Route path={ROUTES.profile} component={Profile} />
         <Route path={ROUTES.faq} component={Faq} />

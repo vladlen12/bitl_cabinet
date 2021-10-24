@@ -25,7 +25,6 @@ import TextField from "@mui/material/TextField";
 import InputAdornment from '@mui/material/InputAdornment';
 import 'antd/dist/antd.css';
 import { Progress } from 'antd';
-import LoginDialog from "./Popup";
 import CalendarPopover from "./popover";
 
 const data = {
@@ -83,8 +82,6 @@ const PersonalAreaPage = () => {
       <h1 className="h1">
         Personal Area
       </h1>
-
-      <LoginDialog />
 
       <ul className="structure-info-list">
         <li className="board structure-info-list__item">
@@ -359,7 +356,7 @@ const PersonalAreaPage = () => {
                         strokeColor={{
                           '0': '#FF5655',
                         }}
-                        percent={13}
+                        percent={16}
                         format={() => (
                           <img src={customer} alt=""/>
                         )}
@@ -388,7 +385,7 @@ const PersonalAreaPage = () => {
                         strokeColor={{
                           '0': '#FFD965',
                         }}
-                        percent={35}
+                        percent={32}
                         format={() => (
                           <img src={customer} alt=""/>
                         )}
@@ -416,7 +413,7 @@ const PersonalAreaPage = () => {
                         strokeColor={{
                           '0': '#38D47E',
                         }}
-                        percent={45}
+                        percent={40}
                         format={() => (
                           <img src={customer} alt=""/>
                         )}
@@ -444,7 +441,7 @@ const PersonalAreaPage = () => {
                         strokeColor={{
                           '0': '#0D05BA',
                         }}
-                        percent={60}
+                        percent={56}
                         format={() => (
                           <img src={customer} alt=""/>
                         )}
@@ -472,7 +469,7 @@ const PersonalAreaPage = () => {
                         strokeColor={{
                           '0': '#0D05BA',
                         }}
-                        percent={50}
+                        percent={56}
                         format={() => (
                           <img src={customer} alt=""/>
                         )}
@@ -500,7 +497,7 @@ const PersonalAreaPage = () => {
                         strokeColor={{
                           '0': '#BE22E2',
                         }}
-                        percent={70}
+                        percent={72}
                         format={() => (
                           <img src={customer} alt=""/>
                         )}
@@ -528,7 +525,7 @@ const PersonalAreaPage = () => {
                         strokeColor={{
                           '0': '#F6339A',
                         }}
-                        percent={75}
+                        percent={80}
                         format={() => (
                           <img src={customer} alt=""/>
                         )}
@@ -556,7 +553,7 @@ const PersonalAreaPage = () => {
                         strokeColor={{
                           '0': '#FFB865',
                         }}
-                        percent={30}
+                        percent={24}
                         format={() => (
                           <img src={customer} alt=""/>
                         )}
@@ -584,7 +581,7 @@ const PersonalAreaPage = () => {
                         strokeColor={{
                           '0': '#FFD965',
                         }}
-                        percent={27}
+                        percent={24}
                         format={() => (
                           <img src={customer} alt=""/>
                         )}
@@ -612,7 +609,7 @@ const PersonalAreaPage = () => {
                         strokeColor={{
                           '0': '#9A9BA2',
                         }}
-                        percent={5}
+                        percent={8}
                         format={() => (
                           <img src={customer} alt=""/>
                         )}

@@ -5,7 +5,6 @@ import {ReactComponent as Strucure3} from "../../assets/icons/strucure3.svg";
 import {ReactComponent as Strucure4} from "../../assets/icons/strucure4.svg";
 import React from "react";
 import IconTabs from "./Tabs";
-import {TextField} from "@mui/material";
 import ReferalsDialog from "./Popup";
 
 
@@ -14,7 +13,6 @@ const ReferralsSection = () => (
     <h1 className="h1">
       Refferals
     </h1>
-    <ReferalsDialog />
 
     <div className="user-info board">
       <div className="title">
@@ -73,14 +71,7 @@ const ReferralsSection = () => (
         Structure Users
       </div>
       <div className="search-bar-wrapper board">
-        <div className="input-search-wrapper">
-          <TextField
-            className="textarea"
-            label="Serch user"
-            variant="outlined"
-            fullWidth
-          />
-        </div>
+        <ReferalsDialog />
 
         <div className="tabs-wrapper">
           <IconTabs />

@@ -29,13 +29,14 @@
   }
 
   .MuiTypography-subtitle1 {
-    font-weight: bold;
+    font-weight: 700;
     font-size: 14px;
     line-height: 24px;
     color: $Black-700;
     width: 100%;
     height: auto;
     text-align: center;
+    font-family: 'Gilroy', sans-serif;
   }
 
   .MuiButtonBase-root,
@@ -52,6 +53,7 @@
     transform: scale(1);
     width: 28px;
     height: 28px;
+    font-family: 'Gilroy', sans-serif;
   }
 
   .MuiDateRangePickerDay-rangeIntervalDayHighlightStart {
@@ -65,7 +67,10 @@
         border-bottom-left-radius: 4px;
       }
     }
+  }
 
+  .MuiDateRangePickerDay-rangeIntervalDayHighlight {
+    background-color: #F2EFFF;
   }
 
   .MuiDateRangePickerDay-rangeIntervalDayHighlightEnd {

@@ -6,11 +6,11 @@
   top: 45px;
   width: 166px;
   background-color: #FFFFFF;
-  transform: translateY(0);
-  transition: transform 0.5s ease-in-out;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
 }
 .languageSelectWrapperClosed{
-  transform: translateY(-150%);
+  opacity: 0;
 }
 
 .menuItem {
@@ -29,7 +29,7 @@
   padding-right: 12px;
 }
 .menuItemText {
-  font-family: Gilroy, sans-serif;
+  font-family: 'Gilroy', sans-serif;
   font-size: 14px;
   line-height: 24px;
   color: #33343E;

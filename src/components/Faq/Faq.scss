@@ -22,7 +22,7 @@
       padding: 0 0 16px 0;
       min-width: auto;
       margin-right: 28px;
-      font-weight: bold;
+      font-weight: 700;
       font-size: 12px;
       line-height: 12px;
       @media (min-width: $tablet) {
@@ -38,7 +38,7 @@
     }
 
     .MuiTab-wrapper {
-      font-weight: bold;
+      font-weight: 700;
       font-size: 12px;
       line-height: 12px;
       text-transform: uppercase;
@@ -126,7 +126,7 @@
 
     .title {
       position: relative;
-      font-weight: bold;
+      font-weight: 700;
       font-size: 14px;
       line-height: 24px;
       color: $Black-600;

@@ -9,7 +9,7 @@ body {
 }
 
 .listItemText{
-  font-family: Gilroy, serif;
+  font-family: 'Gilroy', serif;
   font-size: 12px;
   line-height: 12px;
   letter-spacing: 1px;
@@ -19,7 +19,7 @@ body {
 .listItemContent{
   display: flex;
   align-items: center;
-  font-family: Gilroy, serif;
+  font-family: 'Gilroy', serif;
   font-size: 12px;
   line-height: 12px;
   letter-spacing: 1px;
@@ -32,7 +32,7 @@ body {
 
 .activeLink{
   color: $Secondary-900;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .activeLink .icon path{
@@ -44,7 +44,7 @@ body {
   justify-content: center;
 }
 .menuItemText {
-  font-family: Gilroy, sans-serif;
+  font-family: 'Gilroy', sans-serif;
   font-size: 14px;
   line-height: 24px;
   color: #33343E;

@@ -54,7 +54,7 @@ function Avatar({level, avatar, isOpen}) {
                             strokeColor={{
                                 '0': '#5851FF',
                             }}
-                            percent={58}
+                            percent={56}
                             format={() => (
                               <img src={customer} alt="customer"/>
                             )}

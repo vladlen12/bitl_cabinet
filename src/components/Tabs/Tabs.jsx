@@ -326,7 +326,7 @@ export default function TabPanelMenu() {
                         strokeColor={{
                           '0': '#38D47E',
                         }}
-                        percent={35}
+                        percent={40}
                         format={() => (
                           <img src={customer} alt=""/>
                         )}
@@ -356,7 +356,7 @@ export default function TabPanelMenu() {
                         strokeColor={{
                           '0': '#FFD965',
                         }}
-                        percent={25}
+                        percent={32}
                         format={() => (
                           <img src={customer} alt=""/>
                         )}
@@ -386,7 +386,7 @@ export default function TabPanelMenu() {
                         strokeColor={{
                           '0': '#FFB865',
                         }}
-                        percent={20}
+                        percent={24}
                         format={() => (
                           <img src={customer} alt=""/>
                         )}
@@ -446,7 +446,7 @@ export default function TabPanelMenu() {
                         strokeColor={{
                           '0': '#5851FF',
                         }}
-                        percent={55}
+                        percent={56}
                         format={() => (
                           <img src={customer} alt=""/>
                         )}
@@ -476,7 +476,7 @@ export default function TabPanelMenu() {
                         strokeColor={{
                           '0': '#A6D4FF',
                         }}
-                        percent={50}
+                        percent={48}
                         format={() => (
                           <img src={customer} alt=""/>
                         )}
@@ -506,7 +506,7 @@ export default function TabPanelMenu() {
                         strokeColor={{
                           '0': '#7B61FF',
                         }}
-                        percent={65}
+                        percent={64}
                         format={() => (
                           <img src={customer} alt=""/>
                         )}
@@ -566,7 +566,7 @@ export default function TabPanelMenu() {
                         strokeColor={{
                           '0': '#38D47E',
                         }}
-                        percent={35}
+                        percent={40}
                         format={() => (
                           <img src={customer} alt=""/>
                         )}
@@ -596,7 +596,7 @@ export default function TabPanelMenu() {
                         strokeColor={{
                           '0': '#A6D4FF',
                         }}
-                        percent={45}
+                        percent={48}
                         format={() => (
                           <img src={customer} alt=""/>
                         )}
@@ -733,7 +733,7 @@ export default function TabPanelMenu() {
                         strokeColor={{
                           '0': '#38D47E',
                         }}
-                        percent={35}
+                        percent={40}
                         format={() => (
                           <img src={customer} alt=""/>
                         )}
@@ -825,7 +825,7 @@ export default function TabPanelMenu() {
                         strokeColor={{
                           '0': '#A6D4FF',
                         }}
-                        percent={45}
+                        percent={48}
                         format={() => (
                           <img src={customer} alt=""/>
                         )}
@@ -856,7 +856,7 @@ export default function TabPanelMenu() {
                         strokeColor={{
                           '0': '#7B61FF',
                         }}
-                        percent={70}
+                        percent={64}
                         format={() => (
                           <img src={customer} alt=""/>
                         )}
@@ -917,7 +917,7 @@ export default function TabPanelMenu() {
                         strokeColor={{
                           '0': '#38D47E',
                         }}
-                        percent={45}
+                        percent={40}
                         format={() => (
                           <img src={customer} alt=""/>
                         )}
@@ -948,7 +948,7 @@ export default function TabPanelMenu() {
                         strokeColor={{
                           '0': '#A6D4FF',
                         }}
-                        percent={55}
+                        percent={48}
                         format={() => (
                           <img src={customer} alt=""/>
                         )}
@@ -1016,7 +1016,7 @@ export default function TabPanelMenu() {
                             strokeColor={{
                               '0': '#5851FF',
                             }}
-                            percent={55}
+                            percent={56}
                             format={() => (
                               <img src={customer} alt=""/>
                             )}
@@ -1449,7 +1449,7 @@ export default function TabPanelMenu() {
                         strokeColor={{
                           '0': '#FF5655',
                         }}
-                        percent={20}
+                        percent={16}
                         format={() => (
                           <img src={customer} alt=""/>
                         )}
@@ -1476,7 +1476,7 @@ export default function TabPanelMenu() {
                         strokeColor={{
                           '0': '#FF5655',
                         }}
-                        percent={15}
+                        percent={16}
                         format={() => (
                           <img src={customer} alt=""/>
                         )}
@@ -1503,7 +1503,7 @@ export default function TabPanelMenu() {
                         strokeColor={{
                           '0': '#9A9BA2',
                         }}
-                        percent={15}
+                        percent={8}
                         format={() => (
                           <img src={customer} alt=""/>
                         )}
@@ -1530,7 +1530,7 @@ export default function TabPanelMenu() {
                         strokeColor={{
                           '0': '#FFB865',
                         }}
-                        percent={30}
+                        percent={24}
                         format={() => (
                           <img src={customer} alt=""/>
                         )}
@@ -1557,7 +1557,7 @@ export default function TabPanelMenu() {
                         strokeColor={{
                           '0': '#FFB865',
                         }}
-                        percent={30}
+                        percent={32}
                         format={() => (
                           <img src={customer} alt=""/>
                         )}
@@ -1611,7 +1611,7 @@ export default function TabPanelMenu() {
                         strokeColor={{
                           '0': '#9A9BA2',
                         }}
-                        percent={15}
+                        percent={8}
                         format={() => (
                           <img src={customer} alt=""/>
                         )}
@@ -1638,7 +1638,7 @@ export default function TabPanelMenu() {
                         strokeColor={{
                           '0': '#5851FF',
                         }}
-                        percent={55}
+                        percent={56}
                         format={() => (
                           <img src={customer} alt=""/>
                         )}
@@ -1665,7 +1665,7 @@ export default function TabPanelMenu() {
                         strokeColor={{
                           '0': '#9A9BA2',
                         }}
-                        percent={15}
+                        percent={8}
                         format={() => (
                           <img src={customer} alt=""/>
                         )}
