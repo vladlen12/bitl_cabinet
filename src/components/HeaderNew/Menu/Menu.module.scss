@@ -24,6 +24,7 @@ body {
   line-height: 12px;
   letter-spacing: 1px;
   text-transform: uppercase;
+  width: 100%;
   color: $Black-700;
 }
 .listItemContent:hover{
@@ -58,7 +59,9 @@ body {
   margin-bottom: 24px;
 }
 .icon {
-  padding-right: 18px;
+  width: 24px;
+  height: 24px;
+  margin-right: 18px;
 }
 @media (min-width: $desktop) {
   .navWrapper{

@@ -3,7 +3,7 @@ import styles from './DistributionBtns.module.scss'
 import Apple from '../../../assets/apple.svg'
 import Android from '../../../assets/android.svg'
 import AppleDark from '../../../assets/AppleDark.svg'
-import AndroidDark from '../../../assets/AndroidDark.svg'
+import AndroidDark from '../../../assets/AndroidDark.png'
 import {Link} from "react-router-dom";
 
 function DistributionBtns(props) {

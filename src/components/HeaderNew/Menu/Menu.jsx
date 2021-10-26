@@ -26,6 +26,7 @@ import news from './menuIcons/News.svg'
 import newsActive from './menuIcons/NewsActive.svg'
 import blackMode from './menuIcons/Black Line.svg'
 import blackModeActive from './menuIcons/BlackLineActive.svg'
+import cx from 'classnames'
 
 import logout from './menuIcons/Logout.svg'
 import logoutActive from './menuIcons/LogoutActive.svg'
@@ -40,6 +41,7 @@ import useWindowSize from "../../../hooks/useWindowSize";
 import constants from "../../../constants/constants";
 import { ROUTES } from "../../../constants/routes";
 
+
 function Menu({isOpen, commonClass}) {
     const location = useLocation();
     const useStyles = makeStyles(generateStyles(isOpen))
@@ -49,6 +51,7 @@ function Menu({isOpen, commonClass}) {
     const [hoveredOnCategory, setHoveredOnCategory] = useState(ROUTES.personalArea)
     const [isDesktop,setIsDesktop] = useState();
     const {width} = useWindowSize()
+    const cxMenuWrapper = cx("menu-wrapper",classes.menu)
 
     const [state, setState] = useState(false);
     useEffect(() => {
@@ -76,7 +79,7 @@ function Menu({isOpen, commonClass}) {
 
     !isDesktop
     ?
-        menu = <div className={classes.menu}>
+        menu = <div className={cxMenuWrapper}>
             <LanguageSelect/>
             <div>
                 <Divider/>

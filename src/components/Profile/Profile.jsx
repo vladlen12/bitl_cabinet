@@ -41,9 +41,6 @@ export default function ProfileSection() {
             </div>
           </div>
           <div className="btn-wrapper">
-            <div className="btn btn--disabled">
-              Delete
-            </div>
             <ProfileDialog />
             <div className="btn btn--gray">
               Delete

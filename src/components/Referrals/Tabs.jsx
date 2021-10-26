@@ -62,6 +62,7 @@ export default function BasicTabs() {
           onChange={handleChange}
           aria-label="tabs"
           variant="scrollable"
+          scrollButtons
           allowScrollButtonsMobile
         >
           <Tab icon={<Tab1 />} {...a11yProps(0)} />

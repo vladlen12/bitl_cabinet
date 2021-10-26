@@ -106,14 +106,14 @@
       }
 
       &:hover {
-        background-color: $Black-500;
+        background-color: rgba(227, 227, 231, .3);
       }
       .tab-item {
         margin-right: 0;
       }
 
       &.Mui-selected {
-        background-color: $Black-500;
+        background-color: rgba(227, 227, 231, .3);
       }
     }
   }

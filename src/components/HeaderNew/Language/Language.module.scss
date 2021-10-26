@@ -9,8 +9,10 @@
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
 }
+
 .languageSelectWrapperClosed{
   opacity: 0;
+  visibility: hidden;
 }
 
 .menuItem {

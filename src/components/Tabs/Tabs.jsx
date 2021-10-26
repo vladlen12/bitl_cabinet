@@ -6,7 +6,6 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import CustomSelect from "../Select/selsect";
 import downSmallIcon from '../../assets/icons/downSmall.svg'
 import savingIcon from '../../assets/icons/Saving.svg'
 import {Doughnut, Line} from 'react-chartjs-2';
@@ -25,6 +24,9 @@ import {ReactComponent as Lvl2} from "../../assets/icons/lvl2.svg";
 import {ReactComponent as DoubleArrow} from "../../assets/icons/Double-Right.svg";
 import {ReactComponent as Lvl3} from "../../assets/icons/lvl3.svg";
 import CustomDateRangeInputs from "../Calendar/Input";
+import TransactionsSelect from "../Reports/Transactions";
+import VolumeSelect from "../Reports/Volume";
+import EventSelect from "../Reports/Event";
 
 
 const data = {
@@ -150,6 +152,7 @@ export default function TabPanelMenu() {
           onChange={handleChange}
           aria-label="tabs"
           variant="scrollable"
+          scrollButtons
           allowScrollButtonsMobile
         >
           <Tab label="Bonus report" {...a11yProps(0)} />
@@ -627,16 +630,16 @@ export default function TabPanelMenu() {
       <TabPanel value={value} index={1}>
         <form className="form form--reports">
           <div className="form-item form-item--period">
-            <CustomSelect />
+            <CustomDateRangeInputs />
           </div>
           <div className="form-item form-item--transaction">
-            <CustomSelect />
+            <TransactionsSelect />
           </div>
           <div className="form-item form-item--type">
-            <CustomSelect />
+            <VolumeSelect />
           </div>
           <div className="form-item form-item--event">
-            <CustomSelect />
+            <EventSelect />
           </div>
           <div className="form-item">
             <button className="btn btn--default" type="button">submit</button>
@@ -978,7 +981,7 @@ export default function TabPanelMenu() {
       <TabPanel value={value} index={2}>
         <form className="form form--status">
           <div className="form-item form-item--period">
-            <CustomSelect />
+            <CustomDateRangeInputs />
           </div>
           <div className="form-item form-item--user">
             <TextField className="textarea" label="Name" variant="outlined" />

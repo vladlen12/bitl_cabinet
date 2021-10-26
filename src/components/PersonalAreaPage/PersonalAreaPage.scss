@@ -328,6 +328,10 @@
       margin-bottom: 24px;
       padding-bottom: 16px;
     }
+
+    svg {
+      cursor: pointer;
+    }
   }
 
   .chart {
@@ -603,6 +607,7 @@
   }
   @media (min-width: $desktop) {
     margin-top: 0;
+    height: 100%;
   }
   .title {
     font-weight: 700;

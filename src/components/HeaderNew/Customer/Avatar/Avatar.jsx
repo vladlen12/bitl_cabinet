@@ -4,11 +4,13 @@ import DrawerMenu from "../../../Drawer/Drawer";
 import {Progress} from "antd";
 import customer from "../../../../assets/icons/customer.svg";
 import "./Avatar.module.scss"
+import cx from "classnames";
 
 
 function Avatar({level, avatar, isOpen}) {
     const useStyles = makeStyles(generateStyles)
     const classes = useStyles()
+    const cxMenuTitle = cx("menu-title",classes.menuTitle)
 
     function generateStyles() {
         return {
@@ -43,7 +45,7 @@ function Avatar({level, avatar, isOpen}) {
     return (
         isOpen
             ?
-            <p className={classes.menuTitle}>Menu</p>
+            <p className={cxMenuTitle}>Menu</p>
             :
                   <div className={classes.avatar}>
                       <div className="user-pic user-pic--avatar">

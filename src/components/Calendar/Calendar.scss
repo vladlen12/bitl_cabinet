@@ -4,7 +4,18 @@
   background-color: $White-100;
   box-shadow: 0px 8px 24px rgba(45, 62, 86, 0.12);
   border-radius: 4px;
-  padding: 32px 24px;
+  padding: 32px 0;
+  .PrivatePickersSlideTransition-root {
+    min-width: 280px;
+  }
+  @media (max-width: $tablet - 1) {
+    padding: 20px;
+    max-width: 280px;
+    > div {
+      min-width: 280px;
+      margin-left: -22px;
+    }
+  }
   .title {
     display: flex;
     align-items: center;
@@ -14,10 +25,19 @@
     padding-bottom: 16px;
     margin-bottom: 16px;
     border-bottom: 1px solid $Black-500;
+    padding-left: 24px;
+    padding-right: 24px;
+    @media (max-width: $tablet - 1) {
+      display: none;
+    }
     img {
       margin-left: 8px;
       margin-right: 8px;
     }
+  }
+
+  .MuiTouchRipple-root {
+    display: none;
   }
 
   .MuiTypography-root {
@@ -26,6 +46,8 @@
     color: $Black-600;
     width: 32px;
     height: 32px;
+    font-family: 'Gilroy', sans-serif;
+    letter-spacing: inherit;
   }
 
   .MuiTypography-subtitle1 {
@@ -37,6 +59,10 @@
     height: auto;
     text-align: center;
     font-family: 'Gilroy', sans-serif;
+  }
+
+  .MuiTypography-caption {
+    width: 28px;
   }
 
   .MuiButtonBase-root,
@@ -92,5 +118,27 @@
 
   .PrivatePickersSlideTransition-root {
     min-height: 206px;
+  }
+
+  .PrivatePickersToolbar-root {
+    .MuiTypography-overline {
+      display: none;
+    }
+
+    .MuiButton-text,
+    .MuiTypography-root {
+      width: auto;
+      height: auto;
+      background-color: transparent;
+      font-size: 16px;
+    }
+
+    .Mui-selected {
+      background-color: transparent !important;
+    }
+
+    .MuiIconButton-root {
+      display: none;
+    }
   }
 }

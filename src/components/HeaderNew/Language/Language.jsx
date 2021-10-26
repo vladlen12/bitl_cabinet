@@ -20,7 +20,7 @@ function Language(props) {
         setSelectedLanguage({img: img,language: language})
     }
 
-    const classnames = cx(styles.languageSelectWrapper, {[styles.languageSelectWrapperClosed]: !toggled})
+    const classnames = cx("lang-toggle",styles.languageSelectWrapper, {[styles.languageSelectWrapperClosed]: !toggled})
     return (
         <div style={{marginRight: "8px", position: "relative",cursor: "pointer"}} onClick={handleToggle}>
             <img src={selectedLanguage.img} alt="Language"/>

@@ -10,6 +10,7 @@ import TextField from "@mui/material/TextField";
 import NewsImg from "../../assets/news/news.png";
 import SharePopover from "../SharePopup/SharePopup";
 import PaginationRounded from "../Pagination/Pagination";
+import {Link} from "react-router-dom";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -59,6 +60,7 @@ export default function TabPanelMenu() {
           onChange={handleChange}
           aria-label="tabs"
           variant="scrollable"
+          scrollButtons
           allowScrollButtonsMobile
         >
           <Tab label="All News" {...a11yProps(0)} />
@@ -91,16 +93,52 @@ export default function TabPanelMenu() {
           <div className="content">
             <div className="article-wrapper">
               <article className="article">
-                <div className="article-image">
-                  <img src={NewsImg} alt="news"/>
-                </div>
+                <Link to="/news-one">
+                  <div className="article-image">
+                    <img src={NewsImg} alt="news"/>
+                  </div>
+                </Link>
+                  <div className="article-content">
+                    <Link to="/news-one">
+                      <div className="title">
+                        Aave, Curve, PoolTogether, and Sushi Among...
+                      </div>
+                    </Link>
+                    <Link to="/news-one">
+                      <div className="description">
+                        Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
+                      </div>
+                    </Link>
+                    <div className="article-data">
+                      <div className="time">
+                        26 jun 2020
+                      </div>
+                      <div className="tag">
+                        Cryptoeconomics
+                      </div>
+                      <div className="share">
+                        <SharePopover />
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              <article className="article">
+                <Link to="/news-one">
+                  <div className="article-image">
+                    <img src={NewsImg} alt="news"/>
+                  </div>
+                </Link>
                 <div className="article-content">
-                  <div className="title">
-                    Aave, Curve, PoolTogether, and Sushi Among...
-                  </div>
-                  <div className="description">
-                    Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
-                  </div>
+                  <Link to="/news-one">
+                    <div className="title">
+                      Aave, Curve, PoolTogether, and Sushi Among...
+                    </div>
+                  </Link>
+                  <Link to="/news-one">
+                    <div className="description">
+                      Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
+                    </div>
+                  </Link>
                   <div className="article-data">
                     <div className="time">
                       26 jun 2020
@@ -115,16 +153,22 @@ export default function TabPanelMenu() {
                 </div>
               </article>
               <article className="article">
-                <div className="article-image">
-                  <img src={NewsImg} alt="news"/>
-                </div>
+                <Link to="/news-one">
+                  <div className="article-image">
+                    <img src={NewsImg} alt="news"/>
+                  </div>
+                </Link>
                 <div className="article-content">
-                  <div className="title">
-                    Aave, Curve, PoolTogether, and Sushi Among...
-                  </div>
-                  <div className="description">
-                    Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
-                  </div>
+                  <Link to="/news-one">
+                    <div className="title">
+                      Aave, Curve, PoolTogether, and Sushi Among...
+                    </div>
+                  </Link>
+                  <Link to="/news-one">
+                    <div className="description">
+                      Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
+                    </div>
+                  </Link>
                   <div className="article-data">
                     <div className="time">
                       26 jun 2020
@@ -139,16 +183,22 @@ export default function TabPanelMenu() {
                 </div>
               </article>
               <article className="article">
-                <div className="article-image">
-                  <img src={NewsImg} alt="news"/>
-                </div>
+                <Link to="/news-one">
+                  <div className="article-image">
+                    <img src={NewsImg} alt="news"/>
+                  </div>
+                </Link>
                 <div className="article-content">
-                  <div className="title">
-                    Aave, Curve, PoolTogether, and Sushi Among...
-                  </div>
-                  <div className="description">
-                    Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
-                  </div>
+                  <Link to="/news-one">
+                    <div className="title">
+                      Aave, Curve, PoolTogether, and Sushi Among...
+                    </div>
+                  </Link>
+                  <Link to="/news-one">
+                    <div className="description">
+                      Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
+                    </div>
+                  </Link>
                   <div className="article-data">
                     <div className="time">
                       26 jun 2020
@@ -163,16 +213,22 @@ export default function TabPanelMenu() {
                 </div>
               </article>
               <article className="article">
-                <div className="article-image">
-                  <img src={NewsImg} alt="news"/>
-                </div>
+                <Link to="/news-one">
+                  <div className="article-image">
+                    <img src={NewsImg} alt="news"/>
+                  </div>
+                </Link>
                 <div className="article-content">
-                  <div className="title">
-                    Aave, Curve, PoolTogether, and Sushi Among...
-                  </div>
-                  <div className="description">
-                    Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
-                  </div>
+                  <Link to="/news-one">
+                    <div className="title">
+                      Aave, Curve, PoolTogether, and Sushi Among...
+                    </div>
+                  </Link>
+                  <Link to="/news-one">
+                    <div className="description">
+                      Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
+                    </div>
+                  </Link>
                   <div className="article-data">
                     <div className="time">
                       26 jun 2020
@@ -187,16 +243,22 @@ export default function TabPanelMenu() {
                 </div>
               </article>
               <article className="article">
-                <div className="article-image">
-                  <img src={NewsImg} alt="news"/>
-                </div>
+                <Link to="/news-one">
+                  <div className="article-image">
+                    <img src={NewsImg} alt="news"/>
+                  </div>
+                </Link>
                 <div className="article-content">
-                  <div className="title">
-                    Aave, Curve, PoolTogether, and Sushi Among...
-                  </div>
-                  <div className="description">
-                    Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
-                  </div>
+                  <Link to="/news-one">
+                    <div className="title">
+                      Aave, Curve, PoolTogether, and Sushi Among...
+                    </div>
+                  </Link>
+                  <Link to="/news-one">
+                    <div className="description">
+                      Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
+                    </div>
+                  </Link>
                   <div className="article-data">
                     <div className="time">
                       26 jun 2020
@@ -211,16 +273,22 @@ export default function TabPanelMenu() {
                 </div>
               </article>
               <article className="article">
-                <div className="article-image">
-                  <img src={NewsImg} alt="news"/>
-                </div>
+                <Link to="/news-one">
+                  <div className="article-image">
+                    <img src={NewsImg} alt="news"/>
+                  </div>
+                </Link>
                 <div className="article-content">
-                  <div className="title">
-                    Aave, Curve, PoolTogether, and Sushi Among...
-                  </div>
-                  <div className="description">
-                    Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
-                  </div>
+                  <Link to="/news-one">
+                    <div className="title">
+                      Aave, Curve, PoolTogether, and Sushi Among...
+                    </div>
+                  </Link>
+                  <Link to="/news-one">
+                    <div className="description">
+                      Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
+                    </div>
+                  </Link>
                   <div className="article-data">
                     <div className="time">
                       26 jun 2020
@@ -235,16 +303,22 @@ export default function TabPanelMenu() {
                 </div>
               </article>
               <article className="article">
-                <div className="article-image">
-                  <img src={NewsImg} alt="news"/>
-                </div>
+                <Link to="/news-one">
+                  <div className="article-image">
+                    <img src={NewsImg} alt="news"/>
+                  </div>
+                </Link>
                 <div className="article-content">
-                  <div className="title">
-                    Aave, Curve, PoolTogether, and Sushi Among...
-                  </div>
-                  <div className="description">
-                    Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
-                  </div>
+                  <Link to="/news-one">
+                    <div className="title">
+                      Aave, Curve, PoolTogether, and Sushi Among...
+                    </div>
+                  </Link>
+                  <Link to="/news-one">
+                    <div className="description">
+                      Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
+                    </div>
+                  </Link>
                   <div className="article-data">
                     <div className="time">
                       26 jun 2020
@@ -259,40 +333,22 @@ export default function TabPanelMenu() {
                 </div>
               </article>
               <article className="article">
-                <div className="article-image">
-                  <img src={NewsImg} alt="news"/>
-                </div>
+                <Link to="/news-one">
+                  <div className="article-image">
+                    <img src={NewsImg} alt="news"/>
+                  </div>
+                </Link>
                 <div className="article-content">
-                  <div className="title">
-                    Aave, Curve, PoolTogether, and Sushi Among...
-                  </div>
-                  <div className="description">
-                    Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
-                  </div>
-                  <div className="article-data">
-                    <div className="time">
-                      26 jun 2020
+                  <Link to="/news-one">
+                    <div className="title">
+                      Aave, Curve, PoolTogether, and Sushi Among...
                     </div>
-                    <div className="tag">
-                      Cryptoeconomics
+                  </Link>
+                  <Link to="/news-one">
+                    <div className="description">
+                      Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
                     </div>
-                    <div className="share">
-                      <SharePopover />
-                    </div>
-                  </div>
-                </div>
-              </article>
-              <article className="article">
-                <div className="article-image">
-                  <img src={NewsImg} alt="news"/>
-                </div>
-                <div className="article-content">
-                  <div className="title">
-                    Aave, Curve, PoolTogether, and Sushi Among...
-                  </div>
-                  <div className="description">
-                    Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
-                  </div>
+                  </Link>
                   <div className="article-data">
                     <div className="time">
                       26 jun 2020
@@ -394,16 +450,22 @@ export default function TabPanelMenu() {
           <div className="content">
             <div className="article-wrapper">
               <article className="article">
-                <div className="article-image">
-                  <img src={NewsImg} alt="news"/>
-                </div>
+                <Link to="/news-one">
+                  <div className="article-image">
+                    <img src={NewsImg} alt="news"/>
+                  </div>
+                </Link>
                 <div className="article-content">
-                  <div className="title">
-                    Aave, Curve, PoolTogether, and Sushi Among...
-                  </div>
-                  <div className="description">
-                    Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
-                  </div>
+                  <Link to="/news-one">
+                    <div className="title">
+                      Aave, Curve, PoolTogether, and Sushi Among...
+                    </div>
+                  </Link>
+                  <Link to="/news-one">
+                    <div className="description">
+                      Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
+                    </div>
+                  </Link>
                   <div className="article-data">
                     <div className="time">
                       26 jun 2020
@@ -418,16 +480,22 @@ export default function TabPanelMenu() {
                 </div>
               </article>
               <article className="article">
-                <div className="article-image">
-                  <img src={NewsImg} alt="news"/>
-                </div>
+                <Link to="/news-one">
+                  <div className="article-image">
+                    <img src={NewsImg} alt="news"/>
+                  </div>
+                </Link>
                 <div className="article-content">
-                  <div className="title">
-                    Aave, Curve, PoolTogether, and Sushi Among...
-                  </div>
-                  <div className="description">
-                    Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
-                  </div>
+                  <Link to="/news-one">
+                    <div className="title">
+                      Aave, Curve, PoolTogether, and Sushi Among...
+                    </div>
+                  </Link>
+                  <Link to="/news-one">
+                    <div className="description">
+                      Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
+                    </div>
+                  </Link>
                   <div className="article-data">
                     <div className="time">
                       26 jun 2020
@@ -442,16 +510,22 @@ export default function TabPanelMenu() {
                 </div>
               </article>
               <article className="article">
-                <div className="article-image">
-                  <img src={NewsImg} alt="news"/>
-                </div>
+                <Link to="/news-one">
+                  <div className="article-image">
+                    <img src={NewsImg} alt="news"/>
+                  </div>
+                </Link>
                 <div className="article-content">
-                  <div className="title">
-                    Aave, Curve, PoolTogether, and Sushi Among...
-                  </div>
-                  <div className="description">
-                    Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
-                  </div>
+                  <Link to="/news-one">
+                    <div className="title">
+                      Aave, Curve, PoolTogether, and Sushi Among...
+                    </div>
+                  </Link>
+                  <Link to="/news-one">
+                    <div className="description">
+                      Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
+                    </div>
+                  </Link>
                   <div className="article-data">
                     <div className="time">
                       26 jun 2020
@@ -466,16 +540,22 @@ export default function TabPanelMenu() {
                 </div>
               </article>
               <article className="article">
-                <div className="article-image">
-                  <img src={NewsImg} alt="news"/>
-                </div>
+                <Link to="/news-one">
+                  <div className="article-image">
+                    <img src={NewsImg} alt="news"/>
+                  </div>
+                </Link>
                 <div className="article-content">
-                  <div className="title">
-                    Aave, Curve, PoolTogether, and Sushi Among...
-                  </div>
-                  <div className="description">
-                    Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
-                  </div>
+                  <Link to="/news-one">
+                    <div className="title">
+                      Aave, Curve, PoolTogether, and Sushi Among...
+                    </div>
+                  </Link>
+                  <Link to="/news-one">
+                    <div className="description">
+                      Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
+                    </div>
+                  </Link>
                   <div className="article-data">
                     <div className="time">
                       26 jun 2020
@@ -490,16 +570,22 @@ export default function TabPanelMenu() {
                 </div>
               </article>
               <article className="article">
-                <div className="article-image">
-                  <img src={NewsImg} alt="news"/>
-                </div>
+                <Link to="/news-one">
+                  <div className="article-image">
+                    <img src={NewsImg} alt="news"/>
+                  </div>
+                </Link>
                 <div className="article-content">
-                  <div className="title">
-                    Aave, Curve, PoolTogether, and Sushi Among...
-                  </div>
-                  <div className="description">
-                    Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
-                  </div>
+                  <Link to="/news-one">
+                    <div className="title">
+                      Aave, Curve, PoolTogether, and Sushi Among...
+                    </div>
+                  </Link>
+                  <Link to="/news-one">
+                    <div className="description">
+                      Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
+                    </div>
+                  </Link>
                   <div className="article-data">
                     <div className="time">
                       26 jun 2020
@@ -514,16 +600,22 @@ export default function TabPanelMenu() {
                 </div>
               </article>
               <article className="article">
-                <div className="article-image">
-                  <img src={NewsImg} alt="news"/>
-                </div>
+                <Link to="/news-one">
+                  <div className="article-image">
+                    <img src={NewsImg} alt="news"/>
+                  </div>
+                </Link>
                 <div className="article-content">
-                  <div className="title">
-                    Aave, Curve, PoolTogether, and Sushi Among...
-                  </div>
-                  <div className="description">
-                    Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
-                  </div>
+                  <Link to="/news-one">
+                    <div className="title">
+                      Aave, Curve, PoolTogether, and Sushi Among...
+                    </div>
+                  </Link>
+                  <Link to="/news-one">
+                    <div className="description">
+                      Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
+                    </div>
+                  </Link>
                   <div className="article-data">
                     <div className="time">
                       26 jun 2020
@@ -538,16 +630,22 @@ export default function TabPanelMenu() {
                 </div>
               </article>
               <article className="article">
-                <div className="article-image">
-                  <img src={NewsImg} alt="news"/>
-                </div>
+                <Link to="/news-one">
+                  <div className="article-image">
+                    <img src={NewsImg} alt="news"/>
+                  </div>
+                </Link>
                 <div className="article-content">
-                  <div className="title">
-                    Aave, Curve, PoolTogether, and Sushi Among...
-                  </div>
-                  <div className="description">
-                    Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
-                  </div>
+                  <Link to="/news-one">
+                    <div className="title">
+                      Aave, Curve, PoolTogether, and Sushi Among...
+                    </div>
+                  </Link>
+                  <Link to="/news-one">
+                    <div className="description">
+                      Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
+                    </div>
+                  </Link>
                   <div className="article-data">
                     <div className="time">
                       26 jun 2020
@@ -562,16 +660,22 @@ export default function TabPanelMenu() {
                 </div>
               </article>
               <article className="article">
-                <div className="article-image">
-                  <img src={NewsImg} alt="news"/>
-                </div>
+                <Link to="/news-one">
+                  <div className="article-image">
+                    <img src={NewsImg} alt="news"/>
+                  </div>
+                </Link>
                 <div className="article-content">
-                  <div className="title">
-                    Aave, Curve, PoolTogether, and Sushi Among...
-                  </div>
-                  <div className="description">
-                    Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
-                  </div>
+                  <Link to="/news-one">
+                    <div className="title">
+                      Aave, Curve, PoolTogether, and Sushi Among...
+                    </div>
+                  </Link>
+                  <Link to="/news-one">
+                    <div className="description">
+                      Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
+                    </div>
+                  </Link>
                   <div className="article-data">
                     <div className="time">
                       26 jun 2020
@@ -586,16 +690,22 @@ export default function TabPanelMenu() {
                 </div>
               </article>
               <article className="article">
-                <div className="article-image">
-                  <img src={NewsImg} alt="news"/>
-                </div>
+                <Link to="/news-one">
+                  <div className="article-image">
+                    <img src={NewsImg} alt="news"/>
+                  </div>
+                </Link>
                 <div className="article-content">
-                  <div className="title">
-                    Aave, Curve, PoolTogether, and Sushi Among...
-                  </div>
-                  <div className="description">
-                    Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
-                  </div>
+                  <Link to="/news-one">
+                    <div className="title">
+                      Aave, Curve, PoolTogether, and Sushi Among...
+                    </div>
+                  </Link>
+                  <Link to="/news-one">
+                    <div className="description">
+                      Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
+                    </div>
+                  </Link>
                   <div className="article-data">
                     <div className="time">
                       26 jun 2020
@@ -1000,16 +1110,22 @@ export default function TabPanelMenu() {
           <div className="content">
             <div className="article-wrapper">
               <article className="article">
-                <div className="article-image">
-                  <img src={NewsImg} alt="news"/>
-                </div>
+                <Link to="/news-one">
+                  <div className="article-image">
+                    <img src={NewsImg} alt="news"/>
+                  </div>
+                </Link>
                 <div className="article-content">
-                  <div className="title">
-                    Aave, Curve, PoolTogether, and Sushi Among...
-                  </div>
-                  <div className="description">
-                    Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
-                  </div>
+                  <Link to="/news-one">
+                    <div className="title">
+                      Aave, Curve, PoolTogether, and Sushi Among...
+                    </div>
+                  </Link>
+                  <Link to="/news-one">
+                    <div className="description">
+                      Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
+                    </div>
+                  </Link>
                   <div className="article-data">
                     <div className="time">
                       26 jun 2020
@@ -1024,16 +1140,22 @@ export default function TabPanelMenu() {
                 </div>
               </article>
               <article className="article">
-                <div className="article-image">
-                  <img src={NewsImg} alt="news"/>
-                </div>
+                <Link to="/news-one">
+                  <div className="article-image">
+                    <img src={NewsImg} alt="news"/>
+                  </div>
+                </Link>
                 <div className="article-content">
-                  <div className="title">
-                    Aave, Curve, PoolTogether, and Sushi Among...
-                  </div>
-                  <div className="description">
-                    Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
-                  </div>
+                  <Link to="/news-one">
+                    <div className="title">
+                      Aave, Curve, PoolTogether, and Sushi Among...
+                    </div>
+                  </Link>
+                  <Link to="/news-one">
+                    <div className="description">
+                      Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
+                    </div>
+                  </Link>
                   <div className="article-data">
                     <div className="time">
                       26 jun 2020
@@ -1048,16 +1170,22 @@ export default function TabPanelMenu() {
                 </div>
               </article>
               <article className="article">
-                <div className="article-image">
-                  <img src={NewsImg} alt="news"/>
-                </div>
+                <Link to="/news-one">
+                  <div className="article-image">
+                    <img src={NewsImg} alt="news"/>
+                  </div>
+                </Link>
                 <div className="article-content">
-                  <div className="title">
-                    Aave, Curve, PoolTogether, and Sushi Among...
-                  </div>
-                  <div className="description">
-                    Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
-                  </div>
+                  <Link to="/news-one">
+                    <div className="title">
+                      Aave, Curve, PoolTogether, and Sushi Among...
+                    </div>
+                  </Link>
+                  <Link to="/news-one">
+                    <div className="description">
+                      Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
+                    </div>
+                  </Link>
                   <div className="article-data">
                     <div className="time">
                       26 jun 2020
@@ -1072,16 +1200,22 @@ export default function TabPanelMenu() {
                 </div>
               </article>
               <article className="article">
-                <div className="article-image">
-                  <img src={NewsImg} alt="news"/>
-                </div>
+                <Link to="/news-one">
+                  <div className="article-image">
+                    <img src={NewsImg} alt="news"/>
+                  </div>
+                </Link>
                 <div className="article-content">
-                  <div className="title">
-                    Aave, Curve, PoolTogether, and Sushi Among...
-                  </div>
-                  <div className="description">
-                    Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
-                  </div>
+                  <Link to="/news-one">
+                    <div className="title">
+                      Aave, Curve, PoolTogether, and Sushi Among...
+                    </div>
+                  </Link>
+                  <Link to="/news-one">
+                    <div className="description">
+                      Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
+                    </div>
+                  </Link>
                   <div className="article-data">
                     <div className="time">
                       26 jun 2020
@@ -1096,16 +1230,22 @@ export default function TabPanelMenu() {
                 </div>
               </article>
               <article className="article">
-                <div className="article-image">
-                  <img src={NewsImg} alt="news"/>
-                </div>
+                <Link to="/news-one">
+                  <div className="article-image">
+                    <img src={NewsImg} alt="news"/>
+                  </div>
+                </Link>
                 <div className="article-content">
-                  <div className="title">
-                    Aave, Curve, PoolTogether, and Sushi Among...
-                  </div>
-                  <div className="description">
-                    Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
-                  </div>
+                  <Link to="/news-one">
+                    <div className="title">
+                      Aave, Curve, PoolTogether, and Sushi Among...
+                    </div>
+                  </Link>
+                  <Link to="/news-one">
+                    <div className="description">
+                      Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
+                    </div>
+                  </Link>
                   <div className="article-data">
                     <div className="time">
                       26 jun 2020
@@ -1120,16 +1260,22 @@ export default function TabPanelMenu() {
                 </div>
               </article>
               <article className="article">
-                <div className="article-image">
-                  <img src={NewsImg} alt="news"/>
-                </div>
+                <Link to="/news-one">
+                  <div className="article-image">
+                    <img src={NewsImg} alt="news"/>
+                  </div>
+                </Link>
                 <div className="article-content">
-                  <div className="title">
-                    Aave, Curve, PoolTogether, and Sushi Among...
-                  </div>
-                  <div className="description">
-                    Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
-                  </div>
+                  <Link to="/news-one">
+                    <div className="title">
+                      Aave, Curve, PoolTogether, and Sushi Among...
+                    </div>
+                  </Link>
+                  <Link to="/news-one">
+                    <div className="description">
+                      Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
+                    </div>
+                  </Link>
                   <div className="article-data">
                     <div className="time">
                       26 jun 2020
@@ -1144,16 +1290,22 @@ export default function TabPanelMenu() {
                 </div>
               </article>
               <article className="article">
-                <div className="article-image">
-                  <img src={NewsImg} alt="news"/>
-                </div>
+                <Link to="/news-one">
+                  <div className="article-image">
+                    <img src={NewsImg} alt="news"/>
+                  </div>
+                </Link>
                 <div className="article-content">
-                  <div className="title">
-                    Aave, Curve, PoolTogether, and Sushi Among...
-                  </div>
-                  <div className="description">
-                    Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
-                  </div>
+                  <Link to="/news-one">
+                    <div className="title">
+                      Aave, Curve, PoolTogether, and Sushi Among...
+                    </div>
+                  </Link>
+                  <Link to="/news-one">
+                    <div className="description">
+                      Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
+                    </div>
+                  </Link>
                   <div className="article-data">
                     <div className="time">
                       26 jun 2020
@@ -1168,16 +1320,22 @@ export default function TabPanelMenu() {
                 </div>
               </article>
               <article className="article">
-                <div className="article-image">
-                  <img src={NewsImg} alt="news"/>
-                </div>
+                <Link to="/news-one">
+                  <div className="article-image">
+                    <img src={NewsImg} alt="news"/>
+                  </div>
+                </Link>
                 <div className="article-content">
-                  <div className="title">
-                    Aave, Curve, PoolTogether, and Sushi Among...
-                  </div>
-                  <div className="description">
-                    Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
-                  </div>
+                  <Link to="/news-one">
+                    <div className="title">
+                      Aave, Curve, PoolTogether, and Sushi Among...
+                    </div>
+                  </Link>
+                  <Link to="/news-one">
+                    <div className="description">
+                      Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
+                    </div>
+                  </Link>
                   <div className="article-data">
                     <div className="time">
                       26 jun 2020
@@ -1192,16 +1350,22 @@ export default function TabPanelMenu() {
                 </div>
               </article>
               <article className="article">
-                <div className="article-image">
-                  <img src={NewsImg} alt="news"/>
-                </div>
+                <Link to="/news-one">
+                  <div className="article-image">
+                    <img src={NewsImg} alt="news"/>
+                  </div>
+                </Link>
                 <div className="article-content">
-                  <div className="title">
-                    Aave, Curve, PoolTogether, and Sushi Among...
-                  </div>
-                  <div className="description">
-                    Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
-                  </div>
+                  <Link to="/news-one">
+                    <div className="title">
+                      Aave, Curve, PoolTogether, and Sushi Among...
+                    </div>
+                  </Link>
+                  <Link to="/news-one">
+                    <div className="description">
+                      Today, a consortium of leading Ethereum decentralized finance (DeFi) projects announced DeFi for the People, a collaboration
+                    </div>
+                  </Link>
                   <div className="article-data">
                     <div className="time">
                       26 jun 2020

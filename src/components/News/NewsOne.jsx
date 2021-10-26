@@ -8,7 +8,7 @@ import {Link} from "react-router-dom";
 const NewsSectionOne = () => (
   <section className="section section--news">
     <h1 className="h1">
-      <Link href="#"><ArrowLeft /></Link> All news
+      <Link to="/news"><ArrowLeft /></Link> All news
     </h1>
 
     <div className="board">

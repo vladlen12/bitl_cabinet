@@ -53,6 +53,7 @@ export default function FaqTabs() {
           onChange={handleChange}
           aria-label="tabs"
           variant="scrollable"
+          scrollButtons
           allowScrollButtonsMobile
         >
           <Tab label="All qestions" {...a11yProps(0)} />

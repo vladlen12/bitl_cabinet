@@ -67,6 +67,7 @@ body{
   background: #FAFAFF;
   font-family: 'Gilroy', sans-serif;
   font-feature-settings: inherit;
+  font-variant: inherit;
 }
 
 a{
@@ -113,11 +114,22 @@ a{
 }
 
 .menu-lang {
+  &.Mui-focused {
+    .MuiOutlinedInput-notchedOutline {
+      border-color: $Secondary-900 !important;
+      border-width: 1px !important;
+    }
+  }
   @media (max-width: $desktop - 1) {
     .MuiOutlinedInput-input {
       padding: 12px 16px;
     }
   }
+
+  legend {
+    display: none;
+  }
+
 }
 
 .title,
@@ -798,7 +810,7 @@ a{
 
 .MuiDialog-container {
   .MuiPaper-root {
-    max-width: inherit;
+    max-width: none;
     background-color: transparent;
     @media (max-width: $tablet - 1) {
       margin: 10px;
@@ -809,6 +821,14 @@ a{
 .modal-wrapper--referrals {
   @media (min-width: $tablet) {
     width: 648px;
+    padding: 32px 0;
+    .title,
+    .board-panel__search,
+    .table,
+    .pagination-wrapper {
+      padding-left: 52px;
+      padding-right: 52px;
+    }
   }
 
   .board-panel__search .input-search-wrapper {
@@ -891,6 +911,8 @@ a{
   .table {
     width: 100%;
     margin-top: 32px;
+    height: 200px;
+    overflow-y: auto;
     @media (min-width: $tablet) {
       width: auto;
     }
@@ -917,6 +939,11 @@ a{
   .app-store__item--dark {
     display: none;
   }
+}
+
+.MuiMenu-list {
+  max-height: 190px;
+  overflow-y: auto;
 }
 
 body {
@@ -1050,7 +1077,13 @@ body {
     .section--reports .form ,
     .section--reports .partner-info .table tbody tr ,
     .section--reports .history-info .table tbody tr ,
-    .section--profile .profile-data-item,{
+    .section--profile .profile-data-item,
+    .article-wrapper--single .article-content h1,
+    .article-wrapper--single .article-content .title,
+    .article-aside,
+    .article-aside .title,
+    .section--profile .profile-data-item.change .info ,
+    .section--profile .profile-data-item .info ,{
       color: $Black-500;
       border-color: $Black-700;
     }
@@ -1070,7 +1103,7 @@ body {
     }
 
     .textarea label {
-      color: $Black-600;
+      color: $Black-500;
     }
 
     .tabs-wrapper .MuiTab-root.Mui-selected {
@@ -1234,6 +1267,7 @@ body {
     .section--profile .profile-data-item .info .input {
       background-color: transparent;
       border-color: $Black-700;
+      color: $Black-500;
     }
 
     .section--profile .MuiIconButton-root {
@@ -1275,6 +1309,117 @@ body {
 
     input:checked + .switch-menu {
       background-color: $Main-900;
+    }
+
+    .lang-toggle {
+      background-color: $Black-800;
+      > div {
+        background-color: $Black-800;
+        &:hover {
+          background-color: rgba(123, 97, 255, .2);
+          p {
+            color: $Secondary-900;
+          }
+        }
+        p {
+          color: $White-100;
+        }
+      }
+    }
+
+    .section--news {
+      svg {
+        path {
+          fill: $Black-500;
+        }
+      }
+    }
+
+    .hamburger-react {
+      > div {
+        background-color: $Black-500 !important;
+      }
+    }
+
+    .menu-wrapper {
+      background-color: $Black-800;
+    }
+
+    .menu-lang {
+      .MuiOutlinedInput-notchedOutline {
+        border-color: $Black-700;
+      }
+
+      p {
+        color: $Black-500;
+      }
+
+      .MuiSvgIcon-root {
+        path {
+          fill: $Black-500;
+        }
+      }
+    }
+
+    .MuiPaper-root .MuiList-root {
+      background-color: $Black-800;
+    }
+
+    .MuiMenuItem-root {
+      p {
+        color: $White-100;
+      }
+
+      &:hover {
+        p {
+          color: $Secondary-900;
+        }
+      }
+
+      &.Mui-selected {
+        background-color: rgba(123, 97, 255, .2);
+        p {
+          color: $Secondary-900;
+        }
+      }
+    }
+
+    .menu-title {
+      color: $Black-500;
+    }
+
+    .btn.btn--gray {
+      color: $Gray-100;
+      background-color: rgba(227, 227, 231, .2);
+    }
+
+    .MuiCalendarPicker-root {
+      background-color: $Black-800;
+      box-shadow: none;
+      .PrivatePickersFadeTransitionGroup-root {
+        color: $Black-500;
+      }
+
+      .MuiSvgIcon-root {
+        path {
+          fill: $Black-500;
+        }
+      }
+
+      .MuiTypography-root,
+      .MuiButtonBase-root {
+        color: $Black-500;
+        background-color: $Black-800;
+      }
+
+      .MuiPickersDay-today {
+        border-color: transparent;
+      }
+    }
+
+    .MuiPaper-root {
+      background-color: transparent;
+      box-shadow: 0px 8px 24px rgba(45, 62, 86, 0.12);
     }
   }
 }

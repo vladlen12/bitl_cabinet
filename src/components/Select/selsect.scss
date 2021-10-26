@@ -82,6 +82,7 @@
   border-radius: 4px !important;
 
   .MuiMenuItem-root {
+    padding: 12px 8px;
     &:hover {
       background-color: rgba(123, 97, 255, .05);
       .MuiSvgIcon-root {
@@ -103,6 +104,9 @@
       background-color: transparent;
       &:hover {
         background-color: rgba(123, 97, 255, .05);
+      }
+      &.Mui-focusVisible {
+        background-color: transparent;
       }
     }
   }
@@ -133,5 +137,28 @@
     font-size: 14px;
     line-height: 24px;
     color: $Black-800;
+    font-family: 'Gilroy', sans-serif;
+    letter-spacing: inherit;
+  }
+
+  .item-circle {
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    margin-right: 12px;
+    flex: none;
+  }
+
+  .type {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 14px;
+  }
+
+  .MuiCheckbox-root {
+    padding: 0;
+    margin-right: 16px;
   }
 }

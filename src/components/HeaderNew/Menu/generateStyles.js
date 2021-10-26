@@ -4,6 +4,7 @@ export function generateStyles(isOpen) {
             transform: isOpen ? `translateX(0)` : 'translateX(-120%)',
             width: '100%',
             paddingLeft: '20px',
+            paddingTop: '20px',
             paddingRight: '20px',
             paddingBottom: '32px',
             position: "absolute",
@@ -11,7 +12,7 @@ export function generateStyles(isOpen) {
             left: 0,
             transition: 'transform 0.3s ease-in-out',
             backgroundColor: "#ffffff",
-            zIndex: '100000',
+            zIndex: '1000',
 
             '@media (min-width:768px)':{
                 paddingLeft: '40px',
