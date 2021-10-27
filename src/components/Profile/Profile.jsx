@@ -207,7 +207,7 @@ export default function ProfileSection() {
           <div className="profile-data-item change warning">
             <div className="col-1">
               <div className="title">
-                Second name
+                Date of Birth
               </div>
             </div>
 

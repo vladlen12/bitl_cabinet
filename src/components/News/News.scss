@@ -357,6 +357,9 @@
 
     &:focus {
       border-color: $Secondary-900;
+      &::placeholder {
+        color: transparent;
+      }
     }
   }
 }

@@ -175,6 +175,9 @@
       right: 30px;
       top: 20px;
       cursor: pointer;
+      &:hover {
+        opacity: .6;
+      }
       img {
         margin-right: 0;
       }

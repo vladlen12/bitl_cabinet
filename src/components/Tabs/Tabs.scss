@@ -29,12 +29,12 @@
     margin-right: 28px;
     font-size: 12px;
     line-height: 12px;
+    font-weight: 700;
     @media (min-width: $tablet) {
       margin-right: 42px;
     }
     &.Mui-selected {
       color: $Secondary-900;
-      text-shadow: 0 0 .65px $Secondary-900, 0 0 .65px $Secondary-900;
     }
     &:hover {
       color: $Secondary-900;

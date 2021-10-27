@@ -11,16 +11,6 @@ const privat = () => {
           </h1>
           <p>Last updated: April 28, 2021</p>
         </div>
-        <div className="breadcrumbs">
-          <ul>
-            <li>
-              <Link href="#">Area</Link>
-            </li>
-            <li>
-              Privacy Policy
-            </li>
-          </ul>
-        </div>
       </div>
      <div className="content">
        <h2>1. Overview</h2>

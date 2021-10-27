@@ -8,7 +8,7 @@ import {ReactComponent as Tab1} from '../../assets/icons/tab1.svg';
 import {ReactComponent as Tab2} from '../../assets/icons/tab2.svg';
 import {ReactComponent as Saving} from "../../assets/icons/tab3.svg"
 import Info from "../../assets/icons/info.svg"
-import Close from "../../assets/icons/Close.svg"
+import {ReactComponent as Close} from "../../assets/icons/Close.svg"
 import {Progress} from "antd";
 import customer from "../../assets/icons/customer.svg";
 import PaginationRounded from "../Pagination/Pagination";
@@ -85,7 +85,7 @@ export default function BasicTabs() {
             To make the partner structure load faster, we displayed it in a tabular form. At any time, you can return to the original display, but in this case, the speed of downloading data will significantly decrease and will depend on the capabilities of your browser.
           </div>
           <div className="close-icon">
-            <img src={Close} alt="icon"/>
+            <Close />
           </div>
 
         </div>

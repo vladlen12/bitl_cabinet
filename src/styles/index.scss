@@ -167,6 +167,8 @@ a{
       font-size: 12px;
       line-height: 12px;
       color: $Black-600;
+      font-family: 'Gilroy', sans-serif;
+      margin-top: 6px;
     }
   }
 
@@ -228,6 +230,7 @@ a{
   label {
     font-size: 14px;
     line-height: 22px;
+    font-family: 'Gilroy', sans-serif;
     &.MuiInputLabel-shrink {
       transform: translate(12px, -6px) scale(1);
       font-family: 'Gilroy', sans-serif;
@@ -1213,16 +1216,27 @@ body {
     }
 
     .page-count input {
-      background-color: $Black-700;
+      background-color: transparent;
       border-color: $Black-700;
       color: $Black-500;
       &::placeholder {
         color: $Black-500;
       }
+      &:focus {
+        border-color: $Secondary-900;
+        &::placeholder {
+          color: transparent;
+        }
+      }
     }
 
     .section--referrals .info-block {
       border-color: $Black-700;
+      svg {
+        path {
+          fill: $Black-500;
+        }
+      }
     }
 
     .section--referrals .info-block:before,
@@ -1420,6 +1434,30 @@ body {
     .MuiPaper-root {
       background-color: transparent;
       box-shadow: 0px 8px 24px rgba(45, 62, 86, 0.12);
+    }
+
+    .section--referrals .search-bar-wrapper:before {
+      background-color: $Black-700;
+    }
+
+    .volumes-chart .balance-icon {
+      &.black-500-bg {
+        background-color: $Black-700;
+      }
+    }
+
+    .return-btn {
+      svg {
+        path {
+          fill: $Black-500;
+        }
+      }
+    }
+
+    .return-bar {
+      span {
+        color: $Black-500;
+      }
     }
   }
 }
