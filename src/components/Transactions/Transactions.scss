@@ -211,6 +211,20 @@
         padding-bottom: 16px;
         margin-bottom: 24px;
       }
+
+      .saving-icon {
+        cursor: pointer;
+        border-radius: 8px;
+        border: 1px solid $Black-500;
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+          background-color: rgba(227, 227, 231, 0.3);
+        }
+      }
     }
 
     .table {
@@ -342,7 +356,10 @@
       }
 
       .pagination {
-        margin-right: -10px;
+        margin-right: -6px;
+        @media (max-width: $desktop - 1) {
+          margin-right: 0;
+        }
       }
     }
   }
@@ -356,6 +373,23 @@
       margin-top: 24px;
     }
   }
+
+  .history-info {
+    .saving-icon {
+      cursor: pointer;
+      border-radius: 8px;
+      border: 1px solid $Black-500;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:hover {
+        background-color: rgba(227, 227, 231, 0.3);
+      }
+    }
+  }
+
 }
 
 .modal-wrapper--search {

@@ -7,7 +7,6 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import downSmallIcon from '../../assets/icons/downSmall.svg'
-import savingIcon from '../../assets/icons/Saving.svg'
 import {Doughnut, Line} from 'react-chartjs-2';
 import {Progress} from "antd";
 import customer from "../../assets/icons/customer.svg";
@@ -27,6 +26,7 @@ import CustomDateRangeInputs from "../Calendar/Input";
 import TransactionsSelect from "../Reports/Transactions";
 import VolumeSelect from "../Reports/Volume";
 import EventSelect from "../Reports/Event";
+import {ReactComponent as SavingIcon} from "../../assets/icons/tab3.svg";
 
 
 const data = {
@@ -295,7 +295,9 @@ export default function TabPanelMenu() {
         <div className="board board--bonus">
           <div className="title">
             Received bonuses
-            <img src={savingIcon} alt="icon"/>
+            <div className="saving-icon">
+              <SavingIcon />
+            </div>
           </div>
 
           <div className="table-wrapper">
@@ -700,7 +702,9 @@ export default function TabPanelMenu() {
         <div className="board board--bonus">
           <div className="title">
             UMI statistics
-            <img src={savingIcon} alt="icon"/>
+            <div className="saving-icon">
+              <SavingIcon />
+            </div>
           </div>
 
           <div className="table-wrapper">
@@ -1220,7 +1224,7 @@ export default function TabPanelMenu() {
                     1 of 3
                   </div>
                 </div>
-                <DoubleArrow />
+                <DoubleArrow className="status-info__arrow" />
                 <Lvl3 />
               </div>
 
@@ -1401,7 +1405,9 @@ export default function TabPanelMenu() {
         <div className="history-info board">
           <div className="title">
             Status assignment history
-            <img src={savingIcon} alt="icon"/>
+            <div className="saving-icon">
+              <SavingIcon />
+            </div>
           </div>
 
           <div className="table-wrapper">

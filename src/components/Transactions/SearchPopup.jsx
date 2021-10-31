@@ -2,8 +2,8 @@ import * as React from 'react';
 import Dialog from '@mui/material/Dialog';
 import {ReactComponent as CloseIcon} from "../../assets/icons/Close.svg";
 import SearchPickers from "./Picker";
-import CustomSelect from "../../components/Select/selsect";
 import {TextField} from "@mui/material";
+import TransactionSelect from "./TransactionSelect";
 
 export default function SearchDialog() {
   const [open, setOpen] = React.useState(false);
@@ -33,7 +33,7 @@ export default function SearchDialog() {
 
           <SearchPickers />
 
-          <CustomSelect />
+          <TransactionSelect />
 
           <div className="form-input-wrapper">
             <div className="form-item">

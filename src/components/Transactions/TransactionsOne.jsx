@@ -2,7 +2,7 @@ import './Transactions.scss'
 import React from "react";
 import TextField from "@mui/material/TextField";
 import {ReactComponent as ArrowLeft} from "../../assets/icons/ArrowLeft.svg";
-import savingIcon from "../../assets/icons/Saving.svg";
+import {ReactComponent as SavingIcon} from "../../assets/icons/tab3.svg";
 import PaginationRounded from "../Pagination/Pagination";
 import SearchPopup from "./SearchPopup";
 import {Link} from "react-router-dom";
@@ -58,7 +58,10 @@ export default function TransactionsSectionOne() {
       <div className="board board--bonus">
         <div className="title">
           Transaction list
-          <img src={savingIcon} alt="icon"/>
+          <div className="saving-icon">
+            <SavingIcon />
+          </div>
+
         </div>
 
         <div className="table-wrapper">

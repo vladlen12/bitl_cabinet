@@ -19,7 +19,7 @@ export function generateStyles(isOpen) {
                 paddingRight: '40px',
             },
 
-            '@media (min-width:1024px)':{
+            '@media (min-width:1360px)':{
                 position: "static",
                 transform: `translateX(0)`,
                 width: "215px"

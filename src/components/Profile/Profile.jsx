@@ -24,11 +24,11 @@ export default function ProfileSection() {
               <Progress
                 type="circle"
                 strokeWidth={6}
-                width={56}
+                width={68}
                 strokeColor={{
                   '0': '#5851FF',
                 }}
-                percent={55}
+                percent={56}
                 format={() => (
                   <img src={customer} alt=""/>
                 )}

@@ -5,10 +5,14 @@
     display: flex;
     align-items: center;
     font-weight: 700;
-    font-size: 24px;
-    line-height: 34px;
+    font-size: 20px;
+    line-height: 30px;
     color: $Black-800;
     margin-bottom: 24px;
+    @media (min-width: $tablet) {
+      font-size: 24px;
+      line-height: 34px;
+    }
     a {
       display: flex;
       align-items: center;
@@ -211,6 +215,9 @@
     font-size: 14px;
     line-height: 24px;
     color: $Black-600;
+    &:hover {
+      border: none;
+    }
   }
 }
 
@@ -385,9 +392,15 @@
   .article-content {
     h1,
     .title {
-      font-size: 24px;
-      line-height: 34px;
-      margin-bottom: 24px;
+      font-size: 16px;
+      line-height: 26px;
+      margin-bottom: 20px;
+      font-weight: 700;
+      @media (min-width: $tablet) {
+        font-size: 24px;
+        line-height: 34px;
+        margin-bottom: 24px;
+      }
     }
 
     a {
@@ -396,10 +409,14 @@
 
     h2 {
       font-weight: 700;
-      font-size: 20px;
-      line-height: 30px;
+      font-size: 14px;
+      line-height: 24px;
       color: $Black-700;
       margin-top: 0;
+      @media (min-width: $tablet) {
+        font-size: 20px;
+        line-height: 30px;
+      }
     }
 
     blockquote {
@@ -424,12 +441,19 @@
 
   img {
     max-width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    @media (min-width: $tablet) {
+      margin-bottom: 40px;
+    }
   }
 
   p {
     margin-bottom: 32px;
     color: $Black-700;
+    @media (max-width: $tablet - 1) {
+      font-size: 12px;
+      line-height: 16px;
+    }
   }
 
   .share {
@@ -531,5 +555,22 @@
 
   .article-wrapper {
     order: 1;
+  }
+
+  .article-data {
+    flex-wrap: nowrap;
+    .time {
+      flex: none;
+      width: auto;
+    }
+  }
+}
+
+.section--news {
+  .pagination .MuiButtonBase-root,
+  .pagination .MuiPaginationItem-ellipsis {
+    @media (max-width: $desktop - 1) {
+      margin: 0 5px;
+    }
   }
 }

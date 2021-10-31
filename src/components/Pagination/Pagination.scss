@@ -1,6 +1,17 @@
 @import "../../styles/utils/variables";
 
 .pagination {
+  @media (max-width: $desktop - 1) {
+    li {
+      &:first-child {
+        margin-left: -6px;
+      }
+
+      &:last-child {
+        margin-right: -6px;
+      }
+    }
+  }
   .MuiButtonBase-root {
     min-width: 24px;
     max-width: 24px;
@@ -14,6 +25,9 @@
     margin: 0 8px;
     font-family: 'Gilroy', sans-serif;
     border-radius: 4px;
+    @media (max-width: $desktop - 1) {
+      margin: 0 6px;
+    }
     &.Mui-selected {
       background-color: $Secondary-900;
       color: $White-100;
@@ -55,5 +69,8 @@
     font-family: 'Gilroy', sans-serif;
     border-radius: 4px;
     margin: 0 8px;
+    @media (max-width: $desktop - 1) {
+      margin: 0 6px;
+    }
   }
 }

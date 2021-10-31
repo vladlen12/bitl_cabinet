@@ -7,8 +7,8 @@
       border-top-left-radius: 8px;
       border-top-right-radius: 8px;
       padding-top: 22px;
-      padding-left: 20px;
-      padding-right: 20px;
+      padding-left: 0;
+      padding-right: 0;
       box-shadow: none;
       border-bottom: 1px solid $Black-500;
       @media (min-width: $tablet) {
@@ -195,7 +195,10 @@
     }
 
     .pagination {
-      margin-right: -10px;
+      margin-right: -6px;
+      @media (max-width: $desktop - 1) {
+        margin-right: 0;
+      }
     }
   }
 }

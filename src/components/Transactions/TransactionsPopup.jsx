@@ -54,7 +54,6 @@ export default function TransactionsPopup() {
               variant="outlined"
               fullWidth
               InputProps={{
-                readOnly: true,
                 endAdornment: (
                   <InputAdornment position="end">
                     UMI

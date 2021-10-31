@@ -26,6 +26,8 @@ import InputAdornment from '@mui/material/InputAdornment';
 import 'antd/dist/antd.css';
 import { Progress } from 'antd';
 import CalendarPopover from "./popover";
+import {useEffect, useState} from "react";
+import useWindowSize from "../../hooks/useWindowSize";
 
 const data = {
   datasets: [
@@ -39,6 +41,22 @@ const data = {
       borderWidth: 0,
       rotation: 300,
       cutout: 100
+    },
+  ],
+};
+
+const dataMobile = {
+  datasets: [
+    {
+      label: '# of Votes',
+      data: [17, 83, ],
+      backgroundColor: [
+        '#A6D4FF',
+        '#7B61FF',
+      ],
+      borderWidth: 0,
+      rotation: 300,
+      cutout: 75
     },
   ],
 };
@@ -75,7 +93,15 @@ const data3 = {
   ],
 };
 
+const WINDOW_DESKTOP_SIZE = 767;
+
 const PersonalAreaPage = () => {
+  const [isDesktop,setIsDesktop] = useState();
+  const {width} = useWindowSize()
+
+  useEffect(() => {
+    setIsDesktop(width <= WINDOW_DESKTOP_SIZE)
+  },[width])
 
   return (
     <section className="section section--personal">
@@ -233,9 +259,16 @@ const PersonalAreaPage = () => {
             </div>
 
             <div className="chart">
-              <Doughnut
-                data={data}
-              />
+              {
+                !isDesktop ?
+                  <Doughnut
+                    data={data}
+                  />
+                  :
+                  <Doughnut
+                    data={dataMobile}
+                  />
+              }
               <div className="chart-data">
                 <div className="title">
                   Partner bonus
@@ -734,7 +767,7 @@ const PersonalAreaPage = () => {
                   1 of 3
                 </div>
               </div>
-              <DoubleArrow />
+              <DoubleArrow className="status-info__arrow" />
               <Lvl3 />
             </div>
 

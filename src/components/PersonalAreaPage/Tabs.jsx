@@ -131,7 +131,6 @@ export default function TabPanelLogin() {
             className="textarea"
             fullWidth
             InputProps={{
-              readOnly: true,
               endAdornment: (
                 <InputAdornment position="end">
                   generate

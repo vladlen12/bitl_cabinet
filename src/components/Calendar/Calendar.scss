@@ -121,6 +121,10 @@
   }
 
   .PrivatePickersToolbar-root {
+    @media (max-width: $tablet - 1) {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
     .MuiTypography-overline {
       display: none;
     }

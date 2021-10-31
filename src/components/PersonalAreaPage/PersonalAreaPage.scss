@@ -129,7 +129,7 @@
 .currency-info__item {
   border: 1px solid $Black-500;
   border-radius: 8px;
-  padding: 20px;
+  padding: 20px 16px;
   margin-right: 8px;
   width: 50%;
   @media (min-width: $tablet) {
@@ -267,7 +267,7 @@
   @media (max-width: $tablet - 1) {
     &:last-child {
       margin-left: 52px;
-      margin-top: -10px;
+      margin-top: -26px;
     }
   }
   .icon {
@@ -282,6 +282,9 @@
     margin-bottom: 0;
     border: none;
     font-weight: 400;
+    @media (max-width: $tablet - 1) {
+      margin-top: -26px;
+    }
     @media (min-width: $tablet) {
       font-size: 14px;
       line-height: 24px;
@@ -587,9 +590,11 @@
   .table {
     overflow-x: auto;
     width: 100%;
+    overflow-y: hidden;
     @media (min-width: $tablet) {
       width: auto;
       overflow-x: inherit;
+      overflow-y: inherit;
     }
   }
 
@@ -635,6 +640,7 @@
     flex-direction: row;
   }
   .progress-info__item {
+    position: relative;
     width: 100%;
     border-radius: 8px;
     background-color: rgba(13, 5, 186, .1);
@@ -642,6 +648,20 @@
     display: flex;
     align-items: center;
     margin-bottom: 44px;
+    @media (max-width: $tablet - 1) {
+      &:first-child {
+        &:before {
+          content: '';
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: -36px;
+          width: 24px;
+          height: 24px;
+          background-image: url("../../assets/icons/arrow.svg");
+        }
+      }
+    }
     @media (min-width: $tablet) {
       width: 50%;
       margin-right: 24px;
@@ -700,6 +720,9 @@
   svg {
     margin-right: 18px;
     flex: none;
+    @media (max-width: $tablet - 1) {
+      margin-bottom: 10px;
+    }
   }
 }
 
@@ -809,16 +832,25 @@
   @media (min-width: $tablet) {
     padding: 16px 32px;
     align-items: center;
-    justify-content: inherit;
   }
 
   svg {
     flex: none;
     &:last-child {
-      margin-left: auto;
       @media (max-width: $tablet - 1) {
         order: 1;
         margin-left: 0;
+      }
+    }
+  }
+
+  .status-info__arrow {
+    margin-left: auto;
+    margin-right: auto;
+    @media (max-width: $tablet - 1) {
+      background-image: url("../../assets/icons/ArrowRight.svg");
+      path {
+        display: none;
       }
     }
   }
@@ -829,10 +861,16 @@
     margin-top: 8px;
     @media (min-width: $tablet) {
       margin-left: 14px;
-      margin-right: 28px;
       margin-top: 0;
       order: inherit;
-      width: auto;
+      width: 70%;
+    }
+
+    @media (min-width: 1024px) {
+      width: 80%;
+    }
+    @media (min-width: $desktop) {
+      width: 208px;
     }
     .title {
       font-size: 10px;
@@ -853,12 +891,15 @@
 
     .progress {
       position: relative;
-      width: 208px;
       border-radius: 4px;
       height: 4px;
       background-color: rgba(255, 86, 85, .2);
       margin-top: 4px;
       margin-bottom: 4px;
+      width: 100%;
+      @media (min-width: $desktop) {
+        width: 208px;
+      }
       &:before {
         content: '';
         position: absolute;
@@ -877,6 +918,7 @@
     line-height: 10px;
     color: $Black-700;
     text-transform: uppercase;
+    margin-top: 5px;
   }
 }
 

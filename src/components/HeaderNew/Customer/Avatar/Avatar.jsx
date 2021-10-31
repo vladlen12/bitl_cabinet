@@ -35,7 +35,7 @@ function Avatar({level, avatar, isOpen}) {
                 position: "absolute",
                 top: 0,
                 left: 0,
-                '@media (min-width: 1024px)' : {
+                '@media (min-width: 1360px)' : {
                     display: 'none'
                 }
             }

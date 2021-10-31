@@ -61,9 +61,6 @@ export default function BasicTabs() {
           value={value}
           onChange={handleChange}
           aria-label="tabs"
-          variant="scrollable"
-          scrollButtons
-          allowScrollButtonsMobile
         >
           <Tab icon={<Tab1 />} {...a11yProps(0)} />
           <Tab icon={<Tab2 />} {...a11yProps(1)} />
