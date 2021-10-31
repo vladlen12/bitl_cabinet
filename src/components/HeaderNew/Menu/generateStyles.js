@@ -1,14 +1,14 @@
 export function generateStyles(isOpen) {
     return {
         menu: {
-            transform: isOpen ? `translateX(0)` : 'translateX(-120%)',
+            transform: isOpen ? `translateX(0)` : 'translateX(0)',
             width: '100%',
             paddingLeft: '20px',
             paddingTop: '20px',
             paddingRight: '20px',
             paddingBottom: '32px',
-            position: "absolute",
-            top: '98px',
+            position: "relative",
+            top: '0',
             left: 0,
             transition: 'transform 0.3s ease-in-out',
             backgroundColor: "#ffffff",

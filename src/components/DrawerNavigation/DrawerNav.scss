@@ -1,0 +1,25 @@
+@import "../../styles/utils/variables";
+
+.drawer-wrapper--navigation {
+  padding: 18px 24px;
+  width: 290px;
+
+  .drawer-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 36px;
+    svg {
+      cursor: pointer;
+    }
+  }
+
+  .menu-wrapper {
+    padding: 0;
+    display: block;
+  }
+
+  .MuiOutlinedInput-notchedOutline {
+    top: 0;
+  }
+}

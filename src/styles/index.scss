@@ -692,6 +692,10 @@ a{
 }
 
 .MuiCalendarPicker-root {
+  font-family: 'Gilroy', sans-serif;
+  * div {
+    font-family: 'Gilroy', sans-serif;
+  }
   .MuiPickersDay-root {
     width: 32px;
     height: 32px;
@@ -969,13 +973,6 @@ a{
   }
 }
 
-.MuiCalendarPicker-root {
-  font-family: 'Gilroy', sans-serif;
-  * div {
-    font-family: 'Gilroy', sans-serif;
-  }
-}
-
 .app-store {
   margin-right: auto;
   .app-store__item--dark {
@@ -997,6 +994,10 @@ a{
   &:after{
     display: none;
   }
+}
+
+.menu-wrapper {
+  display: none;
 }
 
 body {
@@ -1588,6 +1589,22 @@ body {
       div[role=presentation] {
         color: $Black-500;
       }
+    }
+
+    .burger-menu {
+      path {
+        fill: $Black-500;
+      }
+    }
+
+    .drawer-wrapper--navigation .drawer-head svg {
+      path {
+        fill: $Black-500;
+      }
+    }
+
+    .drawer-wrapper--navigation .drawer-head {
+      color: $Black-500;
     }
   }
 }

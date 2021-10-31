@@ -146,3 +146,20 @@
     }
   }
 }
+
+.calendar-wrapper--single {
+  padding: 0;
+  @media (max-width: $tablet - 1) {
+    div[role=presentation] {
+      padding-left: 15px;
+      margin-right: 30px;
+    }
+  }
+  .MuiTabs-root {
+    display: none;
+  }
+
+  .MuiTypography-caption {
+    width: 32px;
+  }
+}

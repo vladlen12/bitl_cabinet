@@ -1,8 +1,9 @@
 import React from "react"
 import Popover from '@mui/material/Popover';
 import {ReactComponent as Calendar} from "../../assets/icons/Calendar.svg";
-import {ReactComponent as ArrowRight} from "../../assets/icons/ArrowRight.svg";
-import StaticDateRangePickerDemo from "./Calendar";
+import StaticDateTimePickerDemo from "./Calendar";
+import InputAdornment from "@mui/material/InputAdornment";
+import TextField from "@mui/material/TextField";
 
 export default function CalendarPopover() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -20,7 +21,21 @@ export default function CalendarPopover() {
 
   return (
     <>
-      <Calendar aria-describedby={id}  onClick={handleClick} />
+      <TextField
+        label="Date"
+        type="text"
+        variant="outlined"
+        className="textarea search-input"
+        defaultValue="18 February 1985"
+        fullWidth
+        InputProps={{
+          endAdornment: (
+            <InputAdornment position="end">
+              <Calendar aria-describedby={id} onClick={handleClick} />
+            </InputAdornment>
+          ),
+        }}
+      />
       <Popover
         id={id}
         open={open}
@@ -36,11 +51,8 @@ export default function CalendarPopover() {
         }}
         classes={{ paper: "calendar-popover" }}
       >
-        <div className="calendar-wrapper">
-          <div className="title">
-            Start date <ArrowRight /> End date
-          </div>
-          <StaticDateRangePickerDemo />
+        <div className="calendar-wrapper calendar-wrapper--single">
+          <StaticDateTimePickerDemo />
         </div>
 
       </Popover>

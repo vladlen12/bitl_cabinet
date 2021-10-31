@@ -1,10 +1,8 @@
 import React, {useEffect, useState} from 'react';
-import Hamburger from 'hamburger-react'
 import cx from 'classnames'
 import Logo from "./Logo/Logo";
 import Avatar from "./Customer/Avatar/Avatar";
 import customer from '../../assets/icons/customer.svg'
-import Menu from "./Menu/Menu";
 import useWindowSize from "../../hooks/useWindowSize";
 import constants from "../../constants/constants";
 import DistributionBtns from "./DistributionBtns/DistributionBtns";
@@ -14,9 +12,9 @@ import DrawerMenu from "../Drawer/Drawer"
 
 import styles from './Header.module.scss'
 import LoginDialog from "../PersonalAreaPage/Popup";
+import DrawerNavigation from "../DrawerNavigation/Drawer";
 
 function Header({commonClass}) {
-    const [isOpen, setOpen] = useState(false)
     const [isDesktop,setIsDesktop] = useState();
     const {width} = useWindowSize()
 
@@ -32,16 +30,11 @@ function Header({commonClass}) {
         ?
      header =  <>
          <div className={styles.header}>
-             <Hamburger toggled={isOpen}
-                        toggle={setOpen}
-                        size={20}
-                        color="#51525C"
-                        direction="right"
-             />
-             <Logo isOpen={isOpen}/>
-             <Avatar avatar={customer} isOpen={isOpen}/>
+             <DrawerNavigation />
+             <Logo />
+             <Avatar avatar={customer} />
          </div>
-         <Menu isOpen={isOpen}/>
+
      </>
         :
         header = <>

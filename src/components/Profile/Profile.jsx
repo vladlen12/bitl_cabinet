@@ -3,8 +3,8 @@ import {Progress} from "antd";
 import customer from "../../assets/icons/customer.svg";
 import RowRadioButtonsGroup from "./Radio";
 import * as React from "react";
-import DatePickerProfile from "./Picker";
 import ProfileDialog from "./modal";
+import CalendarPopover from "./popover";
 
 export default function ProfileSection() {
 
@@ -213,7 +213,7 @@ export default function ProfileSection() {
 
             <div className="col-2">
               <div className="info">
-                <DatePickerProfile />
+                <CalendarPopover />
                 <div className="btn btn--default">
                   Save
                 </div>

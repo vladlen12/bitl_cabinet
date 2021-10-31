@@ -1,9 +1,9 @@
 import * as React from 'react';
 import Dialog from '@mui/material/Dialog';
 import {ReactComponent as CloseIcon} from "../../assets/icons/Close.svg";
-import SearchPickers from "./Picker";
 import {TextField} from "@mui/material";
 import TransactionSelect from "./TransactionSelect";
+import CalendarPopover from "./popover";
 
 export default function SearchDialog() {
   const [open, setOpen] = React.useState(false);
@@ -31,7 +31,7 @@ export default function SearchDialog() {
           </div>
           <CloseIcon className="modal-close-icon" onClick={handleClose} />
 
-          <SearchPickers />
+          <CalendarPopover />
 
           <TransactionSelect />
 
